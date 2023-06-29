@@ -2,8 +2,8 @@
 - Ecommerce store for X.oti.X Designs
 - Theme development and customization
 - V2 added rendering with React
-### 🚀 LIVE 🌎 https://xotix-designs-devtest.myshopify.com/
-### 🔑 PASSWORD 🔑 *naimay*
+### 🚀 LIVE [ Development store ] 🌎 https://xotix-designs-devtest.myshopify.com/
+### 🔑 STORE PASSWORD 🔑 *naimay*
 <br />
 
 ## 📺 DEMO
@@ -15,7 +15,7 @@
 ## 🧰 BUILT WITH
 - Shopify
 - HTML [ *Liquid.js* ]
-- CSS [ *Tailwind* ]
+- CSS [ *TailwindCSS* ]
 - Javascript
 - React.js [ *Hooks, Refs* ]
 - framer-motion
