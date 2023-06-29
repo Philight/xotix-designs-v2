@@ -1,0 +1,269 @@
+{% raw %}
+
+{% assign variant_size = product.variants | size %}
+{% if configs.show_one_variant %}
+{% assign allow_show_one = 0 %}
+{% else %}
+{% assign allow_show_one = 1 %}
+{% endif %}
+{% if variant_size > allow_show_one %}
+
+{% assign swatch_shape = configs.style_product_page_swatch.swatch_shape %}
+{% if swatch_shape == "circle" %}
+{% assign class_swatch_shape = "globo-detail-style-circle" %}
+{% elsif swatch_shape == "square" %}
+{% assign class_swatch_shape = "globo-detail-style-square" %}
+{% endif %}
+
+{% assign swatch_size = configs.style_product_page_swatch.swatch_size %}
+{% if swatch_size == "small" %}
+{% assign class_swatch_size = "globo-detail-size-small" %}
+{% elsif swatch_size == "medium" %}
+{% assign class_swatch_size = "globo-detail-size-medium" %}
+{% elsif swatch_size == "large" %}
+{% assign class_swatch_size = "globo-detail-size-large" %}
+{% endif %}
+
+{% assign border_style = configs.style_product_page_swatch.border_style %}
+{% if border_style == "none" %}
+{% assign class_border_style = "globo-detail-border-style-none" %}
+{% elsif border_style == "single" %}
+{% assign class_border_style = "globo-detail-border-style-single" %}
+{% elsif border_style == "double" %}
+{% assign class_border_style = "globo-detail-border-style-double" %}
+{% endif %}
+
+{% assign hover_effects = configs.style_product_page_swatch.hover_effects.background %}
+{% if hover_effects == "no effect" %}
+{% assign class_hover_effects = "globo-detail-hover-effects-none" %}
+{% elsif hover_effects == "add glow" %}
+{% assign class_hover_effects = "globo-detail-border-effects-glow" %}
+{% elsif hover_effects == "add shadow" %}
+{% assign class_hover_effects = "globo-detail-border-effects-shadow" %}
+{% endif %}
+
+{% assign hover_effects_zoom = configs.style_product_page_swatch.hover_effects.zoom_image %}
+{% if hover_effects_zoom == "zoom" %}
+{% assign class_hover_effects_zoom = "globo-detail-hover-effects-zoom" %}
+{% endif %}
+
+{% assign size_change = configs.style_product_page_swatch.hover_effects.size_change %}
+{% if size_change == "reduce size" %}
+{% assign class_size_change = "globo-detail-hover-size_change-reduce" %}
+{% elsif size_change == "increase size" %}
+{% assign class_size_change = "globo-detail-hover-size_change-increase" %}
+{% endif %}
+
+{% assign button_corner = configs.style_product_page_button.button_corner %}
+{% if button_corner == "rounded" %}
+{% assign class_button_corner = "globo-detail-button-style-rounded" %}
+{% endif %}
+
+{% assign button_size = configs.style_product_page_button.button_size %}
+{% if button_size == "small" %}
+{% assign class_button_size = "globo-detail-button-size-small" %}
+{% elsif button_size == "medium" %}
+{% assign class_button_size = "globo-detail-button-size-medium" %}
+{% elsif button_size == "large" %}
+{% assign class_button_size = "globo-detail-button-size-large" %}
+{% endif %}
+
+{% assign text_style = configs.style_product_page_button.text_style %}
+{% if text_style == "lowercase" %}
+{% assign class_text_style = "globo-detail-text-style-lowercase" %}
+{% elsif text_style == "uppercase" %}
+{% assign class_text_style = "globo-detail-text-style-uppercase" %}
+{% endif %}
+
+{% assign hover_effects_button = configs.style_product_page_button.hover_effects.background %}
+{% if hover_effects_button == "add glow" %}
+{% assign class_hover_effects_button = "globo-detail-button-effects-glow" %}
+{% elsif hover_effects_button == "add shadow" %}
+{% assign class_hover_effects_button = "globo-detail-button-effects-shadow" %}
+{% endif %}
+
+{% assign stylesoldout = configs.styleSoldout %}
+{% if stylesoldout == "hide" %}
+{% assign class_stylesoldout = "globo-sold-out-hide" %}
+{% elsif stylesoldout == "opacity" %}
+{% assign class_stylesoldout = "globo-sold-out-opacity" %}
+{% elsif stylesoldout == "cross out" %}
+{% assign class_stylesoldout = "globo-sold-out-cross-out" %}
+{% endif %}
+
+{% assign alignContent = configs.align_content %}
+{% if alignContent == "left" %}
+{% assign class_alignContent = "globo-align-content-left" %}
+{% elsif alignContent == "center" %}
+{% assign class_alignContent = "globo-align-content-center" %}
+{% elsif alignContent == "right" %}
+{% assign class_alignContent = "globo-align-content-right" %}
+{% endif %}
+
+{% assign first_available_variant = false %}
+{% for variant in product.variants %}
+{% if !first_available_variant and variant.available %}{% assign first_available_variant = variant %}{% endif %}
+{% endfor %}
+{% unless first_available_variant %}{% assign first_available_variant = product.variants[0] %}{% endunless %}
+<div class="{{ class_alignContent }}">
+  <div class="globo-product-swatch-price" style="display: none;">
+    <span class="gsw-product_price-container">
+      <span class="globo-cs-product_price">{{first_available_variant.price | money }}</span>
+      <span class="globo-cs-product_oldprice">{% if first_available_variant.compare_at_price > first_available_variant.price %}{{first_available_variant.compare_at_price | money }}{% endif %}</span>
+    </span>
+  </div>
+  <ul class="globo-swatch-detail-lists-price" style="display: none;">
+    {% for variant in product.variants %}
+    <li data-value="{{ variant.id }}"><span class="gw-li-price">{{ variant.price | money }}</span> {% if variant.compare_at_price > variant.price %}<span class="gw-li-compareprice">{{ variant.compare_at_price | money }}</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+  <div class="globo-swatch-list">
+    {% assign option_index = 0 %}
+    {% for option in product.options %}
+    {% assign is_color = false %}
+    {% assign option_index = forloop.index0 %}
+    {% assign displayStyle = configs.displayStyles[option] %}
+    {% assign sortOption = configs.listOrderOptions[option] %}
+    {% if option != "Title" %}
+    <div class="swatch--gl clearfix" data-option-index="{{ option_index }}" {% if configs.sortOption %}data-order="{{ sortOption }}"{% endif %}>
+      {% assign values = "" %}
+      {% assign values_available = "" %}
+      {% if displayStyle == 1 %}
+      <label for="pa_{{ option | handleize }}" class="name-option">{{ option }}</label>
+      <ul class="value g-variant-color-detail">
+        {% for variant in product.variants %}
+        {% assign value_available = variant.options[option_index] %}
+        {% unless values_available contains value_available or variant.available == false %}
+        {% assign values_available = values_available | append: "," | append: value_available %}
+        {% assign values_available = values_available | split: "," %}
+        {% endunless %}
+        {% endfor %}
+        
+        {% for variant in product.variants %}
+        {% assign value = variant.options[option_index] %}
+        {% assign option_value = option | append: "-" | append: value %}
+        {% unless values contains value %}
+        {% assign values = values | append: "," | append: value %}
+        {% assign values = values | split: "," %}
+        <li class="select-option {{ class_stylesoldout }} {% if variant.available %}available{% else %}globo-out-of-stock{% endif %}" data-attribute="pa_{{ value | handleize }}" data-value="{{ value | escape }}">
+          <input id="swatch-detail-{{ variant.id }}-{{ option_index }}-{{ value | handle }}" data-variantId="{{ variant.id }}" type="radio" name="option-globo-{{ option_index }}" value="{{ value | escape }}" {% if configs.enableMandatory == false %}{% if forloop.first %} checked{% endif %}{% else %}required{% endif %} />
+          <label title="{{ value }}" for="swatch-detail-{{ variant.id }}-{{ option_index }}-{{ value | handle }}"
+                 class="swatch-anchor swatch-other
+                        {% if configs.displaySelectType[option_value] == 3 or configs.displaySelectType[option_value] == 4 %}{{ class_hover_effects_zoom }}{% endif %}
+                        {% if configs.displaySelectType[option_value] >= 1 and configs.displaySelectType[option_value] <= 4 %}{% if configs.displayColors[option_value] or configs.displayColorsImage[option_value] %}globo-border-color-swatch {{ class_swatch_shape }} {{ class_swatch_size }} {{ class_border_style }} {{ class_hover_effects }} {{ class_size_change }}{% else %} globo-style--button {{ class_button_corner }} {{ class_button_size }} {{ class_text_style }} {{ class_hover_effects_button }}{% endif %}
+                        {% endif %}"
+                 style="display: block;
+                        {% if configs.displayColors[option_value] %}background-color: {{ configs.displayColors[option_value] }}; font-size: 0;
+                        {% if configs.displaySelectType[option_value] == 2 %}{% if configs.displayColors2[option_value] %}background: linear-gradient( -45deg, {{ configs.displayColors2[option_value] }} 50%, {{ configs.displayColors[option_value] }} 50% );{% endif %}{% endif %}{% endif %}
+                        {% if configs.displaySelectType[option_value] == 3 or configs.displaySelectType[option_value] == 4 %}{% if configs.displayColorsImage[option_value] or configs.displayColorsImageUrl[option_value] %}font-size: 0; background-size: cover; background-position: center; background-repeat: no-repeat;{% endif %}{% endif %}
+                        {% if configs.displaySelectType[option_value] == 3 %}{% if configs.displayColorsImage[option_value] %}background-image: url({{ configs.displayColorsImage[option_value] | asset_url  | img_url: "50x" | replace: "\"", ""}});{% endif %}{% endif %}
+                        {% if configs.displaySelectType[option_value] == 4 %}{% if configs.displayColorsImageUrl[option_value] %}background-image: url({{ configs.displayColorsImageUrl[option_value] | asset_url  | img_url: "50x" | replace: "\"", ""}});{% endif %}{% endif %}"
+                 data-option-value="{{configs.displaySelectType[option_value]}}">
+            <span class="attr-title-hover">{{ value | escape }}</span>
+            {{ value }}
+          </label>
+        </li>
+        {% endunless %}
+        {% endfor %}
+      </ul>
+      {% elsif displayStyle == 2 %}
+      <label for="pa_{{ option | handleize }}" class="name-option">{{ option }}</label>
+      <ul class="value g-variant-color-detail">
+        {% for variant in product.variants %}
+        {% assign value_available = variant.options[option_index] %}
+        {% unless values_available contains value_available or variant.available == false %}
+        {% assign values_available = values_available | append: "," | append: value_available %}
+        {% assign values_available = values_available | split: "," %}
+        {% endunless %}
+        {% endfor %}
+        
+        {% for variant in product.variants %}
+        {% assign value = variant.options[option_index] %}
+        {% unless values contains value %}
+        {% assign values = values | append: "," | append: value %}
+        {% assign values = values | split: "," %}
+        <li class="select-option {{ class_stylesoldout }} {% if variant.available %}available{% else %}globo-out-of-stock{% endif %}" data-attribute="pa_{{ value | handleize }}" data-value="{{ value | escape }}" {% if variant.featured_image.src %}data-image={{ variant.featured_image.src | img_url:"1024x1024" }}{% endif %}>
+          <input id="swatch-detail-{{ variant.id }}-{{ option_index }}-{{ value | handle }}" data-variantId="{{ variant.id }}" type="radio" name="option-globo-{{ option_index }}" value="{{ value | escape }}" {% if configs.enableMandatory == false %}{% if forloop.first %} checked{% endif %}{% else %}required{% endif %} />
+          <label title="{{ value }}" for="swatch-detail-{{ variant.id }}-{{ option_index }}-{{ value | handle }}" class="swatch-anchor swatch-other globo-border-color-swatch {{ class_swatch_shape }} {{ class_swatch_size }} {{ class_border_style }} {{ class_hover_effects }} {{ class_hover_effects_zoom }} {{ class_size_change }}" {% if variant.featured_image.src %}style="display: block; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url({{ variant.featured_image.src | img_url:"50x" }});"{% endif %}>
+            <span class="attr-title-hover">{{ value | escape }}</span>
+          </label>
+        </li>
+        {% endunless %}
+        {% endfor %}
+      </ul>
+      {% elsif displayStyle == 3 %}
+      <label for="pa_{{ option | handleize }}" class="name-option">{{ option }}</label>
+      <ul class="value">
+        {% for variant in product.variants %}
+        {% assign value_available = variant.options[option_index] %}
+        {% unless values_available contains value_available or variant.available == false %}
+        {% assign values_available = values_available | append: "," | append: value_available %}
+        {% assign values_available = values_available | split: "," %}
+        {% endunless %}
+        {% endfor %}
+        
+        {% for variant in product.variants %}
+        {% assign value = variant.options[option_index] %}
+        {% unless values contains value %}
+        {% assign values = values | append: "," | append: value %}
+        {% assign values = values | split: "," %}
+        <li class="select-option {{ class_stylesoldout }} {% if variant.available %}available{% else %}globo-out-of-stock{% endif %}" data-attribute="pa_{{ value | handleize }}" data-value="{{ value | escape }}">
+          <input id="swatch-detail-{{ variant.id }}-{{ option_index }}-{{ value | handle }}" data-variantId="{{ variant.id }}" type="radio" name="option-globo-{{ option_index }}" value="{{ value | escape }}"  {% if configs.enableMandatory == false %}{% if forloop.first %} checked{% endif %}{% else %}required{% endif %} />
+          <label title="{{ value }}" for="swatch-detail-{{ variant.id }}-{{ option_index }}-{{ value | handle }}" class="swatch-anchor swatch-other globo-style--button {{ class_button_corner }} {{ class_button_size }} {{ class_text_style }} {{ class_hover_effects_button }}">
+            <span class="attr-title-hover">{{ value | escape }}</span>
+            {{ value }}
+          </label>
+        </li>
+        {% endunless %}
+        {% endfor %}
+      </ul>
+      {% elsif displayStyle == 4 %}
+      <label for="pa_{{ option | handleize }}" class="name-option">{{ option }}</label>
+      <ul class="value ul-globo-dropdown-option">
+        {% if configs.enableMandatory == true %}
+        <li class="swatches-options select-option--dropdown select-option select-globo-init">
+          <input id="swatch-detail-select-an-option-{{ option | handleize }}" data-variantId="{{ variant.id }}" type="radio" value="" name="option-globo-{{ option_index }}" />
+          <label for="swatch-detail-select-an-option-{{ option | handleize }}" class="swatch-anchor swatch-other">
+            Select an option
+          </label>
+          <span class="globo-arrow-select"></span>
+        </li>
+        {% endif %}
+        {% for variant in product.variants %}
+        {% assign value_available = variant.options[option_index] %}
+        {% unless values_available contains value_available or variant.available == false %}
+        {% assign values_available = values_available | append: "," | append: value_available %}
+        {% assign values_available = values_available | split: "," %}
+        {% endunless %}
+        {% endfor %}
+        
+        {% for variant in product.variants %}
+        {% assign value = variant.options[option_index] %}
+        {% unless values contains value %}
+        {% assign values = values | append: "," | append: value %}
+        {% assign values = values | split: "," %}
+
+        <li class="swatches-options select-option--dropdown select-option {% if variant.available %}available{% else %}soldout{% endif %}" data-attribute="pa_{{ value | handleize }}">
+          <input  id="swatch-detail-{{ variant.id }}-{{ option_index }}-{{ value | handle }}" type="radio" name="option-globo-{{ option_index }}" value="{{ value | escape }}" />
+          <label title="{{ value | escape }}" for="swatch-detail-{{ variant.id }}-{{ option_index }}-{{ value | handle }}" class="swatch-anchor swatch-other">
+            {{ value }}
+          </label>
+          <span class="globo-arrow-select"></span>
+        </li>
+
+        {% endunless %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if configs.enableMandatory %}<div class="errorOptions" data-nameinput="option-globo-{{ option_index }}"></div>{% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% if configs.showNumberStock %}
+  <div class="globo-number-stock-variant"></div>
+  {% endif %}
+</div>
+{% endif %}
+
+{% endraw %}

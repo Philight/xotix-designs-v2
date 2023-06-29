@@ -1,0 +1,479 @@
+{% comment %}
+  {% raw %}
+  {% layout none %}
+  {% endraw %}
+{% endcomment %}
+
+{% layout 'theme.free-drinks-layout' %}
+
+<style>
+  :root {
+    --main-bg-color: var(--bg-variant03);
+    --main-cont-color: var(--cont-variant03);
+
+    --bg-variant01: #edb77d;
+    --cont-variant01: rgb(255, 217, 176);
+
+    --bg-variant02: #ecc67c;
+    --cont-variant02: #ffe1a6;
+
+    --bg-variant03: #ebcf82;
+    --cont-variant03: #f2dda1;
+  }
+  @media (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      -webkit-transform-origin: left top;
+      -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+      -o-transform-origin: left top;
+      transform-origin: left top;
+      width: 100vh; /*this is the iPhone screen width.*/
+      position: absolute;
+      overflow-x: hidden;
+      top: 100%;
+      left: 0;
+    }
+  }
+  #mainContainer {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    background-color: white;
+  }
+
+  .notices-container {
+    background-color: #ff2f00;
+    color: #f1e6c7;
+    z-index: 2;
+    position: absolute;
+    padding: 0 12px;
+
+    display: none;
+    transition: all 0.4s ease-in-out;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .main-heading {
+    position: absolute;
+    left: 50%;
+    top: calc((50vh - 150px) / 2);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ebe0c2;
+    z-index: 2;
+  }
+  h1 {
+    font-family: 'Frutiger Serif', serif;
+    /*font-family: "Archivo Narrow",sans-serif;
+    font-family: Rajdhani, sans-serif;
+    */
+  }
+
+  .qr-form-bg {
+    background-image: url('https://assets.vogue.com/photos/60f0a783cde1f98cfcb4214e/master/w_2560%2Cc_limit/1284753985.jpeg');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .black-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+  }
+
+  .qr-party-outer-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .qr-form-container {
+    border: 2px solid #e3d7b8;
+    background-color: #fff;
+    padding: 30px 20px;
+    width: 300px;
+    height: 300px;
+    z-index: 2;
+  }
+  .qr-form-heading {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+  }
+  .input-wrapper {
+    margin-top: 30px;
+  }
+  .input-email {
+    text-align: center;
+    padding: 8px 12px;
+  }
+  .input-name {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .button-wrapper {
+    margin-top: 30px;
+  }
+  .qr-form-submit {
+    display: table;
+    margin: 0 auto;
+    width: 46px;
+    height: 66px;
+    color: #fff;
+    background-color: #000;
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .full-width {
+    width: 100%;
+  }
+
+  .qr-code-container {
+    display: none;
+    z-index: 20;
+  }
+
+  .qr-code-container h2 {
+    position: absolute;
+    left: 50%;
+    top: calc((66vh - 150px) / 2);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 21px;
+    font-weight: 600;
+    z-index: 2;
+  }
+  .qr-code-img-container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+    border: 2px solid #e3d7b8;
+  }
+
+  .qr-section {
+    width: 100%;
+    height: 85%;
+    background-color: black;
+  }
+  .qr-section h1 {
+    color: #ebe0c2; /* #cbba8c;*/
+  }
+  .qr-section h2 {
+    color: #cfbe90;
+  }
+
+  .qr-section .email-notice {
+    position: absolute;
+    border: 1px solid red;
+    width: 100%;
+    height: 40px;
+  }
+
+  /* INSTRUCTIONS SECTION */
+
+  .instructions-section,
+  .products-section {
+    display: none;
+    width: 100%;
+    height: 100vh;
+  }
+  .instructions-section {
+    /* GRADIENT ?*/
+    background-color: black;
+  }
+
+  .instructions-section .blur-top-overlay {
+    width: 300px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    top: 0;
+    height: 17vh;
+    background: rgba(227, 215, 184, 0.1);
+    background: linear-gradient(
+      180deg,
+      rgba(227, 215, 184, 1) 0%,
+      rgba(227, 215, 184, 0.7) 60%,
+      rgba(227, 215, 184, 0.1) 100%
+    );
+    display: none;
+    -webkit-transition: background 1s linear;
+    -moz-transition: background 1s linear;
+    -o-transition: background 1s linear;
+    transition: background 1s linear;
+  }
+
+  .instructions-section .blur-top-overlay.white {
+    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.7) 60%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+  }
+
+  .instructions-section .blur-bottom-overlay {
+    width: 300px;
+    height: 17vh;
+    position: fixed;
+    z-index: 3;
+    border-radius: 15px 20px 0 0;
+    left: 50%;
+    transform: translate(-50%, -6vh);
+
+    background: rgba(227, 215, 184, 0.1);
+    background: linear-gradient(
+      0deg,
+      rgba(227, 215, 184, 1) 0%,
+      rgba(227, 215, 184, 0.7) 60%,
+      rgba(227, 215, 184, 0.1) 100%
+    );
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+  }
+
+  .instructions-section .blur-bottom-overlay.white {
+    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.7) 60%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+  }
+
+  .instructions-section .inner-container {
+    width: 300px;
+    background-color: #e3d7b8;
+    min-height: 15vh;
+    border-radius: 15px 20px 0 0;
+    position: relative;
+    top: -6vh;
+    margin: 0 auto;
+    margin-top: 1px;
+    padding: 10px;
+    padding: 6vh 20px;
+    text-align: center;
+    z-index: 1;
+    height: 106vh;
+  }
+
+  .instructions-section .instructions {
+    height: 100vh;
+    border: 1px solid blue;
+  }
+
+  /* PRODUCTS SECTION */
+
+  .products-section {
+    background-color: #e3d7b8;
+  }
+
+  .products-section h3 {
+    color: red;
+  }
+  .products-section .inner-container {
+    width: 300px;
+    background-color: #fff;
+    min-height: 15vh;
+
+    position: relative;
+
+    margin: 0 auto;
+    padding: 6vh 20px;
+    text-align: center;
+
+    height: 100vh;
+  }
+
+  .products-section .products {
+    height: 100vh;
+    border: 1px solid red;
+  }
+
+  .product-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .products-section img {
+    transform: scale(1);
+    border: 1px solid blue;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .img-text {
+    position: absolute;
+    transform: translateY(120px);
+  }
+
+  .product-modal {
+    display: none;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px;
+
+    background-color: #fff;
+    border: 1px solid #efd280;
+  }
+</style>
+
+<div id="mainContainer">
+  <div class="notices-container full-width"></div>
+
+  <div class="qr-section">
+    <div class="main-heading full-width"><h1>X.OTI.X DESIGNS</h1></div>
+
+    <div class="qr-code-container">
+      <h2>Your QR code</h2>
+      <div class="qr-code-img-container">
+        <img
+          src=""
+          alt="Not Found"
+          width="296"
+          height="296"
+          onerror="this.onerror=null;this.src='https://www.eglsf.info/wp-content/uploads/image-missing.png';"
+        >
+      </div>
+    </div>
+
+    <div class="qr-form-bg"></div>
+    <div class="black-overlay"></div>
+
+    <div class="qr-form-container center">
+      <h2 class="qr-form-heading full-width" style="">Enter your email below, to grab your free drink</h2>
+      <div class="input-wrapper">
+        <input
+          class="input-email full-width"
+          placeholder="enjoy-your-drink@x.oti.x-designs.com"
+          style=""
+        >
+        <!--
+          <input
+          class="input-name full-width" placeholder="firstname/lastname?" />
+        -->
+      </div>
+      <div class="button-wrapper">
+        <button class="qr-form-submit" style="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="40"
+            height="40"
+            viewBox="0 0 172 172"
+            style="
+              fill:#000000; position: absolute;
+              transform: translate(-50%, -50%);
+            "
+          >
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#000000"></path><g fill="#ffffff"><path d="M58.11019,0c-4.43903,0 -8.51287,2.58737 -10.37907,6.59067c-17.12511,36.73168 -13.76222,60.65081 -7.92532,74.24849c5.59609,13.03796 16.05968,22.69359 29.46242,27.18924c4.37848,1.46845 7.38334,5.48699 7.84344,10.48825c3.64425,39.64062 -5.10507,41.0069 -18.2792,47.75002h-8.62939c-1.58312,0 -2.86667,1.28355 -2.86667,2.86667c0,1.58312 1.28355,2.86667 2.86667,2.86667h71.66667c1.58312,0 2.86667,-1.28391 2.86667,-2.86667c0,-1.58276 -1.28355,-2.86667 -2.86667,-2.86667h-50.80215c3.42674,-2.22167 6.46637,-5.08943 8.70918,-9.71909c3.82987,-7.90519 4.76909,-19.79634 3.04444,-38.55653c-0.67116,-7.29674 -5.16621,-13.19728 -11.73052,-15.39924c-11.8336,-3.9689 -21.07339,-12.49744 -26.01696,-24.01463c-5.37464,-12.5216 -8.37498,-34.75503 7.85394,-69.56496c0.9288,-1.99233 2.96302,-3.27959 5.18254,-3.27959h55.85171c2.21952,0 4.25374,1.28796 5.18254,3.28029c16.12357,34.60138 13.15166,56.78247 7.81895,69.29691c-4.92565,11.56019 -14.1547,20.15216 -25.98687,24.1938c-6.3081,2.05397 -11.2095,8.01276 -11.73052,15.5546c-1.22335,17.70274 -0.81672,29.53814 2.52653,37.34086c0.6235,1.45519 2.30835,2.12998 3.7639,1.50612c1.45555,-0.6235 2.12962,-2.30871 1.50612,-3.7639c-2.95697,-6.90186 -3.61867,-17.90409 -2.08142,-34.62536c0.00394,-0.04587 0.00801,-0.10739 0.0098,-0.15397c0.20246,-4.69488 3.19803,-8.84161 7.90223,-10.44766c13.37085,-4.58057 23.79845,-14.29454 29.36444,-27.35651c5.78959,-13.58764 9.11954,-37.45012 -7.89663,-73.96644c-1.86584,-4.00402 -5.94004,-6.59137 -10.37907,-6.59137zM102.25028,32.57684c-3.92753,-0.02221 -7.76337,0.3706 -11.44847,1.17228c-8.58567,1.86763 -13.01003,5.10889 -21.20045,4.95158c-2.52661,-0.04264 -5.08464,-0.3962 -7.60409,-1.0498c-1.5308,-0.39632 -3.09706,0.52187 -3.49445,2.05482c-0.39775,1.53223 0.52223,3.09706 2.05482,3.49445c2.95697,0.76755 5.96689,1.18195 8.94643,1.23247c13.59588,0.22575 18.56508,-7.30699 36.27355,-5.97829c4.81134,0.3612 8.70867,3.93483 9.47693,8.69098c3.72416,23.04513 -5.97153,33.91477 -12.08255,38.34377c-8.89276,6.44427 -20.97889,7.33409 -30.79077,2.26618c-10.5952,-5.47282 -16.58992,-16.89273 -16.44694,-31.33177c0.01541,-1.5824 -1.25485,-2.88608 -2.83797,-2.89396c-1.64654,-0.00824 -2.87995,1.30108 -2.89536,2.83797c-0.56617,57.30933 80.96608,53.3024 70.71345,-10.13621c-1.19289,-7.38382 -7.24117,-12.93306 -14.70777,-13.49349c-1.32736,-0.09971 -2.64718,-0.15357 -3.95636,-0.16097zM66.32526,58.52941c-0.09683,-0.00178 -0.19468,0.00099 -0.29325,0.0091c-1.57738,0.13509 -2.747,1.5234 -2.61191,3.10042c0.01326,0.15624 0.02728,0.31063 0.04269,0.46472c0.1462,1.47956 1.39326,2.58462 2.84917,2.58462c1.69671,0 3.02315,-1.4613 2.85617,-3.14941c-0.01254,-0.12864 -0.02423,-0.258 -0.03569,-0.38843c-0.12631,-1.47913 -1.3547,-2.59425 -2.80718,-2.62101zM70.03177,69.77282c-0.55215,0.00176 -1.10916,0.16255 -1.5999,0.49621c-1.30899,0.89046 -1.64876,2.67397 -0.75866,3.98296c2.33096,3.42674 5.55808,6.10602 9.33276,7.74826c1.45161,0.63174 3.14056,-0.03386 3.7723,-1.48582c0.63174,-1.45197 -0.03316,-3.14092 -1.48512,-3.7723c-2.77995,-1.20937 -5.15866,-3.18496 -6.87902,-5.71443c-0.55654,-0.81834 -1.46211,-1.2578 -2.38236,-1.25487z"></path></g></g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="instructions-section">
+    <div class="blur-top-overlay"></div>
+    <div class="blur-bottom-overlay"></div>
+    <div class="inner-container">
+      <div class="instructions">
+        <h3>INSTRUCTIONS</h3>
+        <div>image with bracelet/cocktail motif</div>
+        <div>
+          Bring your personal QR code to the bar and let the barman scan it. You can scan your bracelet any time to
+          return to this page. First 100 are eligible for a free drink! Duration: 20:00 - 21:00 Be careful, don't scan
+          this QR yourself as it can be used only once.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+    <span id="windowScrollY"
+          style="top:0px;left: 0px;background-color: white; position:fixed; z-index: 100">scrollY, scrollTop
+    </span>
+    <span id="elementTop"
+          style="top:20px;left: 0px;background-color: white; position:fixed; z-index: 100">scrollY, scrollTop
+    </span>
+    <span id="elementBottom"
+          style="top:40px;left: 0px;background-color: white; position:fixed; z-index: 100">scrollY, scrollTop
+    </span>
+      <span id="elementOffsetTop"
+          style="top:60px;left: 0px;background-color: white; position:fixed; z-index: 100">scrollY, scrollTop
+    </span>
+  -->
+
+  <div class="products-section">
+    <div class="blur-overlay"></div>
+    <div class="inner-container">
+      <div class="products">
+        <h3>PRODUCTS</h3>
+        <div>product image zoom modal on click</div>
+        <div class="product-wrapper">
+          <img
+            class="product-bracelet1"
+            src="https://cdn.shopify.com/s/files/1/2162/6311/products/IMG_2314_900x.jpg?v=1584769565"
+            width="300px"
+            height="300px"
+          >
+          <span class="img-text" style="position: absolute; ">Bracelet 01</span>
+        </div>
+
+        {% for product in collections.starlite.products limit: 8 %}
+          <div class="product-wrapper">
+            <img
+              class=""
+              src="{{ product.featured_image | product_img_url: 'medium' }}"
+              alt="{{ product.title | escape }}"
+              width="300px"
+              height="300px"
+            >
+            <span class="img-text" style="position: absolute;">{{ product.title | escape }}</span>
+          </div>
+          <div class="product-modal">X</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+  {% raw %}
+  {{ page.metafields.qr-codes.xzcf12as }}
+  {% endraw %}
+{% endcomment %}

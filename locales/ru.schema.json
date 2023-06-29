@@ -1,0 +1,2358 @@
+{
+  "settings_schema": {
+    "colors": {
+      "name": "Цвета",
+      "settings": {
+        "general__header": {
+          "content": "Общие"
+        },
+        "color_background_body": {
+          "label": "фона"
+        },
+        "color_border": {
+          "label": "Границы"
+        },
+        "color_overlay": {
+          "label": "Наложить"
+        },
+        "color_text": {
+          "label": "Текст"
+        },
+        "color_text_link": {
+          "label": "Ссылки"
+        },
+        "header__header": {
+          "content": "Заголовок"
+        },
+        "color_header_bg": {
+          "label": "фона"
+        },
+        "color_header_text": {
+          "label": "Текст"
+        },
+        "footer__header": {
+          "content": "Нижний колонтитул"
+        },
+        "color_background_footer": {
+          "label": "фона"
+        },
+        "color_text_footer": {
+          "label": "Текст"
+        },
+        "buttons__header": {
+          "content": "Кнопки"
+        },
+        "color_background_button": {
+          "label": "фона"
+        },
+        "color_text_button": {
+          "label": "Текст"
+        },
+        "sale_badge__header": {
+          "content": "Тег продажи"
+        },
+        "color_background_sale_badge": {
+          "label": "Фон"
+        },
+        "color_text_sale_badge": {
+          "label": "Текст"
+        },
+        "sold_badge__header": {
+          "content": "Распроданный тег"
+        },
+        "color_background_sold_badge": {
+          "label": "Фон"
+        },
+        "color_text_sold_badge": {
+          "label": "Текст"
+        },
+        "contrast__header": {
+          "content": "Альтернативные цвета раздела",
+          "info": "Выберите \"Использовать альтернативный цвет разделов\" в нижней части настроек раздела, чтобы использовать эту вторую цветовую схему."
+        },
+        "color_background_contrast": {
+          "label": "фона"
+        },
+        "color_text_contrast": {
+          "label": "Текст"
+        },
+        "color_border_contrast": {
+          "label": "Границы"
+        },
+        "color_background_button_contrast": {
+          "label": "Фон кнопки"
+        },
+        "color_text_button_contrast": {
+          "label": "Текст кнопки"
+        },
+        "color_text_link_contrast": {
+          "label": "Ссылки"
+        },
+        "popover__header": {
+          "content": "Поповеры"
+        },
+        "color_background_popover": {
+          "label": "фона"
+        },
+        "color_text_popover": {
+          "label": "Текст"
+        },
+        "color_border_popover": {
+          "label": "Граница"
+        },
+        "color_background_button_popover": {
+          "label": "Фон кнопки"
+        },
+        "color_text_button_popover": {
+          "label": "Текст кнопки"
+        }
+      }
+    },
+    "fonts": {
+      "name": "Шрифты",
+      "settings": {
+        "logo__header": {
+          "content": "Логотип"
+        },
+        "font_logo": {
+          "label": "Логотип"
+        },
+        "capitalize_logo": {
+          "label": "Большими буквами"
+        },
+        "logo_letter_spacing": {
+          "label": "Интервал между буквами"
+        },
+        "logo_base_size": {
+          "label": "Базовый размер"
+        },
+        "headings__header": {
+          "content": "Заголовки"
+        },
+        "font_heading": {
+          "label": "Заголовки"
+        },
+        "capitalize_headings": {
+          "label": "Большими буквами"
+        },
+        "heading_letter_spacing": {
+          "label": "Интервал между буквами"
+        },
+        "heading_base_size": {
+          "label": "Базовый размер"
+        },
+        "body__header": {
+          "content": "Основной текст"
+        },
+        "font_body": {
+          "label": "Основной текст"
+        },
+        "body_letter_spacing": {
+          "label": "Интервал между буквами"
+        },
+        "body_base_size": {
+          "label": "Базовый размер"
+        },
+        "listing__header": {
+          "content": "Название списка товаров"
+        },
+        "capitalize_product_title": {
+          "label": "Большими буквами"
+        },
+        "product_title_letter_spacing": {
+          "label": "Интервал между буквами"
+        }
+      }
+    },
+    "style": {
+      "name": "Стиль",
+      "settings": {
+        "animation__header": {
+          "content": "Анимация"
+        },
+        "enable_page_transitions": {
+          "label": "Включить переходы между страницами"
+        },
+        "sticky__header": {
+          "content": "Заголовок"
+        },
+        "enable_sticky_header": {
+          "label": "Включить прилипающий заголовок"
+        },
+        "buttons__header": {
+          "content": "Кнопки"
+        },
+        "button_style": {
+          "label": "Стиль",
+          "options__1": "Все заглавные",
+          "options__2": "Обычные"
+        },
+        "button_shape": {
+          "label": "Форма",
+          "options__1": "Острая",
+          "options__2": "Слегка округлая",
+          "options__3": "Круглый"
+        }
+      }
+    },
+    "product": {
+      "name": "Продукт",
+      "settings": {
+        "sale_badge_includes_percent": {
+          "label": "Включите процент продаж в значок продаж"
+        },
+        "swatch_options": {
+          "label": "Вариант параметра для образцов",
+          "info": "Вариант названия параметра, используемого для отображения образцов. Используйте список, разделенный запятыми, для поддержки нескольких параметров: \"Color, Colour\""
+        },
+        "chip_options": {
+          "label": "Вариант параметра для кнопок выбора",
+          "info": "Вариант названия параметра, используемого для отображения кнопок выбора. Используйте список, разделенный запятыми, для поддержки нескольких параметров: \"Size, Material, Fabric\"."
+        }
+      }
+    },
+    "cart": {
+      "name": "Корзина",
+      "settings": {
+        "cart_enable_ajax": {
+          "label": "Показывать уведомление при добавлении товара в корзину"
+        },
+        "cart_show_notes": {
+          "label": "Включить примечания к корзине"
+        }
+      }
+    },
+    "quick_search": {
+      "name": "Быстрый поиск",
+      "settings": {
+        "search_max_result_size": {
+          "label": "Результаты по категориям"
+        },
+        "search_show_articles": {
+          "label": "Показывать статьи"
+        },
+        "search_show_pages": {
+          "label": "Показывать страницы"
+        },
+        "product__header": {
+          "content": "Результаты товаров"
+        },
+        "search_show_price": {
+          "label": "Показывать цену"
+        },
+        "search_show_vendor": {
+          "label": "Показать продавца"
+        }
+      }
+    },
+    "social_media": {
+      "name": "Социальные сети",
+      "settings": {
+        "header": {
+          "content": "Ссылки на аккаунты"
+        },
+        "social_facebook_link": {
+          "label": "Ссылка на Facebook",
+          "info": "https://facebook.com/shopify"
+        },
+        "social_instagram_link": {
+          "label": "Ссылка на Instagram",
+          "info": "https://www.instagram.com/shopify/"
+        },
+        "social_linkedin_link": {
+          "label": "Ссылка на LinkedIn",
+          "info": "https://linkedin.com/company/shopify"
+        },
+        "social_pinterest_link": {
+          "label": "Ссылка на Pinterest",
+          "info": "https://pinterest.com/shopify"
+        },
+        "social_snapchat_link": {
+          "label": "Ссылка на Snapchat",
+          "info": "https://snapchat.com/add/shopify"
+        },
+        "social_tiktok_link": {
+          "label": "Ссылка на TikTok",
+          "info": "https://tiktok.com/@shopify"
+        },
+        "social_tumblr_link": {
+          "label": "Ссылка на Tumblr",
+          "info": "https://shopify.tumblr.com"
+        },
+        "social_twitter_link": {
+          "label": "Ссылка на Twitter",
+          "info": "https://twitter.com/shopify"
+        },
+        "social_vimeo_link": {
+          "label": "Ссылка на Vimeo",
+          "info": "https://vimeo.com/shopify"
+        },
+        "social_youtube_link": {
+          "label": "Ссылка на Youtube",
+          "info": "https://youtube.com/shopify"
+        }
+      }
+    },
+    "favicon": {
+      "name": "Favicon",
+      "settings": {
+        "favicon": {
+          "label": "Изображение фавикона",
+          "info": "Будет уменьшено до 32 x 32px"
+        }
+      }
+    }
+  },
+  "sections": {
+    "announcement_bar": {
+      "name": "Панель объявлений",
+      "settings": {
+        "timing": {
+          "label": "Время между объявлениями"
+        }
+      },
+      "blocks": {
+        "announcement": {
+          "name": "Объявление",
+          "settings": {
+            "title": {
+              "label": "Текст объявления"
+            },
+            "link": {
+              "label": "Ссылка на объявление",
+              "info": "По желанию"
+            },
+            "color_background": {
+              "label": "Цвет фона"
+            },
+            "color_text": {
+              "label": "Цвет текста"
+            }
+          }
+        }
+      }
+    },
+    "apps": {
+      "name": "Приложения",
+      "presets": {
+        "name": "Приложения"
+      }
+    },
+    "blog_posts": {
+      "name": "Записи в блогах",
+      "settings": {
+        "show_date": {
+          "label": "Показать дату публикации"
+        },
+        "columns": {
+          "label": "Столбцов в строке"
+        },
+        "title": {
+          "label": "Заголовок"
+        },
+        "subheading": {
+          "label": "Подзаголовок"
+        },
+        "text_max_width": {
+          "label": "Максимальная ширина текста"
+        },
+        "image_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": {
+            "label": "Оригинальный"
+          },
+          "options__2": {
+            "label": "Квадрат (1:1)"
+          },
+          "options__3": {
+            "label": "Альбомный (3:2)"
+          },
+          "options__4": {
+            "label": "Портрет (2:3)"
+          }
+        },
+        "contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "article": {
+          "name": "Статья",
+          "settings": {
+            "article": {
+              "label": "Статья"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Записи в блогах"
+      }
+    },
+    "collection_list": {
+      "name": "Список коллекций",
+      "settings": {
+        "columns": {
+          "label": "Столбцов в строке"
+        },
+        "title": {
+          "label": "Заголовок"
+        },
+        "subheading": {
+          "label": "Подзаголовок"
+        },
+        "text_max_width": {
+          "label": "Максимальная ширина текста"
+        },
+        "aspect_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": "Оригинальный",
+          "options__2": "Круглый (1:1)",
+          "options__3": "Квадрат (1:1)",
+          "options__4": "Альбомный (3:2)",
+          "options__5": "Портрет (2:3)"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Коллекция",
+          "settings": {
+            "collection": {
+              "label": "Коллекция"
+            },
+            "subheading": {
+              "label": "Подзаголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Список коллекций"
+      }
+    },
+    "custom_liquid": {
+      "name": "Пользовательская жидкость",
+      "settings": {
+        "custom_liquid": {
+          "label": "Пользовательская жидкость"
+        }
+      },
+      "presets": {
+        "name": "Пользовательская жидкость"
+      }
+    },
+    "featured_collection": {
+      "name": "Подвижная коллекция",
+      "settings": {
+        "collection": {
+          "label": "Коллекция"
+        },
+        "columns": {
+          "label": "Колонки"
+        },
+        "title": {
+          "label": "Заголовок"
+        },
+        "subheading": {
+          "label": "Подзаголовок"
+        },
+        "link_text": {
+          "label": "Ярлык кнопки"
+        },
+        "text_max_width": {
+          "label": "Максимальная ширина текста"
+        },
+        "aspect_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": "Оригинальный",
+          "options__2": "Квадрат (1:1)",
+          "options__3": "Альбомный (3:2)",
+          "options__4": "Портрет (2:3)"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "presets": {
+        "name": "Подвижная коллекция"
+      }
+    },
+    "featured_collection_row": {
+      "name": "Строка избранной коллекции",
+      "settings": {
+        "collection": {
+          "label": "Коллекция"
+        },
+        "columns": {
+          "label": "Колонки"
+        },
+        "title": {
+          "label": "Заголовок"
+        },
+        "subheading": {
+          "label": "Подзаголовок"
+        },
+        "link_text": {
+          "label": "Ярлык кнопки"
+        },
+        "text_max_width": {
+          "label": "Максимальная ширина текста"
+        },
+        "text_alignment": {
+          "label": "Выравнивание текста",
+          "options__1": "Слева",
+          "options__2": "По центру"
+        },
+        "aspect_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": "Оригинальный",
+          "options__2": "Квадрат (1:1)",
+          "options__3": "Альбомный (3:2)",
+          "options__4": "Портрет (2:3)"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "presets": {
+        "name": "Строка избранной коллекции"
+      }
+    },
+    "featured_product": {
+      "name": "Рекомендуемый товар",
+      "settings": {
+        "product": {
+          "label": "Продукт"
+        },
+        "enable_payment_button": {
+          "label": "Показать динамическую кнопку оформления заказа",
+          "info": "Позволяет покупателям напрямую оплачивать покупки, используя привычный способ оплаты. [Подробнее](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        },
+        "media__header": {
+          "content": "Медиа"
+        },
+        "media__paragraph": {
+          "content": "Узнайте больше о [типах медиа](https://help.shopify.com/en/manual/products/product-media)"
+        },
+        "enable_video_looping": {
+          "label": "Включить зацикливание видео"
+        },
+        "style__header": {
+          "content": "Стиль"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "border": {
+          "name": "Граница"
+        },
+        "title": {
+          "name": "Заголовок"
+        },
+        "price": {
+          "name": "Цена"
+        },
+        "sku": {
+          "name": "SKU"
+        },
+        "vendor": {
+          "name": "Продавец"
+        },
+        "quantity_selector": {
+          "name": "Селектор количества",
+          "settings": {
+            "show_labels": {
+              "label": "Показать этикетку"
+            }
+          }
+        },
+        "variant_picker": {
+          "name": "Селекторы вариантов",
+          "settings": {
+            "show_labels": {
+              "label": "Показать этикеткуs"
+            },
+            "popup__header": {
+              "content": "Всплывающее окно с информацией",
+              "info": "Добавить всплывающее окно для отображения дополнительной информации о ваших товарах, например, с размерной сеткой."
+            },
+            "variant_popup_option": {
+              "label": "Имя параметра для всплывающего окна с информацией",
+              "info": "Напишите имя параметра, которое будет отображаться в ссылке во всплывающем окне с информацией. Пример: \"Размер\"."
+            },
+            "variant_popup_text": {
+              "label": "Текст ссылки всплывающего окна с информацией"
+            },
+            "variant_popup_page": {
+              "label": "Содержимое всплывающего окна с информацией",
+              "info": "Выбрать страницу в качестве источника для содержимого всплывающего окна. Вы можете добавить текст, таблицы или изображения на эту страницу."
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "Кнопки покупки",
+          "settings": {
+            "show_dynamic_checkout": {
+              "label": "Показывать динамические кнопки оформления заказа",
+              "info": "Используя доступные в вашем магазине способы оплаты, покупатели видят предпочтительный вариант, например PayPal или Apple Pay. [Узнать больше](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+            }
+          }
+        },
+        "description": {
+          "name": "Описание"
+        },
+        "text": {
+          "name": "Текст",
+          "settings": {
+            "text": {
+              "label": "Текст"
+            }
+          }
+        },
+        "share": {
+          "name": "Поделиться",
+          "settings": {
+            "paragraph__1": {
+              "content": "Если вы указываете ссылку в сообщениях в социальных сетях, в качестве изображения предварительного просмотра будет показано главное изображение страницы. [Подробнее](https://help.shopify.com/en/manual/online-store/images/showing-social-media-thumbnail-images)."
+            },
+            "paragraph__2": {
+              "content": "Название и описание магазина будут включены в изображение предварительного просмотра. [Подробнее](https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
+            }
+          }
+        },
+        "accordion": {
+          "name": "Аккордеон",
+          "settings": {
+            "style": {
+              "label": "Стиль",
+              "options__1": "Открывать",
+              "options__2": "Закрытый"
+            },
+            "heading": {
+              "label": "Заголовок аккордеона",
+              "info": "Включить заголовок, который объясняет содержимое."
+            },
+            "content": {
+              "label": "Текст"
+            }
+          }
+        },
+        "inventory_counter": {
+          "name": "Stock Level Indicator",
+          "settings": {
+            "show_labels": {
+              "label": "Show label"
+            },
+            "inventory_max": {
+              "label": "Inventory base quantity",
+              "info": "Enter the initial quantity of your product inventory. Insert a Dynamic source to set different base quantities for multiple products. [Learn more](https://fluorescent.co/help/spark/featured-product#inventory-counter)"
+            },
+            "low_inventory_threshold": {
+              "label": "Low inventory threshold",
+              "info": "Set the product inventory quantity to alert customers when limited quantities are available. Insert a Dynamic source to set different thresholds for multiple products. [Learn more](https://fluorescent.co/help/spark/featured-product#inventory-counter)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Рекомендуемый товар"
+      }
+    },
+    "footer": {
+      "name": "Нижний колонтитул",
+      "settings": {
+        "language__header": {
+          "content": "Выбор языка",
+          "info": "Чтобы добавить язык, зайдите в [языковые настройки](/admin/settings/languages)."
+        },
+        "show_locale_selector": {
+          "label": "Показать выбор языка"
+        },
+        "currency__header": {
+          "content": "Выбор валюты",
+          "info": "Чтобы добавить валюту, перейдите в раздел [настройки оплаты](/admin/settings/payments)"
+        },
+        "show_currency_selector": {
+          "label": "Показать переключатель валют"
+        },
+        "social_media__header": {
+          "content": "Социальные сети",
+          "info": "Настроить ссылки на учетные записи в настройках темы."
+        },
+        "show_social_icons": {
+          "label": "Показать социальные иконки"
+        },
+        "payment__header": {
+          "content": "Типы оплаты",
+          "info": "Отображать только значки для типов оплат, поддерживаемых вашим магазином."
+        },
+        "show_payment_icons": {
+          "label": "Показывать значки оплат"
+        }
+      },
+      "blocks": {
+        "text": {
+          "name": "Текст",
+          "settings": {
+            "title": {
+              "label": "Заголовок",
+              "info": "Добавить заголовок для своего текста. Заголовок изменяется при уменьшении размеров экрана."
+            },
+            "text": {
+              "label": "Текст"
+            }
+          }
+        },
+        "menu": {
+          "name": "Меню",
+          "settings": {
+            "title": {
+              "label": "Заголовок",
+              "info": "Добавить заголовок для своего текста. Заголовок изменяется при уменьшении размеров экрана."
+            },
+            "link_list": {
+              "label": "Меню футера"
+            }
+          }
+        },
+        "newsletter": {
+          "name": "Новостная рассылка",
+          "settings": {
+            "title": {
+              "label": "Заголовок",
+              "info": "Добавить заголовок для своего текста. Заголовок изменяется при уменьшении размеров экрана."
+            },
+            "text": {
+              "label": "Текст"
+            }
+          }
+        }
+      }
+    },
+    "header": {
+      "name": "Заголовок",
+      "settings": {
+        "image": {
+          "label": "Изображение логотипа"
+        },
+        "logo_max_width": {
+          "label": "Максимальная ширина логотипа"
+        },
+        "menu": {
+          "label": "Главное меню"
+        },
+        "secondary_menu": {
+          "label": "Вторичное меню"
+        },
+        "style": {
+          "label": "Стиль",
+          "options__1": "Ссылки",
+          "options__2": "Значок меню"
+        },
+        "navigation_position": {
+          "label": "Положение ссылок",
+          "options__1": "В линию",
+          "options__2": "Ниже"
+        },
+        "logo_position": {
+          "label": "Положение логотипа",
+          "options__1": "Слева",
+          "options__2": "По центру"
+        },
+        "transparent__header": {
+          "content": "Прозрачность заголовка"
+        },
+        "enable_transparent_home": {
+          "label": "Включить на главной странице",
+          "info": "Убедитесь, что первым разделом на вашей домашней странице является раздел Слайдшоу или Видео без звука."
+        },
+        "color_text_transparent": {
+          "label": "Цвет текста"
+        },
+        "color_icon_transparent": {
+          "label": "Цвет значка"
+        },
+        "color_count_transparent": {
+          "label": "Корзина цвет при добавлении"
+        },
+        "color_border_transparent": {
+          "label": "Цвет границы"
+        },
+        "opacity_border_transparent": {
+          "label": "Прозрачность границы"
+        },
+        "logo_transparent": {
+          "label": "Изображение логотипа",
+          "info": "Логотип по умолчанию будет использоваться, если изображение не задано."
+        }
+      }
+    },
+    "image_with_features": {
+      "name": "Изображение с функциями",
+      "settings": {
+        "image": {
+          "label": "Изображение"
+        },
+        "image_width": {
+          "label": "Ширина изображения",
+          "options__1": "1/2",
+          "options__2": "2/3"
+        },
+        "aspect_ratio": {
+          "label": "Image aspect ratio",
+          "options__1": "Оригинальный",
+          "options__2": "Квадрат (1:1)",
+          "options__3": "Альбомный (3:2)",
+          "options__4": "Портрет (2:3)"
+        },
+        "text_position": {
+          "label": "Положение текста",
+          "options__1": "Слева",
+          "options__2": "Правая"
+        },
+        "text_alignment": {
+          "label": "Выравнивание текста",
+          "options__1": "Слева",
+          "options__2": "По центру",
+          "options__3": "Правая"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Заголовок",
+          "settings": {
+            "heading": {
+              "label": "Заголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        },
+        "feature": {
+          "name": "Функция",
+          "settings": {
+            "image": {
+              "label": "Изображение",
+              "info": "рекомендуется 160px x 160px"
+            },
+            "image_shape": {
+              "label": "Форма изображения",
+              "options__1": "Круглый",
+              "options__2": "Квадрат"
+            },
+            "heading": {
+              "label": "Заголовок"
+            },
+            "subheading": {
+              "label": "Подзаголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Изображение с функциями"
+      }
+    },
+    "image_with_text": {
+      "name": "Изображение с текстом",
+      "settings": {
+        "image_1": {
+          "label": "Изображение"
+        },
+        "image_2": {
+          "label": "Изображение 2"
+        },
+        "image_position": {
+          "label": "Положение изображения",
+          "options__1": "Слева",
+          "options__2": "Правая"
+        },
+        "image_width": {
+          "label": "Ширина изображения",
+          "options__1": "1/2",
+          "options__2": "2/3"
+        },
+        "aspect_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": "Оригинальный",
+          "options__2": "Квадрат (1:1)",
+          "options__3": "Альбомный (3:2)",
+          "options__4": "Портрет (2:3)"
+        },
+        "text_alignment": {
+          "label": "Выравнивание текста",
+          "options__1": "Слева",
+          "options__2": "По центру"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Заголовок",
+          "settings": {
+            "title": {
+              "label": "Заголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        },
+        "subheading": {
+          "name": "Подзаголовок",
+          "settings": {
+            "subheading": {
+              "label": "Подзаголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        },
+        "button": {
+          "name": "Кнопка",
+          "settings": {
+            "link": {
+              "label": "Ссылка на кнопку"
+            },
+            "link_text": {
+              "label": "Ярлык кнопки"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Изображение с текстом"
+      }
+    },
+    "inline_features": {
+      "name": "Встроенные функции",
+      "settings": {
+        "columns": {
+          "label": "Столбцов в строке"
+        },
+        "image_shape": {
+          "label": "Форма изображения",
+          "options__1": "Круглый",
+          "options__2": "Квадрат"
+        },
+        "text_alignment": {
+          "label": "Выравнивание текста",
+          "options__1": "Слева",
+          "options__2": "Правая"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "feature": {
+          "name": "Функция",
+          "settings": {
+            "show_image": {
+              "label": "Показать изображение"
+            },
+            "image": {
+              "label": "Изображение",
+              "info": "рекомендуется 160px x 160px"
+            },
+            "heading": {
+              "label": "Заголовок"
+            },
+            "subheading": {
+              "label": "Подзаголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Встроенные функции"
+      }
+    },
+    "logo_list": {
+      "name": "Список логотипов",
+      "settings": {
+        "columns": {
+          "label": "Столбцов в строке"
+        },
+        "gutter_spacing": {
+          "label": "Расстояние между логотипами"
+        },
+        "title": {
+          "label": "Заголовок"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "logo": {
+          "name": "Логотип",
+          "settings": {
+            "image": {
+              "label": "Изображение"
+            },
+            "link": {
+              "label": "Ссылка"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Список логотипов"
+      }
+    },
+    "map": {
+      "name": "Карта",
+      "settings": {
+        "image": {
+          "label": "Изображение",
+          "info": "Отображается, если карта не загружена"
+        },
+        "header": {
+          "content": "Карта",
+          "info": "Требуется адрес карты и действительный ключ Google Maps API."
+        },
+        "map_address": {
+          "label": "Адрес на карте",
+          "info": "Google Maps покажут точное местоположение."
+        },
+        "api_key": {
+          "label": "Ключ Google Maps API",
+          "info": "Зарегистрируйте ключ Google Maps API для отображения карты. Узнайте больше о [регистрации ключа Google Maps API](https://help.shopify.com/en/manual/online-store/themes/os/customize/map-section-api-key)."
+        },
+        "map_json": {
+          "label": "Пользовательская карта JSON",
+          "info": "(По желанию) Добавьте некоторые пользовательские [стили карты](https://mapstyle.withgoogle.com/)."
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Заголовок",
+          "settings": {
+            "title": {
+              "label": "Заголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        },
+        "store_information": {
+          "name": "Хранить информацию",
+          "settings": {
+            "store_information": {
+              "label": "Хранить информацию"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Карта"
+      }
+    },
+    "newsletter": {
+      "name": "Новостная рассылка",
+      "settings": {
+        "title": {
+          "label": "Заголовок"
+        },
+        "subheading": {
+          "label": "Подзаголовок"
+        },
+        "paragraph": {
+          "content": "Клиенты, которые подпишутся, добавят свой адрес электронной почты в раздел ‘участие в маркетинге’ [список клиентов](/admin/customers?query=&accepts_marketing=1)."
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "presets": {
+        "name": "Новостная рассылка"
+      }
+    },
+    "popup": {
+      "name": "Всплывающее окно",
+      "settings": {
+        "enable_popup": {
+          "label": "Включить",
+          "info": "Показывать всплывающее окно в первый раз, когда курсор пользователь пытается покинуть сайт."
+        },
+        "background__header": {
+          "content": "фона"
+        },
+        "image": {
+          "label": "Изображение"
+        },
+        "image_position": {
+          "label": "Положение изображения",
+          "options__1": "Вверху",
+          "options__2": "По центру",
+          "options__3": "Внизу"
+        },
+        "color__header": {
+          "content": "Цвет"
+        },
+        "color_text": {
+          "label": "Текст"
+        },
+        "color_text_button": {
+          "label": "Текст кнопки"
+        },
+        "color_background_button": {
+          "label": "Фон кнопки"
+        },
+        "color_overlay": {
+          "label": "Наложить"
+        },
+        "overlay_opacity": {
+          "label": "Прозрачность наложения"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Заголовок",
+          "settings": {
+            "title": {
+              "label": "Заголовок"
+            },
+            "subheading": {
+              "label": "Подзаголовок"
+            }
+          }
+        },
+        "newsletter_signup": {
+          "name": "Подписка на новости"
+        }
+      }
+    },
+    "product_recommendations": {
+      "name": "Рекомендуемые продукты",
+      "settings": {
+        "columns": {
+          "label": "Столбцов в строке"
+        },
+        "title": {
+          "label": "Заголовок"
+        },
+        "subheading": {
+          "label": "Подзаголовок"
+        },
+        "text_max_width": {
+          "label": "Максимальная ширина текста"
+        },
+        "aspect_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": "Оригинальный",
+          "options__2": "Квадрат (1:1)",
+          "options__3": "Альбомный (3:2)",
+          "options__4": "Портрет (2:3)"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "presets": {
+        "name": "Рекомендуемые продукты"
+      }
+    },
+    "questions": {
+      "name": "Вопросы и ответы",
+      "settings": {
+        "title": {
+          "label": "Заголовок"
+        },
+        "subheading": {
+          "label": "Подзаголовок"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "question": {
+          "name": "Вопрос",
+          "settings": {
+            "title": {
+              "label": "Вопрос"
+            },
+            "answer": {
+              "label": "Ответ"
+            },
+            "author": {
+              "label": "Имя автора"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Вопросы и ответы"
+      }
+    },
+    "quotes": {
+      "name": "Цитаты",
+      "settings": {
+        "timer": {
+          "label": "Время между цитатами"
+        },
+        "image_shape": {
+          "label": "Форма изображения",
+          "options__1": "Круглый",
+          "options__2": "Квадрат"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "quote": {
+          "name": "Цитата",
+          "settings": {
+            "quote": {
+              "label": "Цитата"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            },
+            "author": {
+              "label": "Автор"
+            },
+            "image": {
+              "label": "Фотография автора",
+              "info": "рекомендуется 160px x 160px"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Цитаты"
+      }
+    },
+    "rich_text": {
+      "name": "Форматированный текст",
+      "settings": {
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Заголовок",
+          "settings": {
+            "title": {
+              "label": "Заголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        },
+        "text": {
+          "name": "Текст",
+          "settings": {
+            "subheading": {
+              "label": "Text"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        },
+        "button": {
+          "name": "Кнопка",
+          "settings": {
+            "link_text": {
+              "label": "Ярлык кнопки"
+            },
+            "link": {
+              "label": "Ссылка на кнопку"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Форматированный текст"
+      }
+    },
+    "slideshow": {
+      "name": "Слайд-шоу",
+      "settings": {
+        "height": {
+          "label": "Высота"
+        },
+        "mobile_height": {
+          "label": "Высота на мобильном"
+        },
+        "duration_autoplay": {
+          "label": "Время между слайдами"
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "Слайд",
+          "settings": {
+            "desktop_image": {
+              "label": "Изображение"
+            },
+            "mobile_image": {
+              "label": "Изображение на мобильном"
+            },
+            "title": {
+              "label": "Заголовок"
+            },
+            "subheading": {
+              "label": "Подзаголовок"
+            },
+            "heading_text_size": {
+              "label": "Размер заголовка"
+            },
+            "overlay_shadow": {
+              "label": "Величина тени текста"
+            },
+            "max_width_subheading": {
+              "label": "Максимальная ширина текста"
+            },
+            "link_text": {
+              "label": "Ярлык кнопки"
+            },
+            "link": {
+              "label": "Ссылка на кнопку"
+            },
+            "alignment": {
+              "label": "Выравнивание текста",
+              "options__1": {
+                "label": "Вверху слева"
+              },
+              "options__2": {
+                "label": "Верху по центру"
+              },
+              "options__3": {
+                "label": "Вверху справа"
+              },
+              "options__4": {
+                "label": "Посередине слева"
+              },
+              "options__5": {
+                "label": "Посередине по центру"
+              },
+              "options__6": {
+                "label": "Посередине справа"
+              },
+              "options__7": {
+                "label": "Внизу слева"
+              },
+              "options__8": {
+                "label": "Внизу по центру"
+              },
+              "options__9": {
+                "label": "Внизу справа"
+              }
+            },
+            "header": {
+              "content": "Цвет"
+            },
+            "color_text": {
+              "label": "Текст"
+            },
+            "color_text_button": {
+              "label": "Текст кнопки"
+            },
+            "color_background_button": {
+              "label": "Фон кнопки"
+            },
+            "color_overlay": {
+              "label": "Наложить"
+            },
+            "overlay_opacity": {
+              "label": "Прозрачность наложения"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Слайд-шоу"
+      }
+    },
+    "social_proof": {
+      "name": "Подтверждение в социальных сетях",
+      "settings": {
+        "columns": {
+          "label": "Столбцов в строке"
+        },
+        "title": {
+          "label": "Заголовок"
+        },
+        "subheading": {
+          "label": "Подзаголовок"
+        },
+        "text_max_width": {
+          "label": "Максимальная ширина текста"
+        },
+        "aspect_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": "Оригинальный",
+          "options__2": "Квадрат (1:1)",
+          "options__3": "Альбомный (3:2)",
+          "options__4": "Портрет (2:3)"
+        },
+        "like_color": {
+          "label": "Like icon color"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "post": {
+          "name": "Почта",
+          "settings": {
+            "image": {
+              "label": "Изображение"
+            },
+            "link": {
+              "label": "Ссылка"
+            },
+            "header": {
+              "content": "Детали"
+            },
+            "likes": {
+              "label": "Количество лайков",
+              "info": "Введение клиентов в заблуждение с помощью поддельных номеров может подпадать под 'нечестные или обманные действия или методы' согласно [Закону о Федеральной торговой комиссии](https://ca.practicallaw.thomsonreuters.com/w-007-7584)"
+            },
+            "account": {
+              "label": "Опубликовано"
+            },
+            "caption": {
+              "label": "Подпись"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Подтверждение в социальных сетях"
+      }
+    },
+    "testimonials": {
+      "name": "Рекомендации",
+      "settings": {
+        "columns": {
+          "label": "Столбцов в строке"
+        },
+        "title": {
+          "label": "Заголовок"
+        },
+        "subheading": {
+          "label": "Подзаголовок"
+        },
+        "text_alignment": {
+          "label": "Выравнивание текста",
+          "options__1": "Слева",
+          "options__2": "По центру"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "testimonial": {
+          "name": "Рекомендация",
+          "settings": {
+            "heading": {
+              "label": "Заголовок"
+            },
+            "testimonial": {
+              "label": "Рекомендация"
+            },
+            "link": {
+              "label": "Ссылка на кнопку"
+            },
+            "author": {
+              "label": "Автор"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Рекомендации"
+      }
+    },
+    "text_columns_with_images": {
+      "name": "Текстовые столбцы с изображениями",
+      "settings": {
+        "columns": {
+          "label": "Столбцов в строке"
+        },
+        "image_shape": {
+          "label": "Форма изображения",
+          "options__1": "Круглый",
+          "options__2": "Квадрат"
+        },
+        "text_alignment": {
+          "label": "Выравнивание текста",
+          "options__1": "Слева",
+          "options__2": "По центру"
+        },
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Колонка",
+          "settings": {
+            "image": {
+              "label": "Изображение",
+              "info": "160px x 160px recommended"
+            },
+            "heading": {
+              "label": "Заголовок"
+            },
+            "subheading": {
+              "label": "Подзаголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            },
+            "link": {
+              "label": "Ссылка на кнопку"
+            },
+            "link_text": {
+              "label": "Ярлык кнопки"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Текстовые столбцы с изображениями"
+      }
+    },
+    "video": {
+      "name": "Видео",
+      "settings": {
+        "section_contrast": {
+          "label": "Использовать альтернативный цвет разделов"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Заголовок",
+          "settings": {
+            "title": {
+              "label": "Заголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        },
+        "subheading": {
+          "name": "Подзаголовок",
+          "settings": {
+            "subheading": {
+              "label": "Подзаголовок"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        },
+        "video": {
+          "name": "Видео",
+          "settings": {
+            "video_url": {
+              "label": "URL видео"
+            },
+            "image": {
+              "label": "Наложение изображений"
+            },
+            "opacity_overlay": {
+              "label": "Прозрачность наложения"
+            },
+            "color_overlay": {
+              "label": "Наложить"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Видео"
+      }
+    },
+    "video_hero": {
+      "name": "Раздел с авто воспроизведением видео без звука",
+      "settings": {
+        "height": {
+          "label": "Высота"
+        },
+        "mobile_height": {
+          "label": "Высота на мобильном"
+        },
+        "video_url": {
+          "label": "Ссылка на видео",
+          "info": "Используйте прямую ссылку на видеофайл .mp4. [Узнайте больше здесь](https://fluorescent.co/help/spark/video-hero#add-a-video)."
+        },
+        "image": {
+          "label": "Резервное изображение"
+        },
+        "alignment": {
+          "label": "Выравнивание текста",
+          "options__1": {
+            "label": "Вверху слева"
+          },
+          "options__2": {
+            "label": "Верху по центру"
+          },
+          "options__3": {
+            "label": "Вверху справа"
+          },
+          "options__4": {
+            "label": "Посередине слева"
+          },
+          "options__5": {
+            "label": "Посередине по центру"
+          },
+          "options__6": {
+            "label": "Посередине справа"
+          },
+          "options__7": {
+            "label": "Внизу слева"
+          },
+          "options__8": {
+            "label": "Внизу по центру"
+          },
+          "options__9": {
+            "label": "Внизу справа"
+          }
+        },
+        "overlay_shadow": {
+          "label": "Величина тени текста"
+        },
+        "header": {
+          "content": "Цвет"
+        },
+        "color_text": {
+          "label": "Цвет текста"
+        },
+        "color_text_button": {
+          "label": "Текст кнопки"
+        },
+        "color_background_button": {
+          "label": "Фон кнопки"
+        },
+        "color_overlay": {
+          "label": "Цвет наложения"
+        },
+        "overlay_opacity": {
+          "label": "Прозрачность наложения"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Заголовок",
+          "settings": {
+            "heading": {
+              "label": "Заголовок"
+            },
+            "heading_text_size": {
+              "label": "Размер заголовка"
+            },
+            "text_max_width": {
+              "label": "Максимальная ширина текста"
+            }
+          }
+        },
+        "subheading": {
+          "name": "Подзаголовок",
+          "settings": {
+            "subheading": {
+              "label": "Подзаголовок"
+            },
+            "text_max_width": {
+              "label": "Text max width"
+            }
+          }
+        },
+        "button": {
+          "name": "Кнопка",
+          "settings": {
+            "link_text": {
+              "label": "Ярлык кнопки"
+            },
+            "link": {
+              "label": "Ссылка на кнопку"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Раздел с авто воспроизведением видео без звука"
+      }
+    },
+    "main_article": {
+      "name": "Заметка в блоге",
+      "blocks": {
+        "featured_image": {
+          "name": "Подлинное изображение"
+        },
+        "title": {
+          "name": "Заголовок",
+          "settings": {
+            "blog_show_date": {
+              "label": "Показать дату"
+            },
+            "blog_show_social_sharing": {
+              "label": "Показать социальные иконки"
+            }
+          }
+        },
+        "content": {
+          "name": "Содержание",
+          "settings": {
+            "blog_show_social_sharing": {
+              "label": "Показать социальные иконки"
+            },
+            "blog_show_pagination": {
+              "label": "Показать пагинацию",
+              "info": "Пагинация появится, если у вас есть несколько статей блога для отображения"
+            },
+            "content_max_width": {
+              "label": "Максимальная ширина содержимого",
+              "info": "Настройка максимальной ширины содержимого статьи."
+            }
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Записи в блогах",
+      "settings": {
+        "show_rss": {
+          "label": "Показать значок RSS"
+        },
+        "articles_per_row": {
+          "label": "Статей в строке"
+        },
+        "header": {
+          "content": "Карточка записи блога"
+        },
+        "image_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": {
+            "label": "Оригинальный"
+          },
+          "options__2": {
+            "label": "Квадрат (1:1)"
+          },
+          "options__3": {
+            "label": "Альбомный (3:2)"
+          },
+          "options__4": {
+            "label": "Портрет (2:3)"
+          }
+        }
+      },
+      "blocks": {
+        "title": {
+          "name": "Заголовок",
+          "settings": {
+            "show_date": {
+              "label": "Показать дату"
+            }
+          }
+        },
+        "summary": {
+          "name": "Отрывок",
+          "settings": {
+            "show_link": {
+              "label": "Показать ссылку"
+            }
+          }
+        }
+      }
+    },
+    "main_cart": {
+      "name": "Страница корзины",
+      "settings": {
+        "cart_ajax_enable": {
+          "label": "Включить автоматическое обновление корзины",
+          "info": "Обновляет корзину, как только вносятся изменения в клиента"
+        }
+      }
+    },
+    "main_collection_banner": {
+      "name": "Баннер коллекции",
+      "settings": {
+        "show_collection_image": {
+          "label": "Показать изображение коллекции"
+        },
+        "collection_image_aspect_ratio": {
+          "label": "Соотношение сторон изображения коллекции",
+          "options__1": "Оригинальный",
+          "options__2": "Квадрат (1:1)",
+          "options__3": "Альбомный (3:2)",
+          "options__4": "Портрет (2:3)"
+        },
+        "show_collection_description": {
+          "label": "Показать описание коллекции"
+        },
+        "text_max_width": {
+          "label": "Максимальная ширина текста"
+        }
+      }
+    },
+    "main_collection_product_grid": {
+      "name": "Сетка продуктов",
+      "settings": {
+        "filtering__header": {
+          "content": "Фильтрация"
+        },
+        "show_sort": {
+          "label": "Показывать параметры сортировки"
+        },
+        "show_filters": {
+          "label": "Показывать фильтры"
+        },
+        "collection__header": {
+          "content": "Коллекция"
+        },
+        "columns": {
+          "label": "Столбцов в строке"
+        },
+        "per_page": {
+          "label": "Продукты на странице"
+        },
+        "pagination": {
+          "label": "Пагинация",
+          "info": "Выберите способ навигации по дополнительным страницам товаров.",
+          "options__1": "Бесконечно",
+          "options__2": "Нажмите, чтобы загрузить",
+          "options__3": "Разбито на страницы"
+        },
+        "show_swatches_and_chips": {
+          "label": "Показывать образцы и кнопки выбора",
+          "info": "Отображать параметры товара при наведении курсора. Чтобы узнать больше о настройке образцов и кнопок выбора, ознакомьтесь с нашей [документацией](https://fluorescent.co/help/spark/product-pages#set-up-product-chips)."
+        },
+        "aspect_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": "Оригинальный",
+          "options__2": "Квадрат (1:1)",
+          "options__3": "Альбомный (3:2)",
+          "options__4": "Портрет (2:3)"
+        }
+      }
+    },
+    "main_list_collections": {
+      "name": "Страница списка коллекций",
+      "settings": {
+        "paragraph": {
+          "content": "По умолчанию в списке отображаются все ваши коллекции. Чтобы настроить список, выберите ‘Выбрано’ и добавьте блоки коллекций."
+        },
+        "display_type": {
+          "label": "Выбрать коллекции для отображения",
+          "options__1": "Все",
+          "options__2": "Выбрано"
+        },
+        "show_description": {
+          "label": "Показать описание коллекции"
+        },
+        "aspect_ratio": {
+          "label": "Соотношение сторон изображения",
+          "options__1": "Оригинальный",
+          "options__2": "Круглый (1:1)",
+          "options__3": "Квадрат (1:1)",
+          "options__4": "Альбомный (3:2)",
+          "options__5": "Портрет (2:3)"
+        },
+        "columns": {
+          "label": "Столбцов в строке"
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Коллекция",
+          "settings": {
+            "collection": {
+              "label": "Коллекция"
+            }
+          }
+        }
+      }
+    },
+    "main_page": {
+      "name": "Страница",
+      "settings": {
+        "content_max_width": {
+          "label": "Максимальная ширина содержимого",
+          "info": "Настройте максимальную ширину содержимого страницы. [Узнайте больше о страницах](https://help.shopify.com/ru/manual/online-store/pages)."
+        }
+      }
+    },
+    "main_page_about": {
+      "name": "О странице",
+      "settings": {
+        "intro": {
+          "label": "Вступление"
+        },
+        "content_max_width": {
+          "label": "Максимальная ширина содержимого",
+          "info": "Настройте максимальную ширину содержимого страницы. [Узнайте больше о страницах](https://help.shopify.com/ru/manual/online-store/pages)."
+        }
+      },
+      "blocks": {
+        "media": {
+          "name": "Медиа",
+          "settings": {
+            "image": {
+              "label": "Изображение"
+            },
+            "video_url": {
+              "label": "Ссылка на видео",
+              "info": "Используйте прямую ссылку на видеофайл .mp4. [Узнайте больше здесь](https://fluorescent.co/help/spark/video-hero#add-a-video)."
+            }
+          }
+        }
+      }
+    },
+    "main_page_contact": {
+      "name": "Страница контактов",
+      "blocks": {
+        "image": {
+          "name": "Изображение",
+          "settings": {
+            "image": {
+              "label": "Изображение",
+              "info": "Используйте изображение с соотношением ширины к высоте 2:3 (рекомендуется)."
+            }
+          }
+        }
+      }
+    },
+    "main_password": {
+      "name": "Страница с паролем",
+      "settings": {
+        "show_share": {
+          "label": "Показать кнопки поделиться"
+        }
+      },
+      "blocks": {
+        "branding": {
+          "name": "Брендирование",
+          "settings": {
+            "logo": {
+              "label": "Изображение логотипа"
+            },
+            "logo_max_width": {
+              "label": "Максимальная ширина логотипа"
+            }
+          }
+        },
+        "heading": {
+          "name": "Заголовок",
+          "settings": {
+            "heading": {
+              "label": "Заголовок"
+            },
+            "text": {
+              "label": "Подзаголовок"
+            }
+          }
+        },
+        "newsletter_signup": {
+          "name": "Подписка на новости"
+        }
+      }
+    },
+    "main_product_details": {
+      "name": "Подробная информация о товаре",
+      "blocks": {
+        "description": {
+          "name": "Описание",
+          "settings": {
+            "style": {
+              "label": "Стиль",
+              "options__1": "Параграф",
+              "options__2": "Аккордеон открывается",
+              "options__3": "Аккордеон закрыт"
+            }
+          }
+        },
+        "accordion": {
+          "name": "Аккордеон",
+          "settings": {
+            "style": {
+              "label": "Стиль",
+              "options__1": "Открывать",
+              "options__2": "Закрытый"
+            },
+            "heading": {
+              "label": "Заголовок аккордеона",
+              "info": "Включить заголовок, который объясняет содержимое."
+            },
+            "content": {
+              "label": "Текст"
+            }
+          }
+        },
+        "payment_widget": {
+          "name": "Виджет платежных значков",
+          "settings": {
+            "icon": {
+              "label": "Иконка",
+              "options__1": "Отсутствует",
+              "options__2": "Чат",
+              "options__3": "Платеж",
+              "options__4": "Безопасность",
+              "options__5": "Доставка"
+            },
+            "title": {
+              "label": "Заголовок"
+            },
+            "show_payment_icons": {
+              "label": "Показывать значки оплат"
+            },
+            "text": {
+              "label": "Текст"
+            }
+          }
+        },
+        "security_widget": {
+          "name": "Виджет безопасности",
+          "settings": {
+            "icon": {
+              "label": "Иконка",
+              "options__1": "Отсутствует",
+              "options__2": "Чат",
+              "options__3": "Платеж",
+              "options__4": "Безопасность",
+              "options__5": "Доставка"
+            },
+            "title": {
+              "label": "Заголовок"
+            },
+            "text": {
+              "label": "Текст"
+            }
+          }
+        },
+        "shipping_widget": {
+          "name": "Виджет доставки",
+          "settings": {
+            "icon": {
+              "label": "Иконка",
+              "options__1": "Отсутствует",
+              "options__2": "Чат",
+              "options__3": "Платеж",
+              "options__4": "Безопасность",
+              "options__5": "Доставка"
+            },
+            "title": {
+              "label": "Заголовок"
+            },
+            "text": {
+              "label": "Текст"
+            },
+            "show_estimator": {
+              "label": "Показывать расчет доставки"
+            }
+          }
+        },
+        "custom_widget": {
+          "name": "Пользовательский виджет",
+          "settings": {
+            "icon": {
+              "label": "Иконка",
+              "options__1": "Отсутствует",
+              "options__2": "Чат",
+              "options__3": "Платеж",
+              "options__4": "Безопасность",
+              "options__5": "Доставка"
+            },
+            "title": {
+              "label": "Заголовок"
+            },
+            "text": {
+              "label": "Текст"
+            }
+          }
+        }
+      }
+    },
+    "main_product_overview": {
+      "name": "Обзор товара",
+      "settings": {
+        "purchase_bar__header": {
+          "content": "Панель быстрой покупки"
+        },
+        "enable_quick_purchase_bar": {
+          "label": "Показывать панель быстрой покупки"
+        },
+        "show_share_buttons": {
+          "label": "Показывать кнопки поделиться в соц сетях"
+        },
+        "media__header": {
+          "content": "Медиа"
+        },
+        "media__paragraph": {
+          "content": "Узнайте больше о [типах медиа](https://help.shopify.com/en/manual/products/product-media)"
+        },
+        "enable_video_looping": {
+          "label": "Включить зацикливание видео"
+        }
+      },
+      "blocks": {
+        "border": {
+          "name": "Граница"
+        },
+        "title": {
+          "name": "Заголовок"
+        },
+        "price": {
+          "name": "Цена"
+        },
+        "sku": {
+          "name": "SKU"
+        },
+        "vendor": {
+          "name": "Продавец"
+        },
+        "quantity_selector": {
+          "name": "Селектор количества",
+          "settings": {
+            "show_labels": {
+              "label": "Показать этикетку"
+            }
+          }
+        },
+        "variant_picker": {
+          "name": "Селекторы вариантов",
+          "settings": {
+            "show_labels": {
+              "label": "Показать этикеткуs"
+            },
+            "popup__header": {
+              "content": "Всплывающее окно с информацией",
+              "info": "Добавить всплывающее окно для отображения дополнительной информации о ваших товарах, например, с размерной сеткой."
+            },
+            "variant_popup_option": {
+              "label": "Имя параметра для всплывающего окна с информацией",
+              "info": "Писать названия параметров для отображения в виде кнопок выбора. Используйте список, разделенный запятыми: \"Размер\"."
+            },
+            "variant_popup_text": {
+              "label": "Текст ссылки всплывающего окна с информацией"
+            },
+            "variant_popup_page": {
+              "label": "Содержимое всплывающего окна с информацией",
+              "info": "Выбрать страницу в качестве источника для содержимого всплывающего окна. Вы можете добавить текст, таблицы или изображения на эту страницу."
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "Кнопки покупки",
+          "settings": {
+            "show_dynamic_checkout": {
+              "label": "Показывать динамические кнопки оформления заказа",
+              "info": "Используя доступные в вашем магазине способы оплаты, покупатели видят предпочтительный вариант, например PayPal или Apple Pay. [Узнать больше](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+            }
+          }
+        },
+        "description": {
+          "name": "Описание",
+          "settings": {
+            "style": {
+              "label": "Стиль",
+              "options__1": "Параграф",
+              "options__2": "Аккордеон открывается",
+              "options__3": "Аккордеон закрыт"
+            }
+          }
+        },
+        "text": {
+          "name": "Текст",
+          "settings": {
+            "text": {
+              "label": "Текст"
+            }
+          }
+        },
+        "share": {
+          "name": "Поделиться",
+          "settings": {
+            "paragraph__1": {
+              "content": "Если вы указываете ссылку в сообщениях в социальных сетях, в качестве изображения предварительного просмотра будет показано главное изображение страницы. [Подробнее](https://help.shopify.com/en/manual/online-store/images/showing-social-media-thumbnail-images)."
+            },
+            "paragraph__2": {
+              "content": "Название и описание магазина будут включены в изображение предварительного просмотра. [Подробнее](https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
+            }
+          }
+        },
+        "inventory_counter": {
+          "name": "Stock Level Indicator",
+          "settings": {
+            "show_labels": {
+              "label": "Show label"
+            },
+            "inventory_max": {
+              "label": "Inventory base quantity",
+              "info": "Enter the initial quantity of your product inventory. Insert a Dynamic source to set different base quantities for multiple products. [Learn more](https://fluorescent.co/help/spark/product-pages#inventory-counter)"
+            },
+            "low_inventory_threshold": {
+              "label": "Low inventory threshold",
+              "info": "Set the product inventory quantity to alert customers when limited quantities are available. Insert a Dynamic source to set different thresholds for multiple products. [Learn more](https://fluorescent.co/help/spark/product-pages#inventory-counter)"
+            }
+          }
+        },
+        "accordion": {
+          "name": "Аккордеон",
+          "settings": {
+            "column": {
+              "label": "Колонка",
+              "options__1": "Слева",
+              "options__2": "Правая"
+            },
+            "style": {
+              "label": "Стиль",
+              "options__1": "Открывать",
+              "options__2": "Закрытый"
+            },
+            "heading": {
+              "label": "Заголовок аккордеона",
+              "info": "Включить заголовок, который объясняет содержимое."
+            },
+            "content": {
+              "label": "Текст"
+            }
+          }
+        },
+        "payment_widget": {
+          "name": "Выпадающие значки платежей",
+          "settings": {
+            "column": {
+              "label": "Колонка",
+              "options__1": "Слева",
+              "options__2": "Правая"
+            },
+            "style": {
+              "label": "Стиль",
+              "options__1": "Открывать",
+              "options__2": "Закрытый"
+            },
+            "icon": {
+              "label": "Иконка",
+              "options__1": "Отсутствует",
+              "options__2": "Чат",
+              "options__3": "Платеж",
+              "options__4": "Безопасность",
+              "options__5": "Доставка"
+            },
+            "title": {
+              "label": "Заголовок"
+            },
+            "show_payment_icons": {
+              "label": "Показывать значки оплат"
+            },
+            "text": {
+              "label": "Текст"
+            }
+          }
+        },
+        "security_widget": {
+          "name": "Выпадающий список безопасности",
+          "settings": {
+            "column": {
+              "label": "Колонка",
+              "options__1": "Слева",
+              "options__2": "Правая"
+            },
+            "style": {
+              "label": "Стиль",
+              "options__1": "Открывать",
+              "options__2": "Закрытый"
+            },
+            "icon": {
+              "label": "Иконка",
+              "options__1": "Отсутствует",
+              "options__2": "Чат",
+              "options__3": "Платеж",
+              "options__4": "Безопасность",
+              "options__5": "Доставка"
+            },
+            "title": {
+              "label": "Заголовок"
+            },
+            "text": {
+              "label": "Текст"
+            }
+          }
+        },
+        "shipping_widget": {
+          "name": "Выпадающий список доставки",
+          "settings": {
+            "column": {
+              "label": "Колонка",
+              "options__1": "Слева",
+              "options__2": "Правая"
+            },
+            "style": {
+              "label": "Стиль",
+              "options__1": "Открывать",
+              "options__2": "Закрытый"
+            },
+            "icon": {
+              "label": "Иконка",
+              "options__1": "Отсутствует",
+              "options__2": "Чат",
+              "options__3": "Платеж",
+              "options__4": "Безопасность",
+              "options__5": "Доставка"
+            },
+            "title": {
+              "label": "Заголовок"
+            },
+            "text": {
+              "label": "Текст"
+            },
+            "show_estimator": {
+              "label": "Показывать расчет доставки"
+            }
+          }
+        }
+      }
+    }
+  },
+  "socialshopwave": {
+    "add_to_cart": "Add To Cart",
+    "adding_to_cart": "Adding...",
+    "sold_out": "Sold Out",
+    "description": "Description",
+    "view_on_instagram": "View on Instagram"
+  }
+}

@@ -1,0 +1,183 @@
+<div
+  class="video section{% if section.settings.section_contrast %} section--contrast{% endif %}"
+  data-section-id="{{ section.id }}"
+  data-section-type="video"
+>
+  <div class="video__inner section__inner">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'heading' -%}
+          <h2
+            class="video__heading ff-heading fs-heading-2-base fs-heading-1-base-ns"
+            style="--text-max-width: {{ block.settings.text_max_width }}rem;"
+          >
+            {{ block.settings.title | newline_to_br }}
+          </h2>
+
+        {%- when 'subheading' -%}
+          <div
+            class="video__subheading rte ff-body fs-body-base fs-body-large-ns"
+            style="--text-max-width: {{ block.settings.text_max_width }}rem;"
+          >
+            {{ block.settings.subheading }}
+          </div>
+
+        {%- when 'video' -%}
+          {%- liquid
+            assign video_url = block.settings.video_url
+            assign opacity = block.settings.opacity_overlay | divided_by: 100.0
+          -%}
+
+          <div
+            class="video__wrapper"
+            data-video-id="{{ video_url.id }}"
+            data-video-type="{{  video_url.type }}"
+            style="
+              --color-overlay: {{ block.settings.color_overlay }};
+              --color-overlay-transparent: {{ block.settings.color_overlay | color_modify: 'alpha', opacity }};
+            "
+          >
+            {%- if video_url.url != blank -%}
+              <div class="video__container" data-video-container>
+                <div class="video__player" tabindex="-1" data-video-player></div>
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.image != blank -%}
+              {%
+                render 'image' with
+                image: block.settings.image,
+                wrapper_class: 'video__image visible',
+                disable_style: true
+              %}
+            {%- endif -%}
+
+            <div class="video__overlay visible" data-overlay>
+              <button
+                type="button"
+                class="video__play"
+                data-play-button
+                data-video-trigger
+                aria-label="{{ 'general.accessibility.play_video' | t }}"
+              >
+                {% render 'icon' with icon: 'play_arrow' %}
+              </button>
+            </div>
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.video.name",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--image-first",
+  "settings": [
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.video.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.video.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "t:sections.video.blocks.heading.settings.title.label",
+          "default": "Featured video"
+        },
+        {
+          "type": "range",
+          "id": "text_max_width",
+          "label": "t:sections.video.blocks.heading.settings.text_max_width.label",
+          "min": 24,
+          "max": 48,
+          "step": 1,
+          "default": 42
+        }
+      ]
+    },
+    {
+      "type": "subheading",
+      "name": "t:sections.video.blocks.subheading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "id": "subheading",
+          "type": "richtext",
+          "label": "t:sections.video.blocks.subheading.settings.subheading.label",
+          "default": "<p>Use this sections to promote a featured video.</p>"
+        },
+        {
+          "type": "range",
+          "id": "text_max_width",
+          "label": "t:sections.video.blocks.subheading.settings.text_max_width.label",
+          "min": 24,
+          "max": 48,
+          "step": 1,
+          "default": 42
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "t:sections.video.blocks.video.name",
+      "limit": 1,
+      "settings": [
+        {
+          "id": "video_url",
+          "type": "video_url",
+          "label": "t:sections.video.blocks.video.settings.video_url.label",
+          "accept": ["youtube", "vimeo"],
+          "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "t:sections.video.blocks.video.settings.image.label"
+        },
+        {
+          "id": "opacity_overlay",
+          "type": "range",
+          "label": "t:sections.video.blocks.video.settings.opacity_overlay.label",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "default": 60,
+          "unit": "%"
+        },
+        {
+          "id": "color_overlay",
+          "type": "color",
+          "label": "t:sections.video.blocks.video.settings.color_overlay.label",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.video.presets.name",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "subheading"
+        },
+        {
+          "type": "video"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

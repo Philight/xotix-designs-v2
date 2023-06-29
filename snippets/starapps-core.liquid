@@ -1,0 +1,71 @@
+<!-- starapps_core_start -->
+<!-- This code is automatically managed by StarApps Studio -->
+<!-- Please contact support@starapps.studio for any help -->
+<!-- File location: snippets/starapps-core.liquid -->
+
+{% comment %} meta_information_start {% endcomment %}
+{% comment %}Locale, Currency and other meta data of the store{% endcomment %}
+<script type="application/json" sa-language-info="true" data-no-instant="true">
+  {{ newline }}{"current_language":"{{ shop.locale | escape }}", "default_language":"{%- for locale in shop.published_locales -%}{%- if locale.primary -%}{{ locale.iso_code | escape }}{%- endif -%}{%- endfor -%}", "money_format":{{ shop.money_format | json }}}{{ newline }}
+</script>
+{% comment %} meta_information_end {% endcomment %}
+
+<script
+  type="text/javascript"
+  src="https://assets-cdn.starapps.studio/apps/vsk/x-oti-x-designs/script-28739-1645040208.js?shop={{shop.permanent_domain}}"
+  async
+></script>
+
+<!-- VSK_PRE_APP_HIDE_CODE -->
+{% if product.id != '' and product.id > 0 and content_for_header contains 'swatch-king-installed' %}
+  <style type="text/css" data-vsk-hide="data-vsk-hide">
+    html:not(.nojs):not(.no-js) .swatch_options,
+    html:not(.nojs):not(.no-js) form[action='/cart/add'] .product__variants,
+    html:not(.nojs):not(.no-js) form[action='/cart/add'] .form__row div.selector-wrapper,
+    html:not(.nojs):not(.no-js) form .swatch.clearfix {
+      opacity: 0;
+      max-height: 0;
+    }
+  </style>
+  <script type="text/javascript">
+    'use strict'
+    // JS code added by StarApps Studio
+    // It hides the default option selector so it's not visible in the frontend
+    // Javascript to prevent options selector to be visible on JS disabled browsers
+    ;(function () {
+      var swatchTarget = '.swatches div[option-target] .swatch-single'
+      var intervalTime = 0
+      var intervalID = setInterval(function () {
+        // Update interval time
+        intervalTime += 250
+
+        // Check for app
+        var variantSwatchKingApp = document.querySelector(swatchTarget)
+
+        // If we either find our app or page is loaded + 5 seconds
+        if (variantSwatchKingApp || (intervalTime >= 5000 && document.readyState == 'complete')) {
+          // Lookup style tag
+          var styleTagElement = document.querySelector('style[data-vsk-hide]')
+
+          // If element found; Remove it.
+          if (styleTagElement) {
+            if (styleTagElement.remove) {
+              styleTagElement.remove()
+            } else {
+              styleTagElement.innerHTML = ''
+            }
+          }
+          // End
+
+          // Remove interval
+          clearInterval(intervalID)
+        }
+        // End
+      }, 250)
+    })()
+    // END
+  </script>
+{% endif %}
+<!-- VSK_PRE_APP_HIDE_CODE_END -->
+
+<!-- starapps_core_end -->

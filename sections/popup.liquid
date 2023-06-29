@@ -1,0 +1,189 @@
+{%- assign overlay_opacity = section.settings.overlay_opacity | divided_by: 100.00 -%}
+
+{%- if section.settings.enable_popup -%}
+  <section
+    class="popup"
+    data-section-id="{{ section.id }}"
+    data-section-type="popup"
+    data-timeout="10000"
+    style="
+      --image-position: {{ section.settings.image_position }};
+      --text-max-width: 42em;
+      --image-color-overlay: {{ section.settings.color_overlay }};
+      --image-overlay-opacity: {{ overlay_opacity }};
+      --color-text: {{ section.settings.color_text }};
+    "
+  >
+    <div class="popup__overlay" data-overlay></div>
+    <div class="popup__bar">
+      {%- if section.settings.image != blank -%}
+        {%
+          render 'image' with
+          image: section.settings.image,
+          id: 'popup',
+          wrapper_class: 'popup__image',
+          disable_style: true
+        %}
+      {%- endif -%}
+
+      <div class="popup__bar-overlay"></div>
+
+      <button
+        type="button"
+        data-close
+        class="popup__close"
+        aria-label="{{ 'general.accessibility.close_modal' | t }}"
+      >
+        {% render 'icon-button' with icon: 'close-stroke' %}
+      </button>
+
+      <div class="popup__content">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <div class="popup__heading-block">
+                {%- if block.settings.title != blank -%}
+                  <h3 class="popup__heading ff-heading fs-heading-2-large">{{ block.settings.title }}</h3>
+                {%- endif -%}
+
+                {%- if block.settings.subheading != blank -%}
+                  <div class="popup__subheading ff-body fs-body-base">{{ block.settings.subheading }}</div>
+                {%- endif -%}
+              </div>
+            {%- when 'newsletter_signup' -%}
+              {%- liquid
+                assign brightness_button = section.settings.color_background_button | color_brightness
+                if brightness_button > 60
+                  assign color_background_button_hover = section.settings.color_background_button | color_darken: 20
+                else
+                  assign color_background_button_hover = section.settings.color_background_button | color_lighten: 20
+                endif
+              -%}
+              <div
+                class="popup__form"
+                style="
+                  --color-text-button: {{ section.settings.color_text_button }};
+                  --color-background-input: {{ section.settings.color_background_button | color_modify: 'alpha', 0.7 }};
+                  --color-background-input-hover: {{ section.settings.color_background_button | color_modify: 'alpha', 0.75 }};
+                  --color-background-button: {{ section.settings.color_background_button }};
+                  --color-background-button-hover : {{ color_background_button_hover }};
+                  --color-text-input: {{ section.settings.color_text_button | color_darken: 10 }};
+                "
+              >
+                {% render 'newsletter-form' with id: 'popup' %}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.popup.name",
+  "settings": [
+    {
+      "id": "enable_popup",
+      "type": "checkbox",
+      "label": "t:sections.popup.settings.enable_popup.label",
+      "info": "t:sections.popup.settings.enable_popup.info",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.popup.settings.background__header.content"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "t:sections.popup.settings.image.label"
+    },
+    {
+      "id": "image_position",
+      "type": "select",
+      "label": "t:sections.popup.settings.image_position.label",
+      "options": [
+        { "label": "t:sections.popup.settings.image_position.options__1", "value": "top" },
+        { "label": "t:sections.popup.settings.image_position.options__2", "value": "center" },
+        { "label": "t:sections.popup.settings.image_position.options__3", "value": "bottom" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.popup.settings.color__header.content"
+    },
+    {
+      "id": "color_text",
+      "type": "color",
+      "label": "t:sections.popup.settings.color_text.label",
+      "default": "#ffffff"
+    },
+    {
+      "id": "color_text_button",
+      "type": "color",
+      "label": "t:sections.popup.settings.color_text_button.label",
+      "default": "#1C2232"
+    },
+    {
+      "id": "color_background_button",
+      "type": "color",
+      "label": "t:sections.popup.settings.color_background_button.label",
+      "default": "#ffffff"
+    },
+    {
+      "id": "color_overlay",
+      "type": "color",
+      "label": "t:sections.popup.settings.color_overlay.label",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:sections.popup.settings.overlay_opacity.label",
+      "unit": "%",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.popup.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "t:sections.popup.blocks.heading.settings.title.label",
+          "default": "Subscribe"
+        },
+        {
+          "id": "subheading",
+          "type": "richtext",
+          "label": "t:sections.popup.blocks.heading.settings.subheading.label",
+          "default": "<p>We only send emails once or twice a month and only about good things.</p>"
+        }
+      ]
+    },
+    {
+      "type": "newsletter_signup",
+      "name": "t:sections.popup.blocks.newsletter_signup.name",
+      "limit": 1
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "heading"
+      },
+      {
+        "type": "newsletter_signup"
+      }
+    ]
+  }
+}
+{% endschema %}

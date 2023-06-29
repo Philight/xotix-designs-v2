@@ -1,0 +1,101 @@
+{%- liquid
+  assign show_collection_image = section.settings.show_collection_image
+  assign collection_image_aspect_ratio = section.settings.collection_image_aspect_ratio
+  assign disable_image_style = true
+
+  if section.settings.show_collection_description
+    assign collection_description = collection.description
+  endif
+
+  if collection_image_aspect_ratio == 'natural'
+    assign disable_image_style = false
+  endif
+-%}
+
+<div
+  class="
+    collection
+    collection--header
+    collection--image-aspect-{{ collection_image_aspect_ratio }}
+    {% if show_collection_image and collection.image -%}collection--has-image{%- endif %}
+  "
+  style="--text-max-width: {{ section.settings.text_max_width }}rem;"
+>
+  <div class="collection__inner">
+    <header class="collection__header">
+      <div class="collection__header-text">
+        {%
+          render 'section-header',
+          heading: collection.title,
+          subheading: collection_description,
+          classes: 'section-header--large section-header--center',
+        %}
+      </div>
+
+      {% if show_collection_image and collection.image %}
+        <div class="collection__header-image-wrapper">
+          {%
+            render 'image' with
+            image: collection.image,
+            wrapper_class: 'lazyload collection__header-image',
+            disable_style: disable_image_style
+          %}
+        </div>
+      {% endif %}
+    </header>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_collection_banner.name",
+  "class": "collection-section",
+  "settings": [
+    {
+      "id": "show_collection_image",
+      "type": "checkbox",
+      "label": "t:sections.main_collection_banner.settings.show_collection_image.label",
+      "default": false
+    },
+    {
+      "id": "collection_image_aspect_ratio",
+      "type": "select",
+      "label": "t:sections.main_collection_banner.settings.collection_image_aspect_ratio.label",
+      "options": [
+        {
+          "label": "t:sections.main_collection_banner.settings.collection_image_aspect_ratio.options__1",
+          "value": "natural"
+        },
+        {
+          "label": "t:sections.main_collection_banner.settings.collection_image_aspect_ratio.options__2",
+          "value": "square"
+        },
+        {
+          "label": "t:sections.main_collection_banner.settings.collection_image_aspect_ratio.options__3",
+          "value": "landscape"
+        },
+        {
+          "label": "t:sections.main_collection_banner.settings.collection_image_aspect_ratio.options__4",
+          "value": "portrait"
+        }
+      ],
+      "default": "natural"
+    },
+    {
+      "id": "show_collection_description",
+      "type": "checkbox",
+      "label": "t:sections.main_collection_banner.settings.show_collection_description.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.main_collection_banner.settings.text_max_width.label",
+      "min": 24,
+      "max": 48,
+      "step": 1,
+      "default": 42
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,57 @@
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign compare_at_price = current_variant.compare_at_price
+  assign price = current_variant.price
+  assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+  assign first_3d_model = product.media | where: 'media_type', 'model' | first
+-%}
+
+<div class="quick-purchase-bar" data-quick-purchase-bar>
+  <button
+    type="button"
+    class="quick-purchase-bar__hide btn"
+    aria-label="{{ 'general.accessibility.mobile_filters' | t }}"
+    data-mobile-hide
+  >
+    {% render 'icon' with icon: 'triangle' %}
+  </button>
+
+  <div class="quick-purchase-bar__inner">
+    <div class="quick-purchase-bar__product">
+      {%- if featured_media != blank -%}
+        {%-
+          render 'image' with
+          image: featured_media,
+          wrapper_class: 'quick-purchase-bar__product-image',
+          disable_style: true
+        -%}
+      {%- endif -%}
+
+      <h4
+        class="quick-purchase-bar__product-title ff-heading fs-heading-4-base fs-heading-3-base-ns"
+        data-bar-product-title
+      >
+        {{ product.title }}
+      </h4>
+
+      <div class="quick-purchase-bar__product-price fs-body-x-small fs-heading-4-base-l">
+        <span data-price>{{ current_variant.price | money }}</span>
+        <s data-compare-price>
+          {%- if current_variant.compare_at_price > current_variant.price -%}
+            {{ current_variant.compare_at_price | money }}
+          {%- endif -%}
+        </s>
+        <span class="fs-body-x-small fs-body-base-l" data-bar-quantity></span>
+      </div>
+    </div>
+    <div class="quick-purchase-bar__purchase">
+      {%- if show_share_buttons -%}
+        {%- render 'share-icons' with title: product.title, url: product.url, image: product.featured_media -%}
+      {%- endif -%}
+
+      <a class="quick-purchase-bar__purchase-button btn btn--small btn--primary" data-quick-purchase-button>
+        {{ 'products.product.buy_now' | t }}
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+{
+  "name": "shopify-vite-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "concurrently --raw --kill-others --passthrough-arguments \"npm run dev:shopify {@}\" \"npm run dev:vite\"",
+    "dev:shopify": "shopify theme dev",
+    "dev:vite": "vite",
+    "deploy": "npm run build && npm run deploy:shopify",
+    "deploy:shopify": "shopify theme push --environment env1",
+    "download": "shopify theme pull --environment env1",
+    "lint": "eslint . --debug",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier -c . --cache --plugin-search-dir=. --verbose",
+    "prettier:fix": "prettier -w . --cache --plugin-search-dir=.",
+    "format": "npm run prettier:fix && npm run lint:fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.1.0",
+    "@vitejs/plugin-react": "^4.0.1",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "postcss-import": "^15.1.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9",
+    "vite-plugin-shopify": "^2.1.1"
+  },
+  "dependencies": {
+    "framer-motion": "^10.12.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scroll-parallax": "^3.4.2"
+  }
+}

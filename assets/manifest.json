@@ -1,0 +1,315 @@
+{
+  "frontend/assets/fonts/inria_serif/InriaSerif-Bold.eot": {
+    "file": "InriaSerif-Bold-ee49ebbb.eot",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Bold.eot"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Bold.ttf": {
+    "file": "InriaSerif-Bold-f8d2ff5c.ttf",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Bold.ttf"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Bold.woff": {
+    "file": "InriaSerif-Bold-1307602a.woff",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Bold.woff"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Bold.woff2": {
+    "file": "InriaSerif-Bold-d79fdde0.woff2",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Bold.woff2"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-BoldItalic.eot": {
+    "file": "InriaSerif-BoldItalic-dbb02c6f.eot",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-BoldItalic.eot"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-BoldItalic.ttf": {
+    "file": "InriaSerif-BoldItalic-3d7dc480.ttf",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-BoldItalic.ttf"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-BoldItalic.woff": {
+    "file": "InriaSerif-BoldItalic-29dcedaf.woff",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-BoldItalic.woff"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-BoldItalic.woff2": {
+    "file": "InriaSerif-BoldItalic-f54b5971.woff2",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-BoldItalic.woff2"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Italic.eot": {
+    "file": "InriaSerif-Italic-28308500.eot",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Italic.eot"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Italic.ttf": {
+    "file": "InriaSerif-Italic-764ba8e6.ttf",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Italic.ttf"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Italic.woff": {
+    "file": "InriaSerif-Italic-e25b7608.woff",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Italic.woff"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Italic.woff2": {
+    "file": "InriaSerif-Italic-21cea63b.woff2",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Italic.woff2"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Light.eot": {
+    "file": "InriaSerif-Light-0998bb02.eot",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Light.eot"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Light.ttf": {
+    "file": "InriaSerif-Light-87b5ad25.ttf",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Light.ttf"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Light.woff": {
+    "file": "InriaSerif-Light-4d8e903e.woff",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Light.woff"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Light.woff2": {
+    "file": "InriaSerif-Light-67bd061d.woff2",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Light.woff2"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-LightItalic.eot": {
+    "file": "InriaSerif-LightItalic-dd313ce0.eot",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-LightItalic.eot"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-LightItalic.ttf": {
+    "file": "InriaSerif-LightItalic-4b12f5b7.ttf",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-LightItalic.ttf"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-LightItalic.woff": {
+    "file": "InriaSerif-LightItalic-12edd8aa.woff",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-LightItalic.woff"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-LightItalic.woff2": {
+    "file": "InriaSerif-LightItalic-83495274.woff2",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-LightItalic.woff2"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Regular.eot": {
+    "file": "InriaSerif-Regular-4d866625.eot",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Regular.eot"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Regular.ttf": {
+    "file": "InriaSerif-Regular-f4dc8ca5.ttf",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Regular.ttf"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Regular.woff": {
+    "file": "InriaSerif-Regular-5375cfc0.woff",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Regular.woff"
+  },
+  "frontend/assets/fonts/inria_serif/InriaSerif-Regular.woff2": {
+    "file": "InriaSerif-Regular-1ca51c87.woff2",
+    "src": "frontend/assets/fonts/inria_serif/InriaSerif-Regular.woff2"
+  },
+  "frontend/assets/fonts/kelly_slab/KellySlab-Regular.eot": {
+    "file": "KellySlab-Regular-61554484.eot",
+    "src": "frontend/assets/fonts/kelly_slab/KellySlab-Regular.eot"
+  },
+  "frontend/assets/fonts/kelly_slab/KellySlab-Regular.ttf": {
+    "file": "KellySlab-Regular-0943d886.ttf",
+    "src": "frontend/assets/fonts/kelly_slab/KellySlab-Regular.ttf"
+  },
+  "frontend/assets/fonts/kelly_slab/KellySlab-Regular.woff": {
+    "file": "KellySlab-Regular-56a7e14c.woff",
+    "src": "frontend/assets/fonts/kelly_slab/KellySlab-Regular.woff"
+  },
+  "frontend/assets/fonts/kelly_slab/KellySlab-Regular.woff2": {
+    "file": "KellySlab-Regular-c4e6d493.woff2",
+    "src": "frontend/assets/fonts/kelly_slab/KellySlab-Regular.woff2"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Black.eot": {
+    "file": "Lexend-Black-ae9282a5.eot",
+    "src": "frontend/assets/fonts/lexend/Lexend-Black.eot"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Black.ttf": {
+    "file": "Lexend-Black-5b09c403.ttf",
+    "src": "frontend/assets/fonts/lexend/Lexend-Black.ttf"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Black.woff": {
+    "file": "Lexend-Black-d623a491.woff",
+    "src": "frontend/assets/fonts/lexend/Lexend-Black.woff"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Black.woff2": {
+    "file": "Lexend-Black-9c3ea43e.woff2",
+    "src": "frontend/assets/fonts/lexend/Lexend-Black.woff2"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Bold.eot": {
+    "file": "Lexend-Bold-46b27da2.eot",
+    "src": "frontend/assets/fonts/lexend/Lexend-Bold.eot"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Bold.ttf": {
+    "file": "Lexend-Bold-84026f2a.ttf",
+    "src": "frontend/assets/fonts/lexend/Lexend-Bold.ttf"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Bold.woff": {
+    "file": "Lexend-Bold-55c080ab.woff",
+    "src": "frontend/assets/fonts/lexend/Lexend-Bold.woff"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Bold.woff2": {
+    "file": "Lexend-Bold-629a3569.woff2",
+    "src": "frontend/assets/fonts/lexend/Lexend-Bold.woff2"
+  },
+  "frontend/assets/fonts/lexend/Lexend-ExtraBold.eot": {
+    "file": "Lexend-ExtraBold-64727f9b.eot",
+    "src": "frontend/assets/fonts/lexend/Lexend-ExtraBold.eot"
+  },
+  "frontend/assets/fonts/lexend/Lexend-ExtraBold.ttf": {
+    "file": "Lexend-ExtraBold-fdb7adeb.ttf",
+    "src": "frontend/assets/fonts/lexend/Lexend-ExtraBold.ttf"
+  },
+  "frontend/assets/fonts/lexend/Lexend-ExtraBold.woff": {
+    "file": "Lexend-ExtraBold-552c1257.woff",
+    "src": "frontend/assets/fonts/lexend/Lexend-ExtraBold.woff"
+  },
+  "frontend/assets/fonts/lexend/Lexend-ExtraBold.woff2": {
+    "file": "Lexend-ExtraBold-57e5161b.woff2",
+    "src": "frontend/assets/fonts/lexend/Lexend-ExtraBold.woff2"
+  },
+  "frontend/assets/fonts/lexend/Lexend-ExtraLight.eot": {
+    "file": "Lexend-ExtraLight-b27905ba.eot",
+    "src": "frontend/assets/fonts/lexend/Lexend-ExtraLight.eot"
+  },
+  "frontend/assets/fonts/lexend/Lexend-ExtraLight.ttf": {
+    "file": "Lexend-ExtraLight-21d2e014.ttf",
+    "src": "frontend/assets/fonts/lexend/Lexend-ExtraLight.ttf"
+  },
+  "frontend/assets/fonts/lexend/Lexend-ExtraLight.woff": {
+    "file": "Lexend-ExtraLight-8928ee12.woff",
+    "src": "frontend/assets/fonts/lexend/Lexend-ExtraLight.woff"
+  },
+  "frontend/assets/fonts/lexend/Lexend-ExtraLight.woff2": {
+    "file": "Lexend-ExtraLight-7e843e9a.woff2",
+    "src": "frontend/assets/fonts/lexend/Lexend-ExtraLight.woff2"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Light.eot": {
+    "file": "Lexend-Light-cdc59846.eot",
+    "src": "frontend/assets/fonts/lexend/Lexend-Light.eot"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Light.ttf": {
+    "file": "Lexend-Light-d5564027.ttf",
+    "src": "frontend/assets/fonts/lexend/Lexend-Light.ttf"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Light.woff": {
+    "file": "Lexend-Light-724a6df4.woff",
+    "src": "frontend/assets/fonts/lexend/Lexend-Light.woff"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Light.woff2": {
+    "file": "Lexend-Light-68c3d27f.woff2",
+    "src": "frontend/assets/fonts/lexend/Lexend-Light.woff2"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Medium.eot": {
+    "file": "Lexend-Medium-22e5286c.eot",
+    "src": "frontend/assets/fonts/lexend/Lexend-Medium.eot"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Medium.ttf": {
+    "file": "Lexend-Medium-454e7bdd.ttf",
+    "src": "frontend/assets/fonts/lexend/Lexend-Medium.ttf"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Medium.woff": {
+    "file": "Lexend-Medium-2369788f.woff",
+    "src": "frontend/assets/fonts/lexend/Lexend-Medium.woff"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Medium.woff2": {
+    "file": "Lexend-Medium-585e350c.woff2",
+    "src": "frontend/assets/fonts/lexend/Lexend-Medium.woff2"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Regular.eot": {
+    "file": "Lexend-Regular-d04859d2.eot",
+    "src": "frontend/assets/fonts/lexend/Lexend-Regular.eot"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Regular.ttf": {
+    "file": "Lexend-Regular-8341b587.ttf",
+    "src": "frontend/assets/fonts/lexend/Lexend-Regular.ttf"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Regular.woff": {
+    "file": "Lexend-Regular-fc6d969c.woff",
+    "src": "frontend/assets/fonts/lexend/Lexend-Regular.woff"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Regular.woff2": {
+    "file": "Lexend-Regular-5796bdd2.woff2",
+    "src": "frontend/assets/fonts/lexend/Lexend-Regular.woff2"
+  },
+  "frontend/assets/fonts/lexend/Lexend-SemiBold.eot": {
+    "file": "Lexend-SemiBold-6bf01de1.eot",
+    "src": "frontend/assets/fonts/lexend/Lexend-SemiBold.eot"
+  },
+  "frontend/assets/fonts/lexend/Lexend-SemiBold.ttf": {
+    "file": "Lexend-SemiBold-25ae7eda.ttf",
+    "src": "frontend/assets/fonts/lexend/Lexend-SemiBold.ttf"
+  },
+  "frontend/assets/fonts/lexend/Lexend-SemiBold.woff": {
+    "file": "Lexend-SemiBold-6f75bd4a.woff",
+    "src": "frontend/assets/fonts/lexend/Lexend-SemiBold.woff"
+  },
+  "frontend/assets/fonts/lexend/Lexend-SemiBold.woff2": {
+    "file": "Lexend-SemiBold-75a3d1d7.woff2",
+    "src": "frontend/assets/fonts/lexend/Lexend-SemiBold.woff2"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Thin.eot": {
+    "file": "Lexend-Thin-7f2ff721.eot",
+    "src": "frontend/assets/fonts/lexend/Lexend-Thin.eot"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Thin.ttf": {
+    "file": "Lexend-Thin-01dd2584.ttf",
+    "src": "frontend/assets/fonts/lexend/Lexend-Thin.ttf"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Thin.woff": {
+    "file": "Lexend-Thin-d850dec5.woff",
+    "src": "frontend/assets/fonts/lexend/Lexend-Thin.woff"
+  },
+  "frontend/assets/fonts/lexend/Lexend-Thin.woff2": {
+    "file": "Lexend-Thin-feb96f46.woff2",
+    "src": "frontend/assets/fonts/lexend/Lexend-Thin.woff2"
+  },
+  "frontend/assets/icons/arrow-right-1.svg": {
+    "file": "arrow-right-1-d0a83236.svg",
+    "src": "frontend/assets/icons/arrow-right-1.svg"
+  },
+  "frontend/assets/icons/arrow-right-2.svg": {
+    "file": "arrow-right-2-c45be4e1.svg",
+    "src": "frontend/assets/icons/arrow-right-2.svg"
+  },
+  "frontend/assets/icons/facebook.svg": {
+    "file": "facebook-71a32a09.svg",
+    "src": "frontend/assets/icons/facebook.svg"
+  },
+  "frontend/assets/icons/instagram-outline.svg": {
+    "file": "instagram-outline-8edfb355.svg",
+    "src": "frontend/assets/icons/instagram-outline.svg"
+  },
+  "frontend/assets/icons/pinterest.svg": {
+    "file": "pinterest-4f0a1b55.svg",
+    "src": "frontend/assets/icons/pinterest.svg"
+  },
+  "frontend/assets/icons/tiktok.svg": {
+    "file": "tiktok-3c3199b6.svg",
+    "src": "frontend/assets/icons/tiktok.svg"
+  },
+  "frontend/assets/icons/wolt.svg": {
+    "file": "wolt-70002b4b.svg",
+    "src": "frontend/assets/icons/wolt.svg"
+  },
+  "frontend/assets/icons/xotixdesigns.svg": {
+    "file": "xotixdesigns-cf4fcebe.svg",
+    "src": "frontend/assets/icons/xotixdesigns.svg"
+  },
+  "frontend/entrypoints/index.jsx": {
+    "assets": [
+      "xotixdesigns-cf4fcebe.svg",
+      "arrow-right-1-d0a83236.svg",
+      "arrow-right-2-c45be4e1.svg",
+      "facebook-71a32a09.svg",
+      "instagram-outline-8edfb355.svg",
+      "tiktok-3c3199b6.svg",
+      "pinterest-4f0a1b55.svg",
+      "wolt-70002b4b.svg"
+    ],
+    "file": "index-192ab370.js",
+    "isEntry": true,
+    "src": "frontend/entrypoints/index.jsx"
+  },
+  "frontend/entrypoints/react.css": {
+    "file": "react-1a683d25.css",
+    "isEntry": true,
+    "src": "frontend/entrypoints/react.css"
+  },
+  "frontend/entrypoints/theme.css": {
+    "file": "theme-4f3b28ae.css",
+    "isEntry": true,
+    "src": "frontend/entrypoints/theme.css"
+  }
+}

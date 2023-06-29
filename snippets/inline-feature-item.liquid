@@ -1,0 +1,48 @@
+<div class="inline-features__item">
+  <div class="inline-features__item-inner">
+    {%- if show_image -%}
+      {%- if image -%}
+        {%
+          render 'image' with
+          image: image,
+          wrapper_class: 'inline-features__item-image',
+          disable_style: true,
+        %}
+      {%- else -%}
+        <div class="inline-features__item-image placeholder-image">
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+    {%- if heading != blank or subheading != blank -%}
+      <div class="inline-features__item-content">
+        {% unless heading == blank %}
+          <h4
+            class="inline-features__item-heading ff-heading fs-heading-4-base fs-heading-2-base-ns {{ column_heading_type }}"
+            style="--text-max-width: {{ text_max_width }}rem;"
+          >
+            {{ heading }}
+          </h4>
+        {% endunless %}
+
+        {% unless subheading == blank %}
+          <div
+            class="inline-features__item-text fs-body-small fs-body-base-l"
+            style="--text-max-width: {{ text_max_width }}rem;"
+          >
+            {{ subheading }}
+          </div>
+        {% endunless %}
+
+        {% unless subheading_html == blank %}
+          <div
+            class="inline-features__item-text fs-body-small fs-body-base-l"
+            style="--text-max-width: {{ text_max_width }}rem;"
+          >
+            {{ subheading_html }}
+          </div>
+        {% endunless %}
+      </div>
+    {%- endif -%}
+  </div>
+</div>

@@ -1,0 +1,186 @@
+@font-face {
+  font-family: 'Kelly Slab';
+  src: url('@fonts/kelly_slab/KellySlab-Regular.eot');
+  src: url('@fonts/kelly_slab/KellySlab-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/kelly_slab/KellySlab-Regular.woff2') format('woff2'),
+    url('@fonts/kelly_slab/KellySlab-Regular.woff') format('woff'),
+    url('@fonts/kelly_slab/KellySlab-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('@fonts/inria_serif/InriaSerif-LightItalic.eot');
+  src: url('@fonts/inria_serif/InriaSerif-LightItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/inria_serif/InriaSerif-LightItalic.woff2') format('woff2'),
+    url('@fonts/inria_serif/InriaSerif-LightItalic.woff') format('woff'),
+    url('@fonts/inria_serif/InriaSerif-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('@fonts/inria_serif/InriaSerif-Bold.eot');
+  src: url('@fonts/inria_serif/InriaSerif-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/inria_serif/InriaSerif-Bold.woff2') format('woff2'),
+    url('@fonts/inria_serif/InriaSerif-Bold.woff') format('woff'),
+    url('@fonts/inria_serif/InriaSerif-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('@fonts/inria_serif/InriaSerif-BoldItalic.eot');
+  src: url('@fonts/inria_serif/InriaSerif-BoldItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/inria_serif/InriaSerif-BoldItalic.woff2') format('woff2'),
+    url('@fonts/inria_serif/InriaSerif-BoldItalic.woff') format('woff'),
+    url('@fonts/inria_serif/InriaSerif-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('@fonts/inria_serif/InriaSerif-Italic.eot');
+  src: url('@fonts/inria_serif/InriaSerif-Italic.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/inria_serif/InriaSerif-Italic.woff2') format('woff2'),
+    url('@fonts/inria_serif/InriaSerif-Italic.woff') format('woff'),
+    url('@fonts/inria_serif/InriaSerif-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('@fonts/inria_serif/InriaSerif-Light.eot');
+  src: url('@fonts/inria_serif/InriaSerif-Light.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/inria_serif/InriaSerif-Light.woff2') format('woff2'),
+    url('@fonts/inria_serif/InriaSerif-Light.woff') format('woff'),
+    url('@fonts/inria_serif/InriaSerif-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('@fonts/inria_serif/InriaSerif-Regular.eot');
+  src: url('@fonts/inria_serif/InriaSerif-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/inria_serif/InriaSerif-Regular.woff2') format('woff2'),
+    url('@fonts/inria_serif/InriaSerif-Regular.woff') format('woff'),
+    url('@fonts/inria_serif/InriaSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('@fonts/lexend/Lexend-Regular.eot');
+  src: url('@fonts/lexend/Lexend-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/lexend/Lexend-Regular.woff2') format('woff2'),
+    url('@fonts/lexend/Lexend-Regular.woff') format('woff'),
+    url('@fonts/lexend/Lexend-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('@fonts/lexend/Lexend-Black.eot');
+  src: url('@fonts/lexend/Lexend-Black.eot?#iefix') format('embedded-opentype'),
+    url('@fonts/lexend/Lexend-Black.woff2') format('woff2'),
+    url('@fonts/lexend/Lexend-Black.woff') format('woff'),
+    url('@fonts/lexend/Lexend-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('@fonts/lexend/Lexend-Thin.eot');
+  src: url('@fonts/lexend/Lexend-Thin.eot?#iefix') format('embedded-opentype'),
+    url('@fonts/lexend/Lexend-Thin.woff2') format('woff2'),
+    url('@fonts/lexend/Lexend-Thin.woff') format('woff'),
+    url('@fonts/lexend/Lexend-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('@fonts/lexend/Lexend-SemiBold.eot');
+  src: url('@fonts/lexend/Lexend-SemiBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/lexend/Lexend-SemiBold.woff2') format('woff2'),
+    url('@fonts/lexend/Lexend-SemiBold.woff') format('woff'),
+    url('@fonts/lexend/Lexend-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('@fonts/lexend/Lexend-ExtraBold.eot');
+  src: url('@fonts/lexend/Lexend-ExtraBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/lexend/Lexend-ExtraBold.woff2') format('woff2'),
+    url('@fonts/lexend/Lexend-ExtraBold.woff') format('woff'),
+    url('@fonts/lexend/Lexend-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('@fonts/lexend/Lexend-Medium.eot');
+  src: url('@fonts/lexend/Lexend-Medium.eot?#iefix') format('embedded-opentype'),
+    url('@fonts/lexend/Lexend-Medium.woff2') format('woff2'),
+    url('@fonts/lexend/Lexend-Medium.woff') format('woff'),
+    url('@fonts/lexend/Lexend-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('@fonts/lexend/Lexend-Light.eot');
+  src: url('@fonts/lexend/Lexend-Light.eot?#iefix') format('embedded-opentype'),
+    url('@fonts/lexend/Lexend-Light.woff2') format('woff2'),
+    url('@fonts/lexend/Lexend-Light.woff') format('woff'),
+    url('@fonts/lexend/Lexend-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('@fonts/lexend/Lexend-ExtraLight.eot');
+  src: url('@fonts/lexend/Lexend-ExtraLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('@fonts/lexend/Lexend-ExtraLight.woff2') format('woff2'),
+    url('@fonts/lexend/Lexend-ExtraLight.woff') format('woff'),
+    url('@fonts/lexend/Lexend-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('@fonts/lexend/Lexend-Bold.eot');
+  src: url('@fonts/lexend/Lexend-Bold.eot?#iefix') format('embedded-opentype'),
+    url('@fonts/lexend/Lexend-Bold.woff2') format('woff2'),
+    url('@fonts/lexend/Lexend-Bold.woff') format('woff'),
+    url('@fonts/lexend/Lexend-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

@@ -1,0 +1,26 @@
+{% assign globo_search = true %}
+{% assign globo_search_overlay = false %}
+{%- assign home_filter = false -%}
+{%- if request.page_type != 'index' -%}{%- assign home_filter = false -%}{%- endif -%}
+{% if globo_search %}
+  <script id="gspfSearchResult" type="template/html">
+    {% include 'globo.filter.search' %}
+  </script>
+{% endif %}
+{% if request.page_type == 'collection' or request.page_type == 'search' or home_filter %}
+  <script id="gspfProduct" type="template/html">
+    {% include 'globo.filter.product' %}
+  </script>
+  <script id="gspfFilterTree" type="template/html">
+    {% include 'globo.filter.tree' %}
+  </script>
+  <script id="gspfFilterSort" type="template/html">
+    {% include 'globo.filter.sort' %}
+  </script>
+  <script id="gspfNoResults" type="template/html">
+    {% include 'globo.filter.no_results' %}
+  </script>
+  <script id="gspfPagination" type="template/html">
+    {% include 'globo.filter.pagination' %}
+  </script>
+{% endif %}

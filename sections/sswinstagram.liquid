@@ -1,0 +1,65 @@
+{% comment %}
+  /**************************************************
+  * DO NOT MODIFY THIS FILE!!!                      *
+  * IT WILL BE OVERWRITTEN BY UPDATES FROM GROWAVE! *
+  **************************************************/
+{% endcomment %}
+<div class="ssw-instagram-feed-wrap page-width container">
+  <div class="section clearfix">
+    <div class="sixteen columns">
+      <div class="clearfix placeholder-instagram">
+        <div
+          class="ssw-html-widget ssw-instagram-widget"
+          data-module="service"
+          data-name="instagramPhotos"
+          {{ section.settings.option_galleries_id }}
+        >
+          <div class="ssw-page-loading">
+            <span class="ssw-spin ssw-loader"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Shoppable Instagram",
+  "class": "ssw-instagram-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "option_galleries_id",
+      "options": [
+        {
+          "group": "(#1) <span class=\"social-heading\">XotiX Social<...",
+          "value": "data-gallery_id=\"1\" data-widget=\"0\"",
+          "label": "grid"
+        },
+        {
+          "group": "(#1) <span class=\"social-heading\">XotiX Social<...",
+          "value": "data-gallery_id=\"1\" data-widget=\"1\"",
+          "label": "listing"
+        },
+        {
+          "group": "(#1) <span class=\"social-heading\">XotiX Social<...",
+          "value": "data-gallery_id=\"1\" data-widget=\"2\"",
+          "label": "slide"
+        },
+        {
+          "group": "(#1) <span class=\"social-heading\">XotiX Social<...",
+          "value": "data-gallery_id=\"1\" data-widget=\"3\"",
+          "label": "masonry"
+        }
+      ],
+      "label": "Choose gallery"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shoppable Instagram",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

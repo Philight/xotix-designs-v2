@@ -1,0 +1,134 @@
+{%- liquid
+  assign section_spacing = 28
+  assign section_spacing_large = 40
+  assign gutter_spacing = section.settings.gutter_spacing
+
+  if gutter_spacing >= section_spacing
+    assign section_spacing = gutter_spacing
+  endif
+
+  if gutter_spacing >= section_spacing_large
+    assign section_spacing_large = gutter_spacing
+  endif
+-%}
+
+<div
+  class="
+    logo-list
+    logo-list--columns-{{ section.settings.columns }}
+    section
+    section--extra-small
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="logo-list"
+  style="
+    --gutter-spacing: {{ gutter_spacing }}px;
+    --section-spacing: {{ section_spacing }}px;
+    --section-spacing-large: {{ section_spacing_large }}px;
+  "
+>
+  <div class="section__inner">
+    <div class="logo-list__content">
+      {%- unless section.settings.title == blank -%}
+        <h2 class="logo-list__heading ff-heading">
+          {{ section.settings.title }}
+        </h2>
+      {%- endunless -%}
+
+      <div class="logo-list__list">
+        {%- for block in section.blocks -%}
+          {%
+            render 'logo-list-item' with
+            image: block.settings.image,
+            link: block.settings.link,
+          %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.logo_list.name",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--extra-small shopify-section--text-first",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.logo_list.settings.columns.label",
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "gutter_spacing",
+      "label": "t:sections.logo_list.settings.gutter_spacing.label",
+      "unit": "px",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "t:sections.logo_list.settings.title.label",
+      "default": "As featured in"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.logo_list.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "max_blocks": 36,
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "t:sections.logo_list.blocks.logo.name",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "t:sections.logo_list.blocks.logo.settings.image.label"
+        },
+        {
+          "id": "link",
+          "type": "url",
+          "label": "t:sections.logo_list.blocks.logo.settings.link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.logo_list.presets.name",
+      "blocks": [
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

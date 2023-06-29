@@ -1,0 +1,494 @@
+{
+  "general": {
+    "404": {
+      "title": "404 यह पेज नहीं मिला",
+      "subtext": "जिस पेज का अनुरोध किया है वह मौजूद नहीं है।",
+      "link": "शॉपिंग जारी रखें"
+    },
+    "accessibility": {
+      "skip_to_content": "कंटेंट पर जाएँ",
+      "close_modal": "बंद करें",
+      "unit_price_separator": "प्रति",
+      "error": "त्रुटि",
+      "pause": "रोकें",
+      "play": "प्ले करें",
+      "submit": "जमा करें",
+      "play_video": "वीडियो प्ले करें",
+      "carousel_next": "अगली कैरॉज़ल स्लाइड पर जाएँ",
+      "carousel_previous": "पिछली कैरॉज़ल स्लाइड पर जाएँ",
+      "carousel_select": "कैरॉज़ल को स्लाइड {{ number }} पर ले जाएँ",
+      "quantity": "उत्पाद की संख्या",
+      "quantity_add": "उत्पादों की संख्या जोड़ें",
+      "quantity_subtract": "उत्पादों की संख्या घटाएँ",
+      "remove_product": "हटाएँ",
+      "accordion_groups": "एकॉर्डियन कंट्रोल ग्रुप बटन",
+      "mobile_filters": "संग्रह फिल्टर दिखाएँ या छिपाएँ",
+      "image_thumbail": "इस इमेज को इमेज {{ number }} से बदलें",
+      "open_search": "सर्च मॉडल खोलें",
+      "open_cart": "कार्ट मॉडल खोलें",
+      "open_menu": "मेन्यू मॉडल खोलें",
+      "go_account": "खाते के पृष्ठ पर जाएँ",
+      "visit_link": "{{ link }} पर जाएँ",
+      "rss": "RDF साइट की संक्षिप्त जानकारी"
+    },
+    "meta": {
+      "tags": "टैग किया \"{{ tags }}\"",
+      "page": "पेज {{ page }}"
+    },
+    "pagination": {
+      "viewing": "आप {{ of }} से {{ total }} तक देख सकता है",
+      "next": "अगला",
+      "previous": "पिछला",
+      "products": "उत्पाद",
+      "blog_posts": "ब्लॉग पोस्ट",
+      "collections": "संग्रह",
+      "load_more": "अधिक लोड करें",
+      "comments": "टिप्पणियाँ",
+      "orders": "ऑर्डर",
+      "addresses": "पते",
+      "results": "परिणाम",
+      "next_page": "{{ type }} का अगला पृष्ठ",
+      "previous_page": "{{ type }} का पिछला पृष्ठ",
+      "page": "{{ type }} का पृष्ठ {{ number }} "
+    },
+    "password_page": {
+      "opening_soon": "जल्द आ रहा है",
+      "login_form_heading": "पासवर्ड डालें और स्टोर में जाएँ",
+      "login_form_password_placeholder": "आपका पासवर्ड",
+      "login_form_submit": "जमा करें",
+      "signup_form_email_placeholder": "आपका ईमेल",
+      "signup_form_button_label": "मुझे सूचित करें",
+      "signup_form_success": "स्टोर खुलने से ठीक पहले हम आपको एक ईमेल भेजेंगे!",
+      "admin_link_html": "क्या आप स्टोर के मालिक हैं? <a href=\"/admin\" class=\"btn btn--text-link\">यहाँ लॉग इन करें।</a>",
+      "password_link": "पासवर्ड का प्रयोग कर प्रवेश करें",
+      "toggle_label": "अन्य फॉर्म दिखाएँ"
+    },
+    "social": {
+      "share": "साझा करें",
+      "alt_text": {
+        "share_on_facebook": "फेसबुक पर साझा करें",
+        "share_on_twitter": "ट्विटर पर ट्वीट करें",
+        "share_on_pinterest": "पिनटरेस्ट पर पिन करें",
+        "share_menu": "शेयर करने के विकल्प"
+      }
+    },
+    "newsletter_form": {
+      "email_placeholder": "ईमेल पता",
+      "confirmation": "सब्सक्राइब करने के लिए धन्यवाद",
+      "submit": "सब्सक्राइब करें"
+    },
+    "payment": {
+      "method": "भुगतान पद्धतियाँ"
+    },
+    "currency": {
+      "dropdown_label": "मुद्रा"
+    },
+    "language": {
+      "dropdown_label": "भाषा"
+    }
+  },
+  "sections": {
+    "drawer_menu": {
+      "account": {
+        "logged_out": "लॉगइन/ रजिस्टर करें",
+        "logged_in": "खाता"
+      },
+      "currency": "मुद्रा",
+      "language": "भाषा",
+      "search_title": "खोजें",
+      "search_view_all": "सभी देखें"
+    },
+    "featured_product": {
+      "placeholder": {
+        "title": "फीचर किए गए उत्पाद",
+        "vendor": "वेंडर"
+      },
+      "view_product": "उत्पाद का पूरा विवरण देखें",
+      "title": "फीचर किए गए उत्पाद"
+    },
+    "blog_posts": {
+      "more": "अधिक"
+    },
+    "faq": {
+      "answered_by": "{{ author }} द्वारा उत्तर दिया गया"
+    },
+    "social_proof": {
+      "likes": "लाइक"
+    },
+    "footer": {
+      "copyright": "प्रतिलिप्याधिकर",
+      "headings": {
+        "cross_border": "मुद्रा और भाषा",
+        "currency": "मुद्रा",
+        "language": "भाषा",
+        "payment": "भुगतान"
+      },
+      "social_platform": "{{ platform }} पर {{ name }}"
+    }
+  },
+  "blogs": {
+    "article": {
+      "tags": "टैग",
+      "pagination": {
+        "next": "अगला पोस्ट",
+        "previous": "पिछला पोस्ट"
+      }
+    },
+    "comments": {
+      "title": "कोई टिप्पणी करें",
+      "name": "नाम",
+      "email": "ईमेल",
+      "message": "संदेश",
+      "post": "टिप्पणी पोस्ट करें",
+      "moderated": "कृपया नोट करें कि टिप्पणियाँ अनुमोदन के बाद ही प्रकाशित की जाती हैं",
+      "success_moderated": "आपकी टिप्पणी सफलतापूर्वक पोस्ट की गई। हम इसे थोड़ी ही देर में प्रकाशित करेंगे क्योंकि हमारा ब्लॉग मर्यादित है",
+      "success": "आपकी टिप्पणी सफलतापूर्वक पोस्ट की गई! धन्यवाद!",
+      "unapproved": "दिया गया ईमेल पते को कमेन्ट पोस्ट करने की अनुमति नहीं है।",
+      "on": " पर ",
+      "comments_with_count": {
+        "one": "{{ count }} टिप्पणी",
+        "other": "{{ count }} टिप्पणियाँ"
+      }
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "आपकी कार्ट",
+      "note": "अपने ऑर्डर के साथ एक नोट लिखें",
+      "remove": "हटाएँ",
+      "subtotal": "पूर्ण योग",
+      "taxes_and_shipping_at_checkout": "कर और शिपिंग की गणना चेकआउट पर होगी",
+      "taxes_and_shipping_policy_at_checkout_html": "<a href=\"{{ link }}\">कर और शिपिंग की गणना चेकआउट पर होगी</a>",
+      "taxes_included_but_shipping_at_checkout": "कर शामिल है और शिपिंग लागत चेक आउट पर जोड़ी जाएगी",
+      "taxes_included_and_shipping_policy_html": "कर शामिल है <a href=\"{{ link }}\">और शिपिंग लागत चेक आउट पर जोड़ी जाएगी</a>",
+      "update": "अपडेट करें",
+      "checkout": "चेक आउट करें",
+      "empty": "आपकी कार्ट अभी खाली है",
+      "cookies_required": "शॉपिंग कार्ट का प्रयोग करने के लिए कुकीज़ सक्षम करें",
+      "continue_shopping": "शॉपिंग जारी रखें",
+      "quantity": "संख्या"
+    },
+    "label": {
+      "product": "उत्पाद",
+      "quantity": "संख्या",
+      "total": "कुलयोग"
+    }
+  },
+  "collections": {
+    "general": {
+      "no_products": "कोई उत्पाद नहीं है",
+      "no_matches": "माफ कीजिएगा, इस कलेक्शन में कोई उत्पाद नहीं है",
+      "collection_label": "कलेक्शन"
+    },
+    "sorting": {
+      "title": "क्रमित करें"
+    },
+    "tags": {
+      "title": "टैग्स"
+    },
+    "filters": {
+      "title": "फिल्टर",
+      "clear": "साफ करें",
+      "clear_filters": "फिल्टर हटाएँ",
+      "apply": "लागू करें",
+      "clear_all": "सब कुछ मिटाएँ",
+      "from": "से",
+      "to": "से",
+      "max_price": "उच्चतम मूल्य {{ price }}"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "नाम",
+      "email": "ईमेल",
+      "phone": "फोन नंबर",
+      "message": "संदेश",
+      "submit": "संदेश भेजें",
+      "post_success": "हमसे संपर्क करने के लिए धन्यवाद। हम आपसे जल्द ही वापस संपर्क करेंगे।"
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "मेरा खाता",
+      "details": "खाते का विवरण"
+    },
+    "activate_account": {
+      "title": "खाता सक्रिय करें",
+      "subtext": "अपने खाते को सक्रिय करने के लिए पासवर्ड बनाएँ",
+      "password": "पासवर्ड",
+      "password_confirm": "पासवर्ड की पुष्टि करें",
+      "submit": "खाता सक्रिय करें",
+      "cancel": "निमंत्रण अस्वीकार करें",
+      "success": "आपका खाता सफलतापूर्वक सक्रिय किया गया"
+    },
+    "addresses": {
+      "title": "आपके पते",
+      "default": "डिफ़ाल्ट",
+      "add_new": "नया पता जोड़ें",
+      "edit_address": "पता संशोधित करें",
+      "first_name": "नाम",
+      "last_name": "उपनाम",
+      "company": "कंपनी",
+      "address1": "पता",
+      "address2": "अपार्टमेंट, सुइट इत्यादि",
+      "city": "शहर",
+      "country": "देश",
+      "province": "राज्य",
+      "zip": "पिन कोड",
+      "phone": "फोन नंबर",
+      "set_default": "डिफ़ाल्ट पता सेट करें",
+      "add": "पता जोड़ें",
+      "update": "पता अपडेट करें",
+      "cancel": "रद्द करें",
+      "edit": "संशोधित करें",
+      "delete": "मिटाएँ",
+      "delete_confirm": "क्या आप वाकई यह पता मिटाना चाहते हैं?"
+    },
+    "login": {
+      "title": "लॉगइन",
+      "email": "ईमेल",
+      "password": "पासवर्ड",
+      "forgot_password": "अपना पता भूल गए हैं?",
+      "sign_in": "साइन इन करें",
+      "guest_title": "गेस्ट के रूप में आगे बढ़ें",
+      "guest_continue": "जारी रखें"
+    },
+    "orders": {
+      "order_number": "ऑर्डर",
+      "order_number_link": "ऑर्डर संख्या {{ number }}",
+      "date": "तारीख",
+      "payment_status": "भुगतान की स्थिति",
+      "fulfillment_status": "फुलफिलमेंट की स्थिति",
+      "total": "कुलयोग"
+    },
+    "order": {
+      "title": "ऑर्डर {{ name }}",
+      "date_html": "{{ date }} को किया गया",
+      "cancelled_html": "ऑर्डर {{ date }} को रद्द किया गया",
+      "cancelled_reason": "रद्द करने का कारण: {{ reason }}",
+      "billing_address": "बिलिंग का पता",
+      "payment_status": "भुगतान की स्थिति",
+      "shipping_address": "शिप करने का पता",
+      "fulfillment_status": "फुलफिलमेंट की स्थिति",
+      "discount": "छूट",
+      "shipping": "शिपिंग",
+      "tax": "कर",
+      "product": "उत्पाद",
+      "sku": "SKU",
+      "price": "कीमत",
+      "quantity": "संख्या",
+      "total": "कुलयोग",
+      "fulfilled_at_html": "{{ date }} को पूरा किया गया",
+      "subtotal": "पूर्ण योग",
+      "summary": "प्रभार की संक्षिप्त जानकारी",
+      "track_shipment": "शिपमेंट ट्रैक करें"
+    },
+    "recover_password": {
+      "title": "अपना पासवर्ड रीसेट करें",
+      "email": "ईमेल",
+      "submit": "जमा करें",
+      "cancel": "रद्द करें",
+      "subtext": "आपका पासवर्ड रीसेट करने के लिए हम आपको एक ईमेल भेजेंगे।",
+      "success": "हमने आपको आपका पासवर्ड अपडेट करने के लिंक के साथ एक ईमेल भेजी है।"
+    },
+    "reset_password": {
+      "title": "खाते का पासवर्ड रीसेट करें",
+      "subtext": "{{ email }} के लिए नया पासवर्ड दर्ज करें",
+      "password": "पासवर्ड",
+      "password_confirm": "पासवर्ड की पुष्टि करें",
+      "submit": "पासवर्ड रीसेट करें",
+      "success": "आपका पासवर्ड सफलतापूर्वक रीसेट किया गया"
+    },
+    "register": {
+      "title": "खाता बनाएँ",
+      "first_name": "नाम",
+      "last_name": "उपनाम",
+      "email": "ईमेल",
+      "password": "पासवर्ड",
+      "submit": "बनाएँ",
+      "success": "आपका खाता सफलतापूर्वक पंजीकृत किया गया"
+    }
+  },
+  "homepage": {
+    "onboarding": {
+      "product_title": "आपके उत्पाद का नाम",
+      "blog_title": "आपकी पोस्ट का शीर्षक"
+    }
+  },
+  "layout": {
+    "customer": {
+      "create_account": "खाता बनाएँ"
+    }
+  },
+  "products": {
+    "product": {
+      "regular_price": "नियमित कीमत",
+      "sold_out": "बिक चुका है",
+      "unavailable": "उपलब्ध नहीं है",
+      "on_sale": "सेल",
+      "on_sale_percent": "{{ value }}% की छूट",
+      "on_sale_from_html": "सेल {{ price }} से शुरू",
+      "from_lowest_price_html": "{{ lowest_price }}  से शुरू",
+      "sale_price": "सेल पर कीमत",
+      "quantity": "संख्या",
+      "add_to_cart": "कार्ट में जोड़ें",
+      "loader_label": "कार्ट में उत्पाद जोड़ा जा रहा है...",
+      "vendor": "वेंडर",
+      "include_taxes": "कर शामिल हैं",
+      "shipping_policy_html": "<a href=\"{{ link }}\">और शिपिंग लागत चेक आउट पर जोड़ी जाएगी</a>",
+      "unit_price_label": "यूनिट की कीमत",
+      "view_in_space": "अपना स्पेस देखें",
+      "view_in_space_label": "अपना स्पेस देखें और आइटम को ऑग्मेंटेड रिएलिटी विंडो में डालें",
+      "description": "विवरण",
+      "estimate_shipping": "शिपिंग का अनुमानित समय",
+      "get_shipping_rates": "रेट जानें",
+      "shipping_estimator": "शिपिंग की अनुमानित गणना",
+      "no_rates": "शिपिंग का रेट उपलब्ध नहीं है",
+      "sku": "SKU",
+      "sku_with_value": "SKU: {{ value }}",
+      "buy_now": "अभी खरीदें",
+      "country_placeholder": "देश",
+      "write_a_review": "समीक्षा लिखें",
+      "quantity_error": "चुनी है संख्या अभी उपलब्ध स्टॉक से अधिक है"
+    },
+    "inventory": {
+      "label": "Stock",
+      "in_stock": "In stock, ready to be shipped",
+      "low_stock": "Limited quantities left",
+      "sold_out": "Re-stocking soon!"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title_html": "ये रहा {{ shop }} के लिए आपका {{ value }} का गिफ्ट कार्ड",
+      "subtext": "आपका गिफ्ट कार्ड",
+      "gift_card_code": "गिफ्ट कार्ट का कोड",
+      "disabled": "सक्षम नहीं है",
+      "expired": "{{ expiry }} को समाप्त हो गया",
+      "active": "{{ expiry }} को समाप्त हो रहा है",
+      "redeem": "अपने गिफ्ट sकार्ड को भुनाने के लिए चेक आउट पर यह कोड डालें",
+      "shop_link": "शॉपिंग शुरू करें",
+      "print": "इस गिफ्ट कार्ड को प्रिंट करें",
+      "remaining_html": "{{ balance }} बचे हैं",
+      "add_to_apple_wallet": "एप्पल वालेट में जोड़ें",
+      "qr_image_alt": "क्यूआर कोड - गिफ्ट कार्ड को भुनाने के लिए स्कैन करें",
+      "initial_value": "गिफ्ट कार्ड का मूल्य: {{ value }}"
+    }
+  },
+  "account": {
+    "add_address": "पता जोड़ें",
+    "log_out": "लॉग आउट करें",
+    "title": "मेरा खाता",
+    "view_addresses": "पते देखें",
+    "welcome": "स्वागत है, {{ name }}!",
+    "welcome_nameless": "स्वागत है!",
+    "orders_paginate": "ऑर्डर",
+    "orders": {
+      "none": "आपने अभी तक कोई ऑर्डर नहीं किया है।",
+      "note": "ग्राहक के नोट",
+      "title": "ऑर्डर का इतिहास"
+    }
+  },
+  "product": {
+    "add_to_cart": "कार्ट में जोड़ें",
+    "quick_add": "शीघ्र जोड़ें",
+    "share": "साझा करें",
+    "sold_out": "बिक चुका है",
+    "reviews": "सामीक्षाएँ",
+    "unavailable": "उपलब्ध नहीं है"
+  },
+  "store_availability": {
+    "general": {
+      "availability": "उपलब्धता",
+      "locations": "लोकेशन",
+      "view_store_info": "स्टोर की जानकारी देखें",
+      "in_stock": "स्टॉक में है",
+      "not_in_stock": "स्टॉक में नहीं है",
+      "check_other_stores": "अन्य स्टोर में उपलब्धता देखें",
+      "pick_up_available": "पिक-अप उपलब्ध है",
+      "pick_up_currently_unavailable": "पिक-अप अभी उपलब्ध नहीं है",
+      "pick_up_available_at_html": "<span>{{ location_name }}</span> पर पिक-अप",
+      "pick_up_unavailable_at_html": "<span>{{ location_name }} पर पिक-अप उपलब्ध नहीं है</span>"
+    }
+  },
+  "search": {
+    "heading": {
+      "one": "खोज का परिणाम",
+      "other": "खोज के परिणाम"
+    },
+    "headings": {
+      "articles": "लेख",
+      "pages": "पेज",
+      "products": "उत्पाद"
+    },
+    "no_results": "हमें सर्च का कोई परिणाम नहीं मिला है",
+    "placeholder": "आप क्या तलाश रहे हैं?",
+    "results_with_count": {
+      "one": "“{{ terms }}” एक परिणाम मिला है",
+      "other": "“{{ terms }}” के लिए {{ count }} परिणाम मिले हैं"
+    },
+    "title": "हमारी साइट खोजें",
+    "view_all": "सभी देखें",
+    "search": "खोजें",
+    "clear_search": "खोज में लिखे शब्द मिटाएँ"
+  },
+  "quick_cart": {
+    "cart": "शॉपिंग कार्ट",
+    "go_to_cart": "कार्ट पर जाएँ",
+    "checkout": "चेक आउट करें",
+    "empty": "आपकी कार्ट अभी खाली है",
+    "subtotal": "पूर्ण योग"
+  },
+  "socialshopwave": {
+    "add_to_cart": "Add To Cart",
+    "adding_to_cart": "Adding...",
+    "sold_out": "Sold Out",
+    "description": "Description",
+    "view_on_instagram": "View on Instagram"
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-list"
+  class="
+    collection-list
+    collection-list--columns-{{ section.settings.columns }}
+    section
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+  style="--text-max-width: {{ section.settings.text_max_width }}rem;"
+>
+  <div class="section__inner">
+    {%
+      render 'section-header',
+      heading: section.settings.title,
+      subheading: section.settings.subheading,
+      classes: 'section-header--large section-header--center',
+    %}
+
+    <div class="collection-list__grid">
+      {%- for block in section.blocks -%}
+        {%- assign featured_collection = block.settings.collection -%}
+        {%- if featured_collection != empty -%}
+          {%
+            render 'collection-item' with
+            collection: featured_collection,
+            subheading: block.settings.subheading,
+            aspect_ratio: section.settings.aspect_ratio,
+            text_max_width: block.settings.text_max_width,
+          %}
+        {%- else -%}
+          {% render 'collection-item' with collection: empty, aspect_ratio: section.settings.aspect_ratio %}
+        {%- endif -%}
+      {%- else -%}
+        {%- for i in (1..columns) -%}
+          {% render 'collection-item' with collection: empty, aspect_ratio: section.settings.aspect_ratio %}
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.collection_list.name",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--text-first",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.collection_list.settings.columns.label",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.collection_list.settings.title.label"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:sections.collection_list.settings.subheading.label"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.collection_list.settings.text_max_width.label",
+      "min": 24,
+      "max": 48,
+      "step": 1,
+      "default": 42
+    },
+    {
+      "id": "aspect_ratio",
+      "type": "select",
+      "label": "t:sections.collection_list.settings.aspect_ratio.label",
+      "options": [
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__1",
+          "value": "natural"
+        },
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__2",
+          "value": "round"
+        },
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__3",
+          "value": "square"
+        },
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__4",
+          "value": "landscape"
+        },
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__5",
+          "value": "portrait"
+        }
+      ],
+      "default": "natural"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.collection_list.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "t:sections.collection_list.blocks.collection.name",
+      "settings": [
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "t:sections.collection_list.blocks.collection.settings.collection.label"
+        },
+        {
+          "id": "subheading",
+          "type": "richtext",
+          "label": "t:sections.collection_list.blocks.collection.settings.subheading.label"
+        },
+        {
+          "type": "range",
+          "id": "text_max_width",
+          "label": "t:sections.collection_list.blocks.collection.settings.text_max_width.label",
+          "min": 24,
+          "max": 48,
+          "step": 1,
+          "default": 42
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.collection_list.presets.name",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

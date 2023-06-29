@@ -1,0 +1,51 @@
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="date=no">
+<meta name="format-detection" content="address=no">
+{{ 'globo.swatch.css' | asset_url | stylesheet_tag }}
+{%- assign assets_url = 'product-1.png' | asset_img_url: '50x' | split: 'product-1_50x.png' -%}
+{%- assign files_url = 'product-1.png' | file_img_url: '50x' | split: 'product-1_50x.png' -%}
+<script>
+    window.Globo      = window.Globo || {};
+    Globo.moneyFormat = "{{ shop.money_format | replace:'"',"'" }}";
+    Globo.GloboMoneyFormat = "{{ shop.money_format | replace:'"',"'" }}";
+    Globo.shopCurrency = "{{ shop.currency }}";
+    Globo.assetsUrl = "{{ assets_url[0] }}";
+    Globo.filesUrl = "{{ files_url[0] }}";
+    var GSCollection = GSCollection || {};
+      var GloboSwatchConfig = {
+          page: {{request.page_type | json}},
+          shop: {
+          name: "{{ shop.name | escape }}",
+          url: "{{ shop.url }}",
+          domain: "{{ shop.permanent_domain }}",
+          themeStoreId: "911",
+          themeName: "Spark/Chic - Main theme",
+          themeVersion: "2.1.0",
+          },
+          {% if product %}        product: {{ product | json}},
+          curVariant: {{ product.selected_or_first_available_variant | json }},
+          {% endif %}    }
+      {% if product %}
+    GloboSwatchConfig.curVariant.inventory_quantity = {{ product.selected_or_first_available_variant.inventory_quantity }}  {% for variant in product.variants %}
+    GloboSwatchConfig.product.variants[{{forloop.index0}}].inventory_quantity = {{ variant.inventory_quantity }}  {% endfor %}
+  {% endif %}
+</script>
+<script src="{{ "globo.swatch.data.js" | asset_url }}"></script>
+<script id="globoSwatchProductDetail" type="template/html">
+  {% include 'globo.swatch.productdetail' %}
+</script>
+<script id="globoSwatchCollection" type="template/html">
+  {% include 'globo.swatch.collection' %}
+</script>
+<script src="{{ "globo.swatch.js" | asset_url }}"></script>
+<script type="text/javascript">
+  var add_to_cart_ajax = false;
+  if(add_to_cart_ajax) {
+    window.addEventListener('DOMContentLoaded', (event) => {
+      var show_multiple_currencies = {% if settings.show_multiple_currencies %}true{% else %}false{% endif %};
+      var cart_type = {{settings.cart_type | json}};
+      var regexCount = /{% raw %}{{ count }}|count|{{count}}{% endraw %}/g;
+      !function(t){window.addEventListener("globoSwatchProductsUpdateCart",function(e){t('[rv-text="cart.item_count"], .main-sidebar-cart-count, .site-header__cart span#CartCount, .cart_count, #CartToggleItemCount, #site-control .cart > div, .cart-count-number, .js-cart-count, .header-cart-link .header-cart-count, .header-tools .header-cart-count').length&&(t('[rv-text="cart.item_count"], .main-sidebar-cart-count, .site-header__cart span#CartCount, .cart_count, #CartToggleItemCount, #site-control .cart > div, .cart-count-number, .js-cart-count, .header-cart-link .header-cart-count, .header-tools .header-cart-count').text(e.detail.cart.item_count),t(".header-cart-link .header-cart-count").length&&t(".header-cart-link .header-cart-count").addClass("active")),t("#CartCount [data-cart-count]").length?t("#CartCount").removeClass("hide")&&t("#CartCount [data-cart-count]").text(e.detail.cart.item_count):t("[data-header-cart-count]").length?t("[data-header-cart-count]").addClass("visible").attr("data-header-cart-count",e.detail.cart.item_count):"undefined"!=typeof theme&&void 0!==theme.Notify&&void 0!==theme.Notify.open&&t(".site-header__cart-indicator").length?(t(".site-header__cart-indicator").removeClass("hide"),theme.Notify.open("success",!1,!0)):"undefined"!=typeof ajaxCart&&void 0!==ajaxCart.load?("undefined"!=typeof theme&&void 0!==theme.cartType&&"drawer"===theme.cartType||"undefined"!=typeof theme&&void 0!==theme.settings&&void 0!==theme.settings.cartType&&"drawer"===theme.settings.cartType||"undefined"!=typeof theme&&void 0!==theme.data&&void 0!==theme.data.cartMethod&&"page"!==theme.data.cartMethod||t("#CartTemplate").length)&&(ajaxCart.load(),$("#CartLink").length&&$("#CartLink").trigger("click"),$(".js-cart-trigger")&&$(".js-cart-trigger").trigger("click"),$('a.js--drawer-open-right[href="/cart"]')&&$('a.js--drawer-open-right[href="/cart"]').trigger("click")):"undefined"!=typeof Shopify&&void 0!==Shopify.loadQuickCart&&t(".cart-modal-popup").length?(t(".nav-main-cart-amount").text(e.detail.cart.item_count).removeClass("hidden"),"modal"==cart_type&&Shopify.loadQuickCart(e.detail.cart)):t(".cart-item-count").length?t(".cart-item-count").text(e.detail.cart.item_count).addClass("cart-show"):t(".cartItemCount").length?(t("[data-header-cart]").trigger("update",e.detail.cart.items[e.detail.cart.items.length-1].variant_id),t(".cartItemCount").text(e.detail.cart.item_count)):t(".page-header .cartsummary").length||t(".mini-cart-wrapper .mini-cart").length||t("#pageheader .cart-summary .cart-count").length&&t("#mobile-header .cart-count").length||t(".cartContainer #Cart").length||t("#cart-count-desktop").length||t("#cart-count-mobile").length||t(".header-cart__count").length||t(".header-cart .cart-summary").length||t("#pageheader .header-mini-menu").length||t(".toolbar-cart .current-cart").length&&t("#cart-summary").length?t.get("/search",function(e){for(var a=[".page-header .cartsummary",".mini-cart-wrapper .mini-cart","#pageheader .cart-summary .cart-count","#mobile-header .cart-count",".cartContainer #Cart","#cart-count-desktop","#cart-count-mobile",".page-header .header-cart",".docked-navigation-container .header-cart","#pageheader .header-mini-menu",".toolbar-cart .current-cart","#cart-summary"],r=t(t.parseHTML("<div>"+e+"</div>")),n=0;n<a.length;n++)t(a[n]).length&&t(a[n]).html(r.find(a[n]).html());if("undefined"!=typeof theme&&void 0!==theme.checkCurrency&&theme.checkCurrency(),show_multiple_currencies&&"undefined"!=typeof theme&&void 0!==theme.money_container&&"undefined"!=typeof Currency&&void 0!==Currency.convertAll&&t("[name=currencies]").length&&Currency.convertAll(shopCurrency,t("[name=currencies]").first().val(),theme.money_container),t("#pageheader .checkout-link").length){var c=t("#pageheader .checkout-link").addClass("reveal");setTimeout(function(){c.removeClass("reveal")},4e3)}"undefined"!=typeof theme&&void 0!==theme.runMultiCurrency&&theme.runMultiCurrency(),t(".toolbar-cart .current-cart").length&&t("#cart-summary").length&&(setTimeout(function(){t("body").addClass("show-cart-summary")},20),t("#cart-summary.updating, #cart-summary .updating").removeClass("updating"))}):t(".topBar__cart").length&&"undefined"!=typeof Theme&&void 0!==Theme.cart&&void 0!==Theme.cart.refreshMiniCart?Theme.cart.refreshMiniCart(e.detail.cart):t(".Header__CartCount").length?document.dispatchEvent(new CustomEvent("product:added",{bubbles:!0,detail:{quantity:e.detail.ids.length}})):t("#StickyCart").length||t("#CartDrawer").length&&t(".js-drawer-open-cart").length&&"undefined"!=typeof $?$("body").trigger("added.ajaxProduct"):t(".header__cart-count").length?(document.documentElement.dispatchEvent(new CustomEvent("product:added",{bubbles:!0,detail:{quantity:e.detail.ids.length}})),t(document).trigger("theme:cart:updated",[e.detail.cart,!0,!0])):t('[data-js-class="Cart"]').length&&"undefined"!=typeof $?($('[data-js-class="Cart"]').attr("data-has-items",!0).trigger("updateHtml"),$("[data-item-count]").attr("data-item-count",e.detail.cart.item_count).show(),$(".cart--external--total-items").text(e.detail.cart.item_count),$('[data-off-canvas--open="right-sidebar"]').first().trigger("click")):"undefined"!=typeof StyleHatch&&void 0!==StyleHatch.AjaxCart&&void 0!==StyleHatch.AjaxCart.updateCartButton?StyleHatch.AjaxCart.updateCartButton(e.detail.cart):"undefined"!=typeof ajaxifyShopify&&void 0!==ajaxifyShopify.cartUpdateCallback?ajaxifyShopify.cartUpdateCallback(e.detail.cart):t(".cartCost").length&&"undefined"!=typeof slate&&void 0!==slate.Currency&&void 0!==slate.Currency.formatMoney&&"undefined"!=typeof theme&&void 0!==theme.moneyFormat?t(".cartCost").html("(<span class='money'>"+slate.Currency.formatMoney(e.detail.cart.total_price,theme.moneyFormat)+"</span>)").removeClass("hidden-count"):"undefined"!=typeof refreshCart&&t(".cart-button").length?(refreshCart(e.detail.cart),window.setTimeout(function(){t.fancybox.close(),t(".cart-button").click()},500)):t("#CartButton .cart-count-js").length?(t("#CartButton .cart-count-js").text(e.detail.cart.item_count).show().addClass("pulse-cart-icon"),setTimeout(function(){t("#CartButton .cart-count-js").removeClass("pulse-cart-icon")},800)):t("#site-cart .cart-items").length&&t("#site-cart-handle").length?t.ajax({url:"/cart",success:function(a){t("#site-cart .cart-items").html(t(a).find("#site-cart .cart-items .cart-item")),t("#CartTotal").html(t(a).find("#CartTotal").html()),t("#CartDetails").html(t(a).find("#CartDetails").html()),window.sidebarCartAjaxFunctions(),e.detail.ids.length>0&&(1==e.detail.ids.length?t("#site-cart .subtitle").html(t("#site-cart .subtitle").data("added-singular").replace(regexCount,e.detail.ids.length)):t("#site-cart .subtitle").html(t("#site-cart .subtitle").data("added-plural").replace(regexCount,e.detail.ids.length)),t(".cart-menu .count").text(e.detail.cart.item_count)),t(".site-cart-handle a").trigger("click")}}):"undefined"!=typeof Shopify&&void 0!==Shopify.updateQuickCart?Shopify.updateQuickCart(e.detail.cart):t("#meta .count").length&&t(".ajaxCartButton").length?(t("#meta .count").text(e.detail.cart.item_count),t(".ajaxCartButton").trigger("click")):t(".cart .cart-icon").length?t(".cart").addClass("cart--show-indicator"):t(".header-tools-cart").length?t(".header-tools-cart").addClass("cart-has-content"):t('[data-action="open-mini-cart"]').length&&t(".mini-cart").length?t(document).trigger("product.added"):window.location.reload()})}(window.jQuery||window.$);
+    });
+  }
+</script>

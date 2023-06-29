@@ -1,0 +1,59 @@
+<!-- INITIAL SETTINGS -->
+{% assign blocks = '' | split: '' %}
+{%- for block in section.blocks -%}
+  {%- capture blockProps -%}
+  {
+    id: {{ block.id }},
+    type: {{ block.type }},
+    settings: {{ block.settings | json }}
+  }
+  {%- endcapture -%}
+
+  {%- assign blockProps = blockProps | strip_newlines -%}
+  {%- assign blockProps = blockProps | split: '!@#' -%}
+  {% assign blocks = blocks | concat: blockProps %}
+{%- endfor -%}
+
+<script>
+  console.log('sectionSettings', `{{ section.settings }}`)
+</script>
+<script>
+  console.log('{{ section.settings | json }}')
+</script>
+
+<section class="container">
+  {% if section.settings.heading != blank %}
+    <h1>{{ section.settings.heading }}</h1>
+  {% endif %}
+
+  <div
+    id="hello-world"
+    class="hello-world__c"
+    sectionId="{{ section.id }}"
+    sectionSettings="{{ section.settings | json | replace: '"', "'" }}"
+    blocks="{{ blocks | json | replace: '"', "'" | replace: "\'", "'" }}"
+    heading="{{ section.settings.heading }}"
+  ></div>
+
+  <footer>
+    {{ powered_by_link }}
+  </footer>
+</section>
+
+{% schema %}
+{
+  "name": "Hello World",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hello World"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,2358 @@
+{
+  "settings_schema": {
+    "colors": {
+      "name": "रंग",
+      "settings": {
+        "general__header": {
+          "content": "सामान्य"
+        },
+        "color_background_body": {
+          "label": "पृष्ठभूमि"
+        },
+        "color_border": {
+          "label": "किनारियाँ"
+        },
+        "color_overlay": {
+          "label": "आवरण"
+        },
+        "color_text": {
+          "label": "टेक्स्ट"
+        },
+        "color_text_link": {
+          "label": "लिंक्स"
+        },
+        "header__header": {
+          "content": "हेडर"
+        },
+        "color_header_bg": {
+          "label": "पृष्ठभूमि"
+        },
+        "color_header_text": {
+          "label": "टेक्स्ट"
+        },
+        "footer__header": {
+          "content": "फोल्डर"
+        },
+        "color_background_footer": {
+          "label": "पृष्ठभूमि"
+        },
+        "color_text_footer": {
+          "label": "टेक्स्ट"
+        },
+        "buttons__header": {
+          "content": "बटन"
+        },
+        "color_background_button": {
+          "label": "पृष्ठभूमि"
+        },
+        "color_text_button": {
+          "label": "टेक्स्ट"
+        },
+        "sale_badge__header": {
+          "content": "बिक्री टैग"
+        },
+        "color_background_sale_badge": {
+          "label": "पृष्ठभूमि"
+        },
+        "color_text_sale_badge": {
+          "label": "टेक्स्ट"
+        },
+        "sold_badge__header": {
+          "content": "बिक गया टैग"
+        },
+        "color_background_sold_badge": {
+          "label": "पृष्ठभूमि"
+        },
+        "color_text_sold_badge": {
+          "label": "टेक्स्ट"
+        },
+        "contrast__header": {
+          "content": "सेक्शन के अन्य रंग",
+          "info": "द्वितीयक रंग योजना का उपयोग करने के लिए सेक्शन सेटिंग्स में सबसे नीचे \"अन्य सेक्शन के रंग का प्रयोग करें\" का बटन चुनें"
+        },
+        "color_background_contrast": {
+          "label": "पृष्ठभूमि"
+        },
+        "color_text_contrast": {
+          "label": "टेक्स्ट"
+        },
+        "color_border_contrast": {
+          "label": "किनारियाँ"
+        },
+        "color_background_button_contrast": {
+          "label": "बटन की पृष्ठभूमि"
+        },
+        "color_text_button_contrast": {
+          "label": "बटन का टेक्स्ट"
+        },
+        "color_text_link_contrast": {
+          "label": "लिंक्स"
+        },
+        "popover__header": {
+          "content": "पॉप-ओवर"
+        },
+        "color_background_popover": {
+          "label": "पृष्ठभूमि"
+        },
+        "color_text_popover": {
+          "label": "टेक्स्ट"
+        },
+        "color_border_popover": {
+          "label": "किनारी"
+        },
+        "color_background_button_popover": {
+          "label": "बटन की पृष्ठभूमि"
+        },
+        "color_text_button_popover": {
+          "label": "बटन का टेक्स्ट"
+        }
+      }
+    },
+    "fonts": {
+      "name": "फॉन्ट",
+      "settings": {
+        "logo__header": {
+          "content": "लोगो"
+        },
+        "font_logo": {
+          "label": "लोगो"
+        },
+        "capitalize_logo": {
+          "label": "बड़े अक्षरों में बदलें"
+        },
+        "logo_letter_spacing": {
+          "label": "अक्षरों के बीच स्पेस"
+        },
+        "logo_base_size": {
+          "label": "बेस का आकार"
+        },
+        "headings__header": {
+          "content": "शीर्षक"
+        },
+        "font_heading": {
+          "label": "शीर्षक"
+        },
+        "capitalize_headings": {
+          "label": "बड़े अक्षरों में बदलें"
+        },
+        "heading_letter_spacing": {
+          "label": "अक्षरों के बीच स्पेस"
+        },
+        "heading_base_size": {
+          "label": "बेस का आकार"
+        },
+        "body__header": {
+          "content": "बॉडी का टेक्स्ट"
+        },
+        "font_body": {
+          "label": "बॉडी का टेक्स्ट"
+        },
+        "body_letter_spacing": {
+          "label": "अक्षरों के बीच स्पेस"
+        },
+        "body_base_size": {
+          "label": "बेस का आकार"
+        },
+        "listing__header": {
+          "content": "उत्पाद सूची में शीर्षक"
+        },
+        "capitalize_product_title": {
+          "label": "बड़े अक्षरों में बदलें"
+        },
+        "product_title_letter_spacing": {
+          "label": "अक्षरों के बीच स्पेस"
+        }
+      }
+    },
+    "style": {
+      "name": "स्टाइल",
+      "settings": {
+        "animation__header": {
+          "content": "एनीमेशन"
+        },
+        "enable_page_transitions": {
+          "label": "पृष्ठ परिवर्तन सक्रिय करें"
+        },
+        "sticky__header": {
+          "content": "हेडर"
+        },
+        "enable_sticky_header": {
+          "label": "स्टिकी हेडर सक्षम करें"
+        },
+        "buttons__header": {
+          "content": "बटन"
+        },
+        "button_style": {
+          "label": "स्टाइल",
+          "options__1": "सभी बड़े अक्षर",
+          "options__2": "सामान्य"
+        },
+        "button_shape": {
+          "label": "आकृति",
+          "options__1": "तीव्र",
+          "options__2": "थोड़ा गोल",
+          "options__3": "गोल"
+        }
+      }
+    },
+    "product": {
+      "name": "उत्पाद",
+      "settings": {
+        "sale_badge_includes_percent": {
+          "label": "सेल्स बैज पर बिक्री का प्रतिशत दें"
+        },
+        "swatch_options": {
+          "label": "स्वाच के लिए प्रकारों के विकल्प",
+          "info": "स्वाच प्रदर्शन के लिए विविध विकल्प नामों का प्रयोग करें। बहुत से विकल्प सपोर्ट करने के लिए कॉमा से अलग की हुई सूची का प्रयोग करें: \"Color, Colour\""
+        },
+        "chip_options": {
+          "label": "चिप्स के लिए प्रकारों के विकल्प",
+          "info": "चिप्स प्रदर्शन के लिए विविध विकल्प नामों का प्रयोग करें। बहुत से विकल्प सपोर्ट करने के लिए कॉमा से अलग की हुई सूची का प्रयोग करें:  \"Size, Material, Fabric\"."
+        }
+      }
+    },
+    "cart": {
+      "name": "कार्ट",
+      "settings": {
+        "cart_enable_ajax": {
+          "label": "कार्ट में आइटम जोड़े जाने पर नोटिफिकेशन दिखाएँ"
+        },
+        "cart_show_notes": {
+          "label": "कार्ट नोट सक्रिय करें"
+        }
+      }
+    },
+    "quick_search": {
+      "name": "क्विक सर्च",
+      "settings": {
+        "search_max_result_size": {
+          "label": "प्रति कैटेगरी परिणाम"
+        },
+        "search_show_articles": {
+          "label": "लेख दिखाएँ"
+        },
+        "search_show_pages": {
+          "label": "पृष्ठ दिखाएँ"
+        },
+        "product__header": {
+          "content": "उत्पाद के परिणाम"
+        },
+        "search_show_price": {
+          "label": "मूल्य दिखाएँ"
+        },
+        "search_show_vendor": {
+          "label": "वेंडर दिखाएं"
+        }
+      }
+    },
+    "social_media": {
+      "name": "सोशल मीडिया",
+      "settings": {
+        "header": {
+          "content": "खाता लिंक"
+        },
+        "social_facebook_link": {
+          "label": "फेसबुक लिंक",
+          "info": "https://facebook.com/shopify"
+        },
+        "social_instagram_link": {
+          "label": "Instagram लिंक",
+          "info": "https://www.instagram.com/shopify/"
+        },
+        "social_linkedin_link": {
+          "label": "लिंक्डइन लिंक",
+          "info": "https://linkedin.com/company/shopify"
+        },
+        "social_pinterest_link": {
+          "label": "पिन्टेरेस्ट लिंक",
+          "info": "https://pinterest.com/shopify"
+        },
+        "social_snapchat_link": {
+          "label": "स्नैपचैट लिंक",
+          "info": "https://snapchat.com/add/shopify"
+        },
+        "social_tiktok_link": {
+          "label": "टिकटॉक लिंक",
+          "info": "https://tiktok.com/@shopify"
+        },
+        "social_tumblr_link": {
+          "label": "टम्बलर लिंक",
+          "info": "https://shopify.tumblr.com"
+        },
+        "social_twitter_link": {
+          "label": "ट्विटर लिंक",
+          "info": "https://twitter.com/shopify"
+        },
+        "social_vimeo_link": {
+          "label": "वीमियो लिंक",
+          "info": "https://vimeo.com/shopify"
+        },
+        "social_youtube_link": {
+          "label": "यूट्यूब लिंक",
+          "info": "https://youtube.com/shopify"
+        }
+      }
+    },
+    "favicon": {
+      "name": "Favicon",
+      "settings": {
+        "favicon": {
+          "label": "Favicon इमेज",
+          "info": "32 X 32px छोटा किया जाएगा"
+        }
+      }
+    }
+  },
+  "sections": {
+    "announcement_bar": {
+      "name": "सूचना बार",
+      "settings": {
+        "timing": {
+          "label": "सूचनाओं के बीच समय"
+        }
+      },
+      "blocks": {
+        "announcement": {
+          "name": "सूचनाएं",
+          "settings": {
+            "title": {
+              "label": "घोषणा का टेक्स्ट"
+            },
+            "link": {
+              "label": "घोषणा का लिंक",
+              "info": "वैकल्पिक"
+            },
+            "color_background": {
+              "label": "पृष्ठभूमि का रंग"
+            },
+            "color_text": {
+              "label": "टेक्स्ट का रंग"
+            }
+          }
+        }
+      }
+    },
+    "apps": {
+      "name": "ऐप्स",
+      "presets": {
+        "name": "ऐप्स"
+      }
+    },
+    "blog_posts": {
+      "name": "ब्लॉग पोस्ट्स",
+      "settings": {
+        "show_date": {
+          "label": "प्रकाशन की तिथि दिखाएँ"
+        },
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        },
+        "title": {
+          "label": "हेडिंग"
+        },
+        "subheading": {
+          "label": "उपशीर्षक"
+        },
+        "text_max_width": {
+          "label": "टेक्स्ट की अधिकतम लंबाई"
+        },
+        "image_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": {
+            "label": "वास्तविक"
+          },
+          "options__2": {
+            "label": "चतुर्भुज (1:1)"
+          },
+          "options__3": {
+            "label": "लैंडस्केप (3:2)"
+          },
+          "options__4": {
+            "label": "पोर्ट्रेट (2:3)"
+          }
+        },
+        "contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "article": {
+          "name": "लेख",
+          "settings": {
+            "article": {
+              "label": "लेख"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "ब्लॉग पोस्ट्स"
+      }
+    },
+    "collection_list": {
+      "name": "संकलनों की सूची",
+      "settings": {
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        },
+        "title": {
+          "label": "हेडिंग"
+        },
+        "subheading": {
+          "label": "उपशीर्षक"
+        },
+        "text_max_width": {
+          "label": "टेक्स्ट की अधिकतम लंबाई"
+        },
+        "aspect_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": "वास्तविक",
+          "options__2": "गोल (1:1)",
+          "options__3": "चतुर्भुज (1:1)",
+          "options__4": "लैंडस्केप (3:2)",
+          "options__5": "पोर्ट्रेट (2:3)"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "संकलन",
+          "settings": {
+            "collection": {
+              "label": "संकलन"
+            },
+            "subheading": {
+              "label": "उपशीर्षक"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "संकलनों की सूची"
+      }
+    },
+    "custom_liquid": {
+      "name": "कस्टम लिक्विड",
+      "settings": {
+        "custom_liquid": {
+          "label": "कस्टम लिक्विड"
+        }
+      },
+      "presets": {
+        "name": "कस्टम Liquid"
+      }
+    },
+    "featured_collection": {
+      "name": "फीचर संकलन",
+      "settings": {
+        "collection": {
+          "label": "संकलन"
+        },
+        "columns": {
+          "label": "कॉलम"
+        },
+        "title": {
+          "label": "हेडिंग"
+        },
+        "subheading": {
+          "label": "उपशीर्षक"
+        },
+        "link_text": {
+          "label": "बटन का लेबल"
+        },
+        "text_max_width": {
+          "label": "टेक्स्ट की अधिकतम लंबाई"
+        },
+        "aspect_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": "वास्तविक",
+          "options__2": "चतुर्भुज (1:1)",
+          "options__3": "लैंडस्केप (3:2)",
+          "options__4": "पोर्ट्रेट (2:3)"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "presets": {
+        "name": "फीचर संकलन"
+      }
+    },
+    "featured_collection_row": {
+      "name": "फीचर किए गए कलेक्शन की पंक्ति",
+      "settings": {
+        "collection": {
+          "label": "संकलन"
+        },
+        "columns": {
+          "label": "कॉलम"
+        },
+        "title": {
+          "label": "हेडिंग"
+        },
+        "subheading": {
+          "label": "उपशीर्षक"
+        },
+        "link_text": {
+          "label": "बटन का लेबल"
+        },
+        "text_max_width": {
+          "label": "टेक्स्ट की अधिकतम लंबाई"
+        },
+        "text_alignment": {
+          "label": "टेक्ट को एक सीध में लाना",
+          "options__1": "बाएँ",
+          "options__2": "मध्य"
+        },
+        "aspect_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": "वास्तविक",
+          "options__2": "चतुर्भुज (1:1)",
+          "options__3": "लैंडस्केप (3:2)",
+          "options__4": "पोर्ट्रेट (2:3)"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "presets": {
+        "name": "फीचर किए गए कलेक्शन की पंक्ति"
+      }
+    },
+    "featured_product": {
+      "name": "फीचर किया गया उत्पाद",
+      "settings": {
+        "product": {
+          "label": "उत्पाद"
+        },
+        "enable_payment_button": {
+          "label": "डायनैमिक चेकआउट बटन दिखाएं",
+          "info": "ग्राहक को परिचित भुगतान पद्धति का प्रयोग करके इसे आज़माने का मौका दें। [अधिक जानें](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        },
+        "media__header": {
+          "content": "मीडिया"
+        },
+        "media__paragraph": {
+          "content": "[मीडिया प्रकारों](https://help.shopify.com/en/manual/products/product-media) के बारे में अधिक जानें"
+        },
+        "enable_video_looping": {
+          "label": "वीडियो लूप की सुविधा चालू करें"
+        },
+        "style__header": {
+          "content": "स्टाइल"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "border": {
+          "name": "किनारी"
+        },
+        "title": {
+          "name": "शीर्षक"
+        },
+        "price": {
+          "name": "कीमत"
+        },
+        "sku": {
+          "name": "SKU"
+        },
+        "vendor": {
+          "name": "वेंडर"
+        },
+        "quantity_selector": {
+          "name": "मात्रा चयन",
+          "settings": {
+            "show_labels": {
+              "label": "लेबल दिखाएं"
+            }
+          }
+        },
+        "variant_picker": {
+          "name": "वैरिएंट चयन",
+          "settings": {
+            "show_labels": {
+              "label": "लेबल दिखाएं"
+            },
+            "popup__header": {
+              "content": "सूचना पॉप-अप",
+              "info": "अपने उत्पाद के बारे में अधिक जानकारी, जैसे साइज़ गाइड, दिखाने के लिए एक पॉप-अप जोड़ें"
+            },
+            "variant_popup_option": {
+              "label": "सूचना पॉप-अप के लिए विकल्प का नाम",
+              "info": "सूचना पॉप-अप का लिंक दिखाने वाले विकल्प का नाम लिखें। उदाहरण: \"आकार\"।"
+            },
+            "variant_popup_text": {
+              "label": "सूचना पॉप-अप लिंक पर टेक्स्ट"
+            },
+            "variant_popup_page": {
+              "label": "सूचना पॉप-अप का विषय",
+              "info": "पॉप-अप सामग्री के लिए स्रोत के रूप में एक पृष्ठ चुनें। आप इस पृष्ठ पर टेक्स्ट, तालिका या चित्र जोड़ सकते हैं।"
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "बटन खरीदें",
+          "settings": {
+            "show_dynamic_checkout": {
+              "label": "डायनामिक चेकआउट बटन दिखाएँ",
+              "info": "अपने स्टोर पर उपलब्ध भुगतान पद्धतियों का प्रयोग करना, ग्राहकों को उनकी वरीयता अनुसार विकल्प दिखते हैं, जैसे PayPal या Apple Pay [अधिक जानें](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+            }
+          }
+        },
+        "description": {
+          "name": "विवरण"
+        },
+        "text": {
+          "name": "टेक्स्ट",
+          "settings": {
+            "text": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "share": {
+          "name": "साझा करें",
+          "settings": {
+            "paragraph__1": {
+              "content": "अगर आप सोशल मीडिया का लिंक जोड़ते हैं, तो लिंक की फीचर की हुई इमेज प्री व्यू इमेज के रूप में दिखाई जाएगी। [अधिक जानें](https://help.shopify.com/en/manual/online-store/images/showing-social-media-thumbnail-images)."
+            },
+            "paragraph__2": {
+              "content": "प्रीव्यू इमेज में स्टोर का शीर्षक और विवरण भी शामिल होंगे। [अधिक जानें](https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
+            }
+          }
+        },
+        "accordion": {
+          "name": "ड्रॉपडाउन मेन्यू",
+          "settings": {
+            "style": {
+              "label": "स्टाइल",
+              "options__1": "खोलें",
+              "options__2": "बंद करें"
+            },
+            "heading": {
+              "label": "Accordion heading",
+              "info": "Include a heading that explains the content."
+            },
+            "content": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "inventory_counter": {
+          "name": "Stock Level Indicator",
+          "settings": {
+            "show_labels": {
+              "label": "Show label"
+            },
+            "inventory_max": {
+              "label": "Inventory base quantity",
+              "info": "Enter the initial quantity of your product inventory. Insert a Dynamic source to set different base quantities for multiple products. [Learn more](https://fluorescent.co/help/spark/featured-product#inventory-counter)"
+            },
+            "low_inventory_threshold": {
+              "label": "Low inventory threshold",
+              "info": "Set the product inventory quantity to alert customers when limited quantities are available. Insert a Dynamic source to set different thresholds for multiple products. [Learn more](https://fluorescent.co/help/spark/featured-product#inventory-counter)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "फीचर किया गया उत्पाद"
+      }
+    },
+    "footer": {
+      "name": "फोल्डर",
+      "settings": {
+        "language__header": {
+          "content": "भाषा चयनr",
+          "info": "भाषा जोड़ने के लिए, अपनी [भाषा सेटिंग्स](/admin/settings/languages) में जाएं"
+        },
+        "show_locale_selector": {
+          "label": "भाषा चयन दिखाएं"
+        },
+        "currency__header": {
+          "content": "करेंसी चयन",
+          "info": "करेंसी जोड़ने के लिए [भुगतान सेटिंग्स](/admin/settings/payments) में जाएँ।"
+        },
+        "show_currency_selector": {
+          "label": "करेंसी चयन दिखाएं"
+        },
+        "social_media__header": {
+          "content": "सोशल मीडिया",
+          "info": "थीम सेटिंग्स में खाते के लिंक कन्फ़िगर करें।"
+        },
+        "show_social_icons": {
+          "label": "सोशल आइकॉन दिखाएं"
+        },
+        "payment__header": {
+          "content": "भुगतान के प्रकार",
+          "info": "केवल उन्हीं भुगतान पद्धतियों के आइकॉन दिखाएँ जो आपके स्टोर पर समर्थित हैं।"
+        },
+        "show_payment_icons": {
+          "label": "भुगतान आइकॉन दिखाएँ"
+        }
+      },
+      "blocks": {
+        "text": {
+          "name": "टेक्स्ट",
+          "settings": {
+            "title": {
+              "label": "हेडिंग",
+              "info": "अपने टेक्स्ट के लिए एक शीर्षक लिखें। शीर्षक फंक्शन छोटे आकार के स्क्रीन पर टॉगल की तरह काम करता है। "
+            },
+            "text": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "menu": {
+          "name": "मेन्यू",
+          "settings": {
+            "title": {
+              "label": "हेडिंग",
+              "info": "अपने टेक्स्ट के लिए एक शीर्षक लिखें। शीर्षक फंक्शन छोटे आकार के स्क्रीन पर टॉगल की तरह काम करता है। "
+            },
+            "link_list": {
+              "label": "फुटर मेन्यू"
+            }
+          }
+        },
+        "newsletter": {
+          "name": "समाचार",
+          "settings": {
+            "title": {
+              "label": "हेडिंग",
+              "info": "अपने टेक्स्ट के लिए एक शीर्षक लिखें। शीर्षक फंक्शन छोटे आकार के स्क्रीन पर टॉगल की तरह काम करता है।"
+            },
+            "text": {
+              "label": "टेक्स्ट"
+            }
+          }
+        }
+      }
+    },
+    "header": {
+      "name": "हेडर",
+      "settings": {
+        "image": {
+          "label": "लोगो इमेज"
+        },
+        "logo_max_width": {
+          "label": "लोगो की अधिकतम लंबाई"
+        },
+        "menu": {
+          "label": "मुख्य मेन्यू"
+        },
+        "secondary_menu": {
+          "label": "द्वितीयक मेन्यू"
+        },
+        "style": {
+          "label": "स्टाइल",
+          "options__1": "लिंक्स",
+          "options__2": "मेन्यू आइकॉन"
+        },
+        "navigation_position": {
+          "label": "लिंक्स की पोजीशन",
+          "options__1": "इन-लाइन",
+          "options__2": "नीचे"
+        },
+        "logo_position": {
+          "label": "लोगो की पोजीशन",
+          "options__1": "बाएँ",
+          "options__2": "मध्य"
+        },
+        "transparent__header": {
+          "content": "पारदर्शी हेडर"
+        },
+        "enable_transparent_home": {
+          "label": "मुख्यपृष्ठ सक्रिय करें",
+          "info": "सुनिश्चित करें कि आपके मुखपृष्ठ के पहले सेक्शन में स्लाइडशो या वीडियो हीरो का सेक्शन हो।"
+        },
+        "color_text_transparent": {
+          "label": "टेक्स्ट का रंग"
+        },
+        "color_icon_transparent": {
+          "label": "आइकॉन का रंग"
+        },
+        "color_count_transparent": {
+          "label": "कार्ट की संख्या का रंग"
+        },
+        "color_border_transparent": {
+          "label": "किनारी का रंग"
+        },
+        "opacity_border_transparent": {
+          "label": "किनारी की पारदर्शिता"
+        },
+        "logo_transparent": {
+          "label": "लोगो इमेज",
+          "info": "अगर कोई इमेज नहीं लगाई जाती है तो डिफ़ाल्ट लोगो दिखाया जाएगा।"
+        }
+      }
+    },
+    "image_with_features": {
+      "name": "फीचरों वाली इमेज",
+      "settings": {
+        "image": {
+          "label": "इमेज"
+        },
+        "image_width": {
+          "label": "इमेज की चौड़ाई",
+          "options__1": "1/2",
+          "options__2": "2/3"
+        },
+        "aspect_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": "वास्तविक",
+          "options__2": "चतुर्भुज (1:1)",
+          "options__3": "लैंडस्केप (3:2)",
+          "options__4": "पोर्ट्रेट (2:3)"
+        },
+        "text_position": {
+          "label": "टेक्स्ट की पोजीशन",
+          "options__1": "बाएँ",
+          "options__2": "दांए"
+        },
+        "text_alignment": {
+          "label": "टेक्ट को एक सीध में लाना",
+          "options__1": "बाएँ",
+          "options__2": "मध्य",
+          "options__3": "दांए"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "हेडिंग",
+          "settings": {
+            "heading": {
+              "label": "हेडिंग"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        },
+        "feature": {
+          "name": "फीचर",
+          "settings": {
+            "image": {
+              "label": "इमेज",
+              "info": "160px x 160px की अनुशंसा की गई है"
+            },
+            "image_shape": {
+              "label": "इमेज की आकृति",
+              "options__1": "गोल",
+              "options__2": "चतुर्भुज"
+            },
+            "heading": {
+              "label": "हेडिंग"
+            },
+            "subheading": {
+              "label": "उपशीर्षक"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "फीचरों वाली इमेज"
+      }
+    },
+    "image_with_text": {
+      "name": "टेक्स्ट के साथ इमेज",
+      "settings": {
+        "image_1": {
+          "label": "इमेज"
+        },
+        "image_2": {
+          "label": "इमेज 2"
+        },
+        "image_position": {
+          "label": "इमेज की पोजीशन",
+          "options__1": "बाएँ",
+          "options__2": "दांए"
+        },
+        "image_width": {
+          "label": "इमेज की चौड़ाई",
+          "options__1": "1/2",
+          "options__2": "2/3"
+        },
+        "aspect_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": "वास्तविक",
+          "options__2": "चतुर्भुज (1:1)",
+          "options__3": "लैंडस्केप (3:2)",
+          "options__4": "पोर्ट्रेट (2:3)"
+        },
+        "text_alignment": {
+          "label": "टेक्ट को एक सीध में लाना",
+          "options__1": "बाएँ",
+          "options__2": "मध्य"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "हेडिंग",
+          "settings": {
+            "title": {
+              "label": "हेडिंग"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        },
+        "subheading": {
+          "name": "उपशीर्षक",
+          "settings": {
+            "subheading": {
+              "label": "उपशीर्षक"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        },
+        "button": {
+          "name": "बटन",
+          "settings": {
+            "link": {
+              "label": "बटन लिंक"
+            },
+            "link_text": {
+              "label": "बटन का लेबल"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "टेक्स्ट के साथ इमेज"
+      }
+    },
+    "inline_features": {
+      "name": "इन-लाइन फीचर",
+      "settings": {
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        },
+        "image_shape": {
+          "label": "इमेज की आकृति",
+          "options__1": "गोल",
+          "options__2": "चतुर्भुज"
+        },
+        "text_alignment": {
+          "label": "टेक्ट को एक सीध में लाना",
+          "options__1": "बाएँ",
+          "options__2": "दांए"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "feature": {
+          "name": "फीचर",
+          "settings": {
+            "show_image": {
+              "label": "इमेज दिखाएं"
+            },
+            "image": {
+              "label": "इमेज",
+              "info": "160px x 160px की अनुशंसा की गई है"
+            },
+            "heading": {
+              "label": "हेडिंग"
+            },
+            "subheading": {
+              "label": "उपशीर्षक"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "इन-लाइन फीचर"
+      }
+    },
+    "logo_list": {
+      "name": "लोगो सूची",
+      "settings": {
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        },
+        "gutter_spacing": {
+          "label": "लोगो के बीच रिक्त जगह"
+        },
+        "title": {
+          "label": "हेडिंग"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "logo": {
+          "name": "लोगो",
+          "settings": {
+            "image": {
+              "label": "इमेज"
+            },
+            "link": {
+              "label": "लिंक"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "लोगो सूची"
+      }
+    },
+    "map": {
+      "name": "नक्शा",
+      "settings": {
+        "image": {
+          "label": "इमेज",
+          "info": "यदि मैप लोड नहीं हो रहा तो दिखाया जाए"
+        },
+        "header": {
+          "content": "नक्शा",
+          "info": "नक्शे पर पता और एक वैध गूगल मैप्स API Key आवश्यक है"
+        },
+        "map_address": {
+          "label": "मैप  पर पता",
+          "info": "गूगल मैप्स सटीक लोकेशन ढूंढ लेगा"
+        },
+        "api_key": {
+          "label": "गूगल मैप्स API Key",
+          "info": "नक्शा दिखाने के लिए गूगल मैप्स API Key का पंजीकरण करें। [गूगल मैप्स API Key का पंजीकरण](https://help.shopify.com/en/manual/online-store/themes/os/customize/map-section-api-key) के बारें में जानें"
+        },
+        "map_json": {
+          "label": "कस्टम मैप JSON",
+          "info": "(वैकल्पिक) कुछ कस्टम [मैप स्टाइल](https://mapstyle.withgoogle.com/) जोड़ें"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "हेडिंग",
+          "settings": {
+            "title": {
+              "label": "हेडिंग"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        },
+        "store_information": {
+          "name": "स्टोर संबंधी सूचना",
+          "settings": {
+            "store_information": {
+              "label": "स्टोर संबंधी सूचना"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "नक्शा"
+      }
+    },
+    "newsletter": {
+      "name": "समाचार",
+      "settings": {
+        "title": {
+          "label": "हेडिंग"
+        },
+        "subheading": {
+          "label": "उपशीर्षक"
+        },
+        "paragraph": {
+          "content": "सबस्क्राइब करने वाले ग्राहकों के ईमेल पते को मार्केटिंग स्वीकार है [ग्राहक सूची] की सूची में जोड़ा जाएगा (/admin/customers?query=&accepts_marketing=1)."
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "presets": {
+        "name": "समाचार"
+      }
+    },
+    "popup": {
+      "name": "पॉप-अप",
+      "settings": {
+        "enable_popup": {
+          "label": "सक्रिय करें",
+          "info": "जब उपयोगकर्ता का कर्सर साइट से पहली बार दूर हटे तो एक पॉप-अप दिखाएँ"
+        },
+        "background__header": {
+          "content": "पृष्ठभूमि"
+        },
+        "image": {
+          "label": "इमेज"
+        },
+        "image_position": {
+          "label": "Image position",
+          "options__1": "सबसे ऊपर",
+          "options__2": "मध्य",
+          "options__3": "सबसे नीचे"
+        },
+        "color__header": {
+          "content": "रंग"
+        },
+        "color_text": {
+          "label": "टेक्स्ट"
+        },
+        "color_text_button": {
+          "label": "बटन का टेक्स्ट"
+        },
+        "color_background_button": {
+          "label": "बटन की पृष्ठभूमि"
+        },
+        "color_overlay": {
+          "label": "आवरण"
+        },
+        "overlay_opacity": {
+          "label": "ऊपरी सतह की पारदर्शिता"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "हेडिंग",
+          "settings": {
+            "title": {
+              "label": "हेडिंग"
+            },
+            "subheading": {
+              "label": "उपशीर्षक"
+            }
+          }
+        },
+        "newsletter_signup": {
+          "name": "समाचार के लिए साइन-अप"
+        }
+      }
+    },
+    "product_recommendations": {
+      "name": "सुझाए गए उत्पाद",
+      "settings": {
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        },
+        "title": {
+          "label": "Heading"
+        },
+        "subheading": {
+          "label": "उपशीर्षक"
+        },
+        "text_max_width": {
+          "label": "टेक्स्ट की अधिकतम लंबाई"
+        },
+        "aspect_ratio": {
+          "label": "Image aspect ratio",
+          "options__1": "वास्तविक",
+          "options__2": "Square (1:1)",
+          "options__3": "लैंडस्केप (3:2)",
+          "options__4": "Portrait (2:3)"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "presets": {
+        "name": "सुझाए गए उत्पाद"
+      }
+    },
+    "questions": {
+      "name": "प्रश्नोत्तरी",
+      "settings": {
+        "title": {
+          "label": "हेडिंग"
+        },
+        "subheading": {
+          "label": "उपशीर्षक"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "question": {
+          "name": "प्रश्न",
+          "settings": {
+            "title": {
+              "label": "प्रश्न"
+            },
+            "answer": {
+              "label": "उत्तर"
+            },
+            "author": {
+              "label": "लेखक का नाम"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "प्रश्नोत्तरी"
+      }
+    },
+    "quotes": {
+      "name": "कथन",
+      "settings": {
+        "timer": {
+          "label": "Time between quotes"
+        },
+        "image_shape": {
+          "label": "इमेज की आकृति",
+          "options__1": "गोल",
+          "options__2": "चतुर्भुज"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "quote": {
+          "name": "कथन",
+          "settings": {
+            "quote": {
+              "label": "कथन"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            },
+            "author": {
+              "label": "लेखक"
+            },
+            "image": {
+              "label": "लेखक की फोटो",
+              "info": "160px x 160px की अनुशंसा की गई है"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "कथन"
+      }
+    },
+    "rich_text": {
+      "name": "रिच टेक्स्ट",
+      "settings": {
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "हेडिंग",
+          "settings": {
+            "title": {
+              "label": "हेडिंग"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        },
+        "text": {
+          "name": "टेक्स्ट",
+          "settings": {
+            "subheading": {
+              "label": "टेक्स्ट"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        },
+        "button": {
+          "name": "बटन",
+          "settings": {
+            "link_text": {
+              "label": "बटन का लेबल"
+            },
+            "link": {
+              "label": "बटन लिंक"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "रिच टेक्स्ट"
+      }
+    },
+    "slideshow": {
+      "name": "स्लाइडशो",
+      "settings": {
+        "height": {
+          "label": "ऊंचाई"
+        },
+        "mobile_height": {
+          "label": "मोबाइल की ऊंचाई"
+        },
+        "duration_autoplay": {
+          "label": "स्लाइडों के बीच अंतराल"
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "स्लाइड",
+          "settings": {
+            "desktop_image": {
+              "label": "इमेज"
+            },
+            "mobile_image": {
+              "label": "मोबाइल इमेज"
+            },
+            "title": {
+              "label": "हेडिंग"
+            },
+            "subheading": {
+              "label": "उपशीर्षक"
+            },
+            "heading_text_size": {
+              "label": "शीर्षक का आकार"
+            },
+            "overlay_shadow": {
+              "label": "टेक्स्ट की छाया का आकार"
+            },
+            "max_width_subheading": {
+              "label": "टेक्स्ट की अधिकतम चौड़ाई"
+            },
+            "link_text": {
+              "label": "बटन का लेबल"
+            },
+            "link": {
+              "label": "बटन लिंक"
+            },
+            "alignment": {
+              "label": "टेक्ट को एक सीध में लाना",
+              "options__1": {
+                "label": "सबसे ऊपर बाएँ"
+              },
+              "options__2": {
+                "label": "सबसे ऊपर मध्य"
+              },
+              "options__3": {
+                "label": "सबसे ऊपर दाएँ"
+              },
+              "options__4": {
+                "label": "बीच में बाएँ"
+              },
+              "options__5": {
+                "label": "बीच में मध्य"
+              },
+              "options__6": {
+                "label": "बीच में दाएँ"
+              },
+              "options__7": {
+                "label": "सबसे नीचे बाएँ"
+              },
+              "options__8": {
+                "label": "सबसे नीचे मध्य"
+              },
+              "options__9": {
+                "label": "सबसे नीचे दाएँ"
+              }
+            },
+            "header": {
+              "content": "रंग"
+            },
+            "color_text": {
+              "label": "टेक्स्ट"
+            },
+            "color_text_button": {
+              "label": "बटन का टेक्स्ट"
+            },
+            "color_background_button": {
+              "label": "बटन की पृष्ठभूमि"
+            },
+            "color_overlay": {
+              "label": "आवरण"
+            },
+            "overlay_opacity": {
+              "label": "ऊपरी सतह की पारदर्शिता"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "स्लाइडशो"
+      }
+    },
+    "social_proof": {
+      "name": "सोशल प्रमाण",
+      "settings": {
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        },
+        "title": {
+          "label": "हेडिंग"
+        },
+        "subheading": {
+          "label": "उपशीर्षक"
+        },
+        "text_max_width": {
+          "label": "टेक्स्ट की अधिकतम लंबाई"
+        },
+        "aspect_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": "वास्तविक",
+          "options__2": "चतुर्भुज (1:1)",
+          "options__3": "लैंडस्केप (3:2)",
+          "options__4": "पोर्ट्रेट (2:3)"
+        },
+        "like_color": {
+          "label": "आइकॉन के रंग को लाइक करें"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "post": {
+          "name": "पोस्ट",
+          "settings": {
+            "image": {
+              "label": "इमेज"
+            },
+            "link": {
+              "label": "लिंक"
+            },
+            "header": {
+              "content": "विवरण"
+            },
+            "likes": {
+              "label": "लाइक्स की संख्या",
+              "info": "फर्जी नंबर देकर गुमराह करने वाले ग्राहक [एफ़टीसी एक्ट](https://ca.practicallaw.thomsonreuters.com/w-007-7584) के अंतर्गत ‘अनुचित और धोखाधड़ी वाले कृत्य और अभ्यास’ के अंतर्गत आएंगे "
+            },
+            "account": {
+              "label": "पोस्टकर्ता"
+            },
+            "caption": {
+              "label": "कैप्शन"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "सोशल प्रमाण"
+      }
+    },
+    "testimonials": {
+      "name": "टेस्टिमोनियल",
+      "settings": {
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        },
+        "title": {
+          "label": "हेडिंग"
+        },
+        "subheading": {
+          "label": "उपशीर्षक"
+        },
+        "text_alignment": {
+          "label": "टेक्ट को एक सीध में लाना",
+          "options__1": "बाएँ",
+          "options__2": "मध्य"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "testimonial": {
+          "name": "टेस्टिमोनियल",
+          "settings": {
+            "heading": {
+              "label": "हेडिंग"
+            },
+            "testimonial": {
+              "label": "टेस्टिमोनियल"
+            },
+            "link": {
+              "label": "बटन लिंक"
+            },
+            "author": {
+              "label": "लेखक"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "टेस्टिमोनियल"
+      }
+    },
+    "text_columns_with_images": {
+      "name": "इमेज वाले टेक्स्ट कॉलम",
+      "settings": {
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        },
+        "image_shape": {
+          "label": "इमेज की आकृति",
+          "options__1": "गोल",
+          "options__2": "चतुर्भुज"
+        },
+        "text_alignment": {
+          "label": "टेक्ट को एक सीध में लाना",
+          "options__1": "बाएँ",
+          "options__2": "मध्य"
+        },
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "कॉलम",
+          "settings": {
+            "image": {
+              "label": "इमेज",
+              "info": "160px x 160px की अनुशंसा की गई है"
+            },
+            "heading": {
+              "label": "हेडिंग"
+            },
+            "subheading": {
+              "label": "उपशीर्षक"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            },
+            "link": {
+              "label": "बटन लिंक"
+            },
+            "link_text": {
+              "label": "बटन का लेबल"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "इमेज वाले टेक्स्ट कॉलम"
+      }
+    },
+    "video": {
+      "name": "वीडियो",
+      "settings": {
+        "section_contrast": {
+          "label": "अन्य सेक्शन के रंग का प्रयोग करें"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "हेडिंग",
+          "settings": {
+            "title": {
+              "label": "हेडिंग"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        },
+        "subheading": {
+          "name": "उपशीर्षक",
+          "settings": {
+            "subheading": {
+              "label": "उपशीर्षक"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम लंबाई"
+            }
+          }
+        },
+        "video": {
+          "name": "वीडियो",
+          "settings": {
+            "video_url": {
+              "label": "वीडियो का URL"
+            },
+            "image": {
+              "label": "इमेज आवरण"
+            },
+            "opacity_overlay": {
+              "label": "ऊपरी सतह की पारदर्शिता"
+            },
+            "color_overlay": {
+              "label": "आवरण"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "वीडियो"
+      }
+    },
+    "video_hero": {
+      "name": "वीडियो हीरो",
+      "settings": {
+        "height": {
+          "label": "ऊंचाई"
+        },
+        "mobile_height": {
+          "label": "मोबाइल की ऊंचाई"
+        },
+        "video_url": {
+          "label": "वीडियो का लिंक",
+          "info": "एक .mp4 वीडियो फाइल से सीधे लिंक का प्रयोग करें [यहाँ अधिक जानें](https://fluorescent.co/help/spark/video-hero#add-a-video)."
+        },
+        "image": {
+          "label": "वैकल्पिक इमेज"
+        },
+        "alignment": {
+          "label": "टेक्ट को एक सीध में लाना",
+          "options__1": {
+            "label": "सबसे ऊपर बाएँ"
+          },
+          "options__2": {
+            "label": "सबसे ऊपर मध्य"
+          },
+          "options__3": {
+            "label": "सबसे ऊपर दाएँ"
+          },
+          "options__4": {
+            "label": "बीच में बाएँ"
+          },
+          "options__5": {
+            "label": "बीच में मध्य"
+          },
+          "options__6": {
+            "label": "बीच में दाएँ"
+          },
+          "options__7": {
+            "label": "सबसे नीचे बाएँ"
+          },
+          "options__8": {
+            "label": "सबसे नीचे मध्य"
+          },
+          "options__9": {
+            "label": "सबसे नीचे दाएँ"
+          }
+        },
+        "overlay_shadow": {
+          "label": "टेक्स्ट की छाया का आकार"
+        },
+        "header": {
+          "content": "रंग"
+        },
+        "color_text": {
+          "label": "टेक्स्ट का रंग"
+        },
+        "color_text_button": {
+          "label": "बटन का टेक्स्ट"
+        },
+        "color_background_button": {
+          "label": "बटन की पृष्ठभूमि"
+        },
+        "color_overlay": {
+          "label": "ऊपरी रंग"
+        },
+        "overlay_opacity": {
+          "label": "ऊपरी सतह की पारदर्शिता"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "हेडिंग",
+          "settings": {
+            "heading": {
+              "label": "हेडिंग"
+            },
+            "heading_text_size": {
+              "label": "शीर्षक का आकार"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम चौड़ाई"
+            }
+          }
+        },
+        "subheading": {
+          "name": "उपशीर्षक",
+          "settings": {
+            "subheading": {
+              "label": "उपशीर्षक"
+            },
+            "text_max_width": {
+              "label": "टेक्स्ट की अधिकतम चौड़ाई"
+            }
+          }
+        },
+        "button": {
+          "name": "बटन",
+          "settings": {
+            "link_text": {
+              "label": "बटन का लेबल"
+            },
+            "link": {
+              "label": "बटन लिंक"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "वीडियो हीरो"
+      }
+    },
+    "main_article": {
+      "name": "ब्लॉग पोस्ट",
+      "blocks": {
+        "featured_image": {
+          "name": "फीचर इमेज"
+        },
+        "title": {
+          "name": "शीर्षक",
+          "settings": {
+            "blog_show_date": {
+              "label": "तिथि दिखाएं"
+            },
+            "blog_show_social_sharing": {
+              "label": "सोशल आइकॉन दिखाएं"
+            }
+          }
+        },
+        "content": {
+          "name": "कंटेंट",
+          "settings": {
+            "blog_show_social_sharing": {
+              "label": "सोशल आइकॉन दिखाएं"
+            },
+            "blog_show_pagination": {
+              "label": "पृष्ठ संख्या दिखाएँ",
+              "info": "जब आपके पास दिखने के लिए कई ब्लॉग लेख होंगे तो पृष्ठ संख्या दिखाई जाएगी।"
+            },
+            "content_max_width": {
+              "label": "अधिकतम सामग्री चौड़ाई",
+              "info": "पृष्ठ की अधिकतम सामग्री चौड़ाई समायोजित करें।"
+            }
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "ब्लॉग पोस्ट्स",
+      "settings": {
+        "show_rss": {
+          "label": "RSS आइकॉन दिखाएँ"
+        },
+        "articles_per_row": {
+          "label": "प्रत्येक पंक्ति में लेख"
+        },
+        "header": {
+          "content": "ब्लॉग पोस्ट कार्ड"
+        },
+        "image_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": {
+            "label": "वास्तविक"
+          },
+          "options__2": {
+            "label": "चतुर्भुज (1:1)"
+          },
+          "options__3": {
+            "label": "लैंडस्केप (3:2)"
+          },
+          "options__4": {
+            "label": "पोर्ट्रेट (2:3)"
+          }
+        }
+      },
+      "blocks": {
+        "title": {
+          "name": "शीर्षक",
+          "settings": {
+            "show_date": {
+              "label": "तिथि दिखाएं"
+            }
+          }
+        },
+        "summary": {
+          "name": "अंश",
+          "settings": {
+            "show_link": {
+              "label": "लिंक दिखाएं"
+            }
+          }
+        }
+      }
+    },
+    "main_cart": {
+      "name": "कार्ट पृष्ठ",
+      "settings": {
+        "cart_ajax_enable": {
+          "label": "स्वत: कार्ट अपडेट की सुविधा सक्रिय करें",
+          "info": "ग्राहक द्वारा बदलाव होते ही कार्ट को तुरंत अपडेट करता है"
+        }
+      }
+    },
+    "main_collection_banner": {
+      "name": "कलेक्शन बैनर",
+      "settings": {
+        "show_collection_image": {
+          "label": "संकलन की इमेज दिखाएं"
+        },
+        "collection_image_aspect_ratio": {
+          "label": "संकलन की फोटो का इमेज अनुपात",
+          "options__1": "वास्तविक",
+          "options__2": "चतुर्भुज (1:1)",
+          "options__3": "लैंडस्केप (3:2)",
+          "options__4": "पोर्ट्रेट (2:3)"
+        },
+        "show_collection_description": {
+          "label": "संकलन का विवरण दिखाएं"
+        },
+        "text_max_width": {
+          "label": "टेक्स्ट की अधिकतम लंबाई"
+        }
+      }
+    },
+    "main_collection_product_grid": {
+      "name": "उत्पाद ग्रिड",
+      "settings": {
+        "filtering__header": {
+          "content": "फिल्टर करें"
+        },
+        "show_sort": {
+          "label": "क्रमित करने के विकल्प दिखाएँ"
+        },
+        "show_filters": {
+          "label": "फिल्टर दिखाएँ"
+        },
+        "collection__header": {
+          "content": "संकलन"
+        },
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        },
+        "per_page": {
+          "label": "उत्पाद प्रति पृष्ठ"
+        },
+        "pagination": {
+          "label": "पृष्ठ संख्या ",
+          "info": "उत्पाद के अतिरिक्त पेजों पर जाने के विकल्प चुनें",
+          "options__1": "अनंत",
+          "options__2": "लोड करने के लिए क्लिक करें",
+          "options__3": "पृष्ठ संख्या निर्धारित"
+        },
+        "show_swatches_and_chips": {
+          "label": "स्वाच और चिप्स दिखाएँ",
+          "info": "कर्सर घुमाने पर उत्पाद के विकल्प दिखाएँ। स्वाच और चिप्स सेट-अप करने के बारे में अधिक जानने के लिए, हमारे [दस्तावेज़](https://fluorescent.co/help/spark/product-pages#set-up-product-chips) देखें।"
+        },
+        "aspect_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": "वास्तविक",
+          "options__2": "चतुर्भुज (1:1)",
+          "options__3": "लैंडस्केप (3:2)",
+          "options__4": "पोर्ट्रेट (2:3)"
+        }
+      }
+    },
+    "main_list_collections": {
+      "name": "संकलन सूची पृष्ठ",
+      "settings": {
+        "paragraph": {
+          "content": "आपके सभी कलेक्शन डिफ़ाल्ट रूप से सूची में हैं। अपनी सूची को कस्टमाइज़ करने के लिए, 'चुने गए' पर जाएँ और कलेक्शन ब्लॉक जोड़ें।"
+        },
+        "display_type": {
+          "label": "दिखाने के लिए कलेक्शन चुनें",
+          "options__1": "सभी",
+          "options__2": "चुने गए"
+        },
+        "show_description": {
+          "label": "संकलन का विवरण दिखाएं"
+        },
+        "aspect_ratio": {
+          "label": "इमेज लंबाई-चौड़ाई अनुपात",
+          "options__1": "वास्तविक",
+          "options__2": "गोल (1:1)",
+          "options__3": "चतुर्भुज (1:1)",
+          "options__4": "लैंडस्केप (3:2)",
+          "options__5": "पोर्ट्रेट (2:3)"
+        },
+        "columns": {
+          "label": "हर पंक्ति में कॉलम"
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "संकलन",
+          "settings": {
+            "collection": {
+              "label": "संकलन"
+            }
+          }
+        }
+      }
+    },
+    "main_page": {
+      "name": "पृष्ठ",
+      "settings": {
+        "content_max_width": {
+          "label": "अधिकतम सामग्री चौड़ाई",
+          "info": "लेख की अधिकतम सामग्री चौड़ाई समायोजित करें। [पृष्ठों के बारे में और जानें](https://help.shopify.com/en/manual/online-store/pages)।"
+        }
+      }
+    },
+    "main_page_about": {
+      "name": "पृष्ठ के बारे में",
+      "settings": {
+        "intro": {
+          "label": "परिचय"
+        },
+        "content_max_width": {
+          "label": "अधिकतम सामग्री चौड़ाई",
+          "info": "लेख की अधिकतम सामग्री चौड़ाई समायोजित करें। [पृष्ठों के बारे में और जानें](https://help.shopify.com/en/manual/online-store/pages)।"
+        }
+      },
+      "blocks": {
+        "media": {
+          "name": "मीडिया",
+          "settings": {
+            "image": {
+              "label": "इमेज"
+            },
+            "video_url": {
+              "label": "वीडियो का लिंक",
+              "info": "एक .mp4 वीडियो फाइल से सीधे लिंक का प्रयोग करें [यहाँ अधिक जानें](https://fluorescent.co/help/spark/video-hero#add-a-video)."
+            }
+          }
+        }
+      }
+    },
+    "main_page_contact": {
+      "name": "संपर्क पृष्ठ",
+      "blocks": {
+        "image": {
+          "name": "इमेज",
+          "settings": {
+            "image": {
+              "label": "इमेज",
+              "info": "2:3 चौड़ाई से लंबाई अनुपात वाली इमेज जोड़ें (सुझाई गई)।"
+            }
+          }
+        }
+      }
+    },
+    "main_password": {
+      "name": "पासवर्ड पृष्ठ",
+      "settings": {
+        "show_share": {
+          "label": "साझा करने का बटन दिखाएँ"
+        }
+      },
+      "blocks": {
+        "branding": {
+          "name": "ब्रांडिंग",
+          "settings": {
+            "logo": {
+              "label": "लोगो इमेज"
+            },
+            "logo_max_width": {
+              "label": "लोगो की अधिकतम लंबाई"
+            }
+          }
+        },
+        "heading": {
+          "name": "हेडिंग",
+          "settings": {
+            "heading": {
+              "label": "हेडिंग"
+            },
+            "text": {
+              "label": "उपशीर्षक"
+            }
+          }
+        },
+        "newsletter_signup": {
+          "name": "समाचार के लिए साइन-अप"
+        }
+      }
+    },
+    "main_product_details": {
+      "name": "उत्पाद का विवरण",
+      "blocks": {
+        "description": {
+          "name": "विवरण",
+          "settings": {
+            "style": {
+              "label": "स्टाइल",
+              "options__1": "पैराग्राफ",
+              "options__2": "ड्रॉपडाउन खोलें",
+              "options__3": "ड्रॉपडाउन बंद करें"
+            }
+          }
+        },
+        "accordion": {
+          "name": "ड्रॉपडाउन मेन्यू",
+          "settings": {
+            "style": {
+              "label": "स्टाइल",
+              "options__1": "खोलें",
+              "options__2": "बंद करें"
+            },
+            "heading": {
+              "label": "ड्रॉपडाउन का शीर्षक",
+              "info": "विषय के बारे में बताने वाला एक शीर्षक शामिल करें।"
+            },
+            "content": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "payment_widget": {
+          "name": "भुगतान बैज का विजेट",
+          "settings": {
+            "icon": {
+              "label": "आइकॉन",
+              "options__1": "कोई नहीं",
+              "options__2": "चैट",
+              "options__3": "भुगतान",
+              "options__4": "सुरक्षा",
+              "options__5": "शिपिंग"
+            },
+            "title": {
+              "label": "शीर्षक"
+            },
+            "show_payment_icons": {
+              "label": "भुगतान आइकॉन दिखाएँ"
+            },
+            "text": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "security_widget": {
+          "name": "सुरक्षा विजेट",
+          "settings": {
+            "icon": {
+              "label": "आइकॉन",
+              "options__1": "कोई नहीं",
+              "options__2": "चैट",
+              "options__3": "भुगतान",
+              "options__4": "सुरक्षा",
+              "options__5": "शिपिंग"
+            },
+            "title": {
+              "label": "शीर्षक"
+            },
+            "text": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "shipping_widget": {
+          "name": "शिपिंग विजेट",
+          "settings": {
+            "icon": {
+              "label": "आइकॉन",
+              "options__1": "कोई नहीं",
+              "options__2": "चैट",
+              "options__3": "भुगतान",
+              "options__4": "सुरक्षा",
+              "options__5": "शिपिंग"
+            },
+            "title": {
+              "label": "शीर्षक"
+            },
+            "text": {
+              "label": "टेक्स्ट"
+            },
+            "show_estimator": {
+              "label": "शिपिंग अनुमान दिखाएँ"
+            }
+          }
+        },
+        "custom_widget": {
+          "name": "कस्टम विजेट",
+          "settings": {
+            "icon": {
+              "label": "आइकॉन",
+              "options__1": "कोई नहीं",
+              "options__2": "चैट",
+              "options__3": "भुगतान",
+              "options__4": "सुरक्षा",
+              "options__5": "शिपिंग"
+            },
+            "title": {
+              "label": "शीर्षक"
+            },
+            "text": {
+              "label": "टेक्स्ट"
+            }
+          }
+        }
+      }
+    },
+    "main_product_overview": {
+      "name": "उत्पाद की संक्षिप्त जानकारी",
+      "settings": {
+        "purchase_bar__header": {
+          "content": "क्विक पर्चेज बार"
+        },
+        "enable_quick_purchase_bar": {
+          "label": "क्विक पर्चेज बार दिखाएँ"
+        },
+        "show_share_buttons": {
+          "label": "सोशल मीडिया पर साझा करने का बटन दिखाएँ"
+        },
+        "media__header": {
+          "content": "मीडिया"
+        },
+        "media__paragraph": {
+          "content": "[मीडिया प्रकारों](https://help.shopify.com/en/manual/products/product-media) के बारे में अधिक जानें"
+        },
+        "enable_video_looping": {
+          "label": "वीडियो लूप की सुविधा चालू करें"
+        }
+      },
+      "blocks": {
+        "border": {
+          "name": "Border"
+        },
+        "title": {
+          "name": "शीर्षक"
+        },
+        "price": {
+          "name": "कीमत"
+        },
+        "sku": {
+          "name": "SKU"
+        },
+        "vendor": {
+          "name": "वेंडर"
+        },
+        "quantity_selector": {
+          "name": "मात्रा चयन",
+          "settings": {
+            "show_labels": {
+              "label": "लेबल दिखाएं"
+            }
+          }
+        },
+        "variant_picker": {
+          "name": "वैरिएंट चयन",
+          "settings": {
+            "show_labels": {
+              "label": "लेबल दिखाएं"
+            },
+            "popup__header": {
+              "content": "सूचना पॉप-अप",
+              "info": "अपने उत्पाद के बारे में अधिक जानकारी, जैसे साइज़ गाइड, दिखाने के लिए एक पॉप-अप जोड़ें"
+            },
+            "variant_popup_option": {
+              "label": "सूचना पॉप-अप के लिए विकल्प का नाम",
+              "info": "चिप्स के रूप में दिखने वाले विकल्प का नाम लिखें। कॉमा लगाकर अलग करें: \"आकार\"."
+            },
+            "variant_popup_text": {
+              "label": "सूचना पॉप-अप लिंक पर टेक्स्ट"
+            },
+            "variant_popup_page": {
+              "label": "सूचना पॉप-अप का विषय",
+              "info": "पॉप-अप सामग्री के लिए स्रोत के रूप में एक पृष्ठ चुनें। आप इस पृष्ठ पर टेक्स्ट, तालिका या चित्र जोड़ सकते हैं।"
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "बटन खरीदें",
+          "settings": {
+            "show_dynamic_checkout": {
+              "label": "डायनामिक चेकआउट बटन दिखाएँ",
+              "info": "अपने स्टोर पर उपलब्ध भुगतान पद्धतियों का प्रयोग करना, ग्राहकों को उनकी वरीयता अनुसार विकल्प दिखते हैं, जैसे PayPal या Apple Pay [अधिक जानें](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+            }
+          }
+        },
+        "description": {
+          "name": "विवरण",
+          "settings": {
+            "style": {
+              "label": "स्टाइल",
+              "options__1": "पैराग्राफ",
+              "options__2": "ड्रॉपडाउन खोलें",
+              "options__3": "ड्रॉपडाउन बंद करें"
+            }
+          }
+        },
+        "text": {
+          "name": "टेक्स्ट",
+          "settings": {
+            "text": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "share": {
+          "name": "साझा करें",
+          "settings": {
+            "paragraph__1": {
+              "content": "अगर आप सोशल मीडिया का लिंक जोड़ते हैं, तो लिंक की फीचर की हुई इमेज प्री व्यू इमेज के रूप में दिखाई जाएगी। [अधिक जानें](https://help.shopify.com/en/manual/online-store/images/showing-social-media-thumbnail-images)."
+            },
+            "paragraph__2": {
+              "content": "प्रीव्यू इमेज में स्टोर का शीर्षक और विवरण भी शामिल होंगे। [अधिक जानें](https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
+            }
+          }
+        },
+        "inventory_counter": {
+          "name": "Stock Level Indicator",
+          "settings": {
+            "show_labels": {
+              "label": "Show label"
+            },
+            "inventory_max": {
+              "label": "Inventory base quantity",
+              "info": "Enter the initial quantity of your product inventory. Insert a Dynamic source to set different base quantities for multiple products. [Learn more](https://fluorescent.co/help/spark/product-pages#inventory-counter)"
+            },
+            "low_inventory_threshold": {
+              "label": "Low inventory threshold",
+              "info": "Set the product inventory quantity to alert customers when limited quantities are available. Insert a Dynamic source to set different thresholds for multiple products. [Learn more](https://fluorescent.co/help/spark/product-pages#inventory-counter)"
+            }
+          }
+        },
+        "accordion": {
+          "name": "ड्रॉपडाउन मेन्यू",
+          "settings": {
+            "column": {
+              "label": "कॉलम",
+              "options__1": "बाएँ",
+              "options__2": "दांए"
+            },
+            "style": {
+              "label": "स्टाइल",
+              "options__1": "खोलें",
+              "options__2": "बंद करें"
+            },
+            "heading": {
+              "label": "ड्रॉपडाउन का शीर्षक",
+              "info": "विषय के बारे में बताने वाला एक शीर्षक शामिल करें।"
+            },
+            "content": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "payment_widget": {
+          "name": "भुगतान आइकॉन के ड्रॉपडाउन",
+          "settings": {
+            "column": {
+              "label": "कॉलम",
+              "options__1": "बाएँ",
+              "options__2": "दांए"
+            },
+            "style": {
+              "label": "स्टाइल",
+              "options__1": "खोलें",
+              "options__2": "बंद करें"
+            },
+            "icon": {
+              "label": "आइकॉन",
+              "options__1": "कोई नहीं",
+              "options__2": "चैट",
+              "options__3": "भुगतान",
+              "options__4": "सुरक्षा",
+              "options__5": "शिपिंग"
+            },
+            "title": {
+              "label": "शीर्षक"
+            },
+            "show_payment_icons": {
+              "label": "भुगतान आइकॉन दिखाएँ"
+            },
+            "text": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "security_widget": {
+          "name": "सुरक्षा ड्रॉपडाउन",
+          "settings": {
+            "column": {
+              "label": "कॉलम",
+              "options__1": "बाएँ",
+              "options__2": "दांए"
+            },
+            "style": {
+              "label": "स्टाइल",
+              "options__1": "खोलें",
+              "options__2": "बंद करें"
+            },
+            "icon": {
+              "label": "आइकॉन",
+              "options__1": "कोई नहीं",
+              "options__2": "चैट",
+              "options__3": "भुगतान",
+              "options__4": "सुरक्षा",
+              "options__5": "शिपिंग"
+            },
+            "title": {
+              "label": "शीर्षक"
+            },
+            "text": {
+              "label": "टेक्स्ट"
+            }
+          }
+        },
+        "shipping_widget": {
+          "name": "शिपिंग ड्रॉपडाउन",
+          "settings": {
+            "column": {
+              "label": "कॉलम",
+              "options__1": "बाएँ",
+              "options__2": "दांए"
+            },
+            "style": {
+              "label": "स्टाइल",
+              "options__1": "खोलें",
+              "options__2": "बंद करें"
+            },
+            "icon": {
+              "label": "आइकॉन",
+              "options__1": "कोई नहीं",
+              "options__2": "चैट",
+              "options__3": "भुगतान",
+              "options__4": "सुरक्षा",
+              "options__5": "शिपिंग"
+            },
+            "title": {
+              "label": "शीर्षक"
+            },
+            "text": {
+              "label": "टेक्स्ट"
+            },
+            "show_estimator": {
+              "label": "शिपिंग अनुमान दिखाएँ"
+            }
+          }
+        }
+      }
+    }
+  },
+  "socialshopwave": {
+    "add_to_cart": "Add To Cart",
+    "adding_to_cart": "Adding...",
+    "sold_out": "Sold Out",
+    "description": "Description",
+    "view_on_instagram": "View on Instagram"
+  }
+}

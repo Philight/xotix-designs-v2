@@ -1,0 +1,84 @@
+<!-- INITIAL SETTINGS -->
+{% assign blocks = '' | split: '' %}
+{%- for block in section.blocks -%}
+  {%- capture blockProps -%}
+  {
+    id: {{ block.id }},
+    type: {{ block.type }},
+    settings: {{ block.settings | json }}
+  }
+  {%- endcapture -%}
+
+  {%- assign blockProps = blockProps | strip_newlines -%}
+  {%- assign blockProps = blockProps | split: '!@#' -%}
+  {% assign blocks = blocks | concat: blockProps %}
+{%- endfor -%}
+
+<div
+  class="image-with-text__cmp"
+  data-section-id="{{ section.id }}"
+  data-section-type="image-with-text"
+  sectionId="{{ section.id }}"
+  sectionSettings="{{ section.settings | json | replace: '"', "'" }}"
+  blocks="{{ blocks | json | replace: '"', "'" | replace: "\'", "'" }}"
+></div>
+
+{% schema %}
+{
+  "name": "Image With Text 2",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--contrast offset-section",
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "<p>Heading</p>"
+    },
+    {
+      "id": "description",
+      "type": "text",
+      "label": "Description",
+      "default": "<p>Description</p>"
+    },
+    {
+      "id": "button_text",
+      "type": "text",
+      "label": "Button Text",
+      "default": "Shop"
+    },
+    {
+      "id": "button_link",
+      "type": "url",
+      "label": "Button Link"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Choose an Image"
+    },
+    {
+      "id": "is_fullwidth",
+      "type": "checkbox",
+      "label": "Fullwidth Section",
+      "default": false
+    },
+    {
+      "id": "reverse_order",
+      "type": "checkbox",
+      "label": "Reverse Order",
+      "default": false
+    },
+    {
+      "id": "css_class",
+      "type": "text",
+      "label": "CSS class (separate by space)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image With Text 2"
+    }
+  ]
+}
+{% endschema %}

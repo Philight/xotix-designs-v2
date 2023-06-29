@@ -1,0 +1,27 @@
+{% raw %}
+<h3>{{translation.form.title || 'Search Products'}}</h3>
+<form action="{% endraw %}
+{{- routes.search_url -}}
+{% raw %}" method="get" role="search">
+    <div class="gf-form-inner">
+        {% assign next_select_show_values = false %}
+        {% for filter in filters %}
+        <div class="gf-form-input-wrapper">
+            <select{% unless forloop.last %} onchange="toggleFormValue({{filter.id}}, this.value)"{% endunless %} class="gf-form-select" name="gff_{{filter.id}}"{% unless filter.is_selected or forloop.first or next_select_show_values %}disabled{% endunless %}>
+                <option value="">{{filter.label}}</option>
+                {% if filter.is_selected or forloop.first or next_select_show_values %}
+                {% for value in filter.values %}
+                <option{% if value.selected %} selected{% endif %} value="{{value.value | replace:"\'", "\\\'" | escape}}">{{value.label}}</option>
+                {% endfor %}
+                {% endif %}
+            </select>
+        </div>
+        {% if filter.is_selected %}{% assign next_select_show_values = true %}{% else %}{% assign next_select_show_values = false %}{% endif %}
+        {% endfor %}
+        <div class="gf-form-input-wrapper">
+            <input type="submit" value="{{translation.form.submit | default: 'Search'}}" class="spf-btn">
+        </div>
+    </div>
+</form>
+
+{% endraw %}

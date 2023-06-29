@@ -1,0 +1,178 @@
+{%- liquid
+  assign desktop_image = desktop_image
+  assign mobile_image = mobile_image
+  assign align = alignment | split: '_'
+  assign order = content_order | split: '_'
+  assign shadow_amount = overlay_shadow | divided_by: 100.00
+  assign shadow_amount_lesser = shadow_amount | minus: 0.04
+  assign overlay_opacity_final = overlay_opacity | divided_by: 100.00
+  assign enable_text_overlay = true
+
+  assign has_content = false
+  if heading != blank or subheading != blank or link != blank or link_text != blank
+    assign has_content = true
+  endif
+
+  if shadow_amount == 0
+    assign enable_text_overlay = false
+  endif
+
+  assign color_background_button = color_background_button
+
+  assign brightness_button = color_background_button | color_brightness
+  if brightness_button > 60
+    assign color_background_button_hover = color_background_button | color_darken: 20
+  else
+    assign color_background_button_hover = color_background_button | color_lighten: 20
+  endif
+
+  assign content_overlay_clr = content_overlay_color | color_to_rgb
+  if content_overlay_clr != 'rgba(0, 0, 0, 0.0)'
+    assign overlay_active = true
+  endif
+
+  assign btn_bkg_color = color_background_button | color_to_rgb
+  assign btn_bor_color = color_border_button | color_to_rgb
+  if btn_bkg_color == 'rgba(0, 0, 0, 0.0)' or btn_bor_color == 'rgba(0, 0, 0, 0.0)'
+    assign button_label = true
+  endif
+-%}
+
+<div
+  class="
+    banner-item
+    {% if enable_text_overlay %}slideshow--has-shadow{% endif %}
+    {% if mobile_image != blank %}slideshow__cell--has-mobile-image{% endif %}
+  "
+  data-slide
+  data-index="{{ forloop.index0 }}"
+  {{ block.shopify_attributes }}
+  style="
+    --color-background-button: {{ color_background_button }};
+    --color-background-button-hover: {{ color_background_button_hover }};
+    --color-border-button:  {{ color_border_button }};
+    --color-text-button: {{ color_text_button }};
+    --slide-color-text: {{ color_text }};
+    --color-overlay: {{ color_overlay }};
+    --overlay-opacity: {{ overlay_opacity_final }};
+    --banner-content-overlay-color: {{ content_overlay_color }};
+    --banner-content-overlay-opacity: {{ content_overlay_opacity | divided_by: 100.00 }};
+    --banner-content-overlay-width: {{ content_overlay_width }}%;
+    --banner-content-overlay-height: {{ content_overlay_height }}%;
+    --text-shadow-amount: {{ shadow_amount }};
+    --text-shadow-amount-lesser: {{ shadow_amount_lesser }};
+    --heading-font-size: {{ heading_text_size }}px;
+    --banner-content-padding: {{ content_padding }}%;
+  "
+>
+  <div class="slideshow__asset">
+    {%- if desktop_image != blank -%}
+      {%
+        render 'image' with
+        image: desktop_image,
+        wrapper_class: ' slideshow__image--desktop',
+        disable_style: true
+      %}
+    {%- endif -%}
+
+    {%- if mobile_image != blank -%}
+      {%
+        render 'image' with
+        image: mobile_image,
+        wrapper_class: 'slideshow__image-wrapper slideshow__image--mobile',
+        disable_style: true
+      %}
+    {%- endif -%}
+
+    {%- if desktop_image == blank -%}
+      {% capture current %}{% cycle 1, 2 %}{% endcapture %}
+
+      <div class="placeholder-image">
+        {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+    {%- endif -%}
+
+    <div class="slideshow__overlay"></div>
+  </div>
+
+  {% if link != blank %}
+    <a href="{{ link }}" class="banner-item__content-wrapper ">
+  {% endif %}
+  <div
+    class="
+      banner-item__content-wrapper
+      flex-h-{{ align[0] }}
+      flex-v-{{ align[1] }}
+      {%if overlay_active %}content-overlay-active{%endif%}
+    "
+  >
+    <div class="banner-item__content-overlay"></div>
+    <div class="banner-item__content">
+      {%- if heading != blank -%}
+        <h3 class="banner-item__heading ff-heading animate order-{{ order[0] }}">
+          {{ heading | newline_to_br }}
+        </h3>
+      {%- endif -%}
+      {%- if subheading != blank -%}
+        <h5 class="banner-item__subheading ff-heading animate order-{{ order[1] }}">
+          {{ subheading | newline_to_br }}
+        </h5>
+      {%- endif -%}
+      {%- if shop_text != blank -%}
+        <h4 class="banner-item__shop-text ff-heading animate order-{{ order[2] }}">
+          <button class="banner-item__shop-text-button {%if button_label %}label{%endif%}">
+            {{ shop_text | newline_to_br }}
+          </button>
+        </h4>
+      {%- endif -%}
+    </div>
+  </div>
+  {% if link != blank %}
+    </a>
+  {% endif %}
+  <!--
+    <div class="slideshow__content-wrapper">
+      <div
+        class="
+          slideshow__content
+          slideshow__content--h-{{ align[0] }}
+          slideshow__content--v-{{ align[1] }}
+          {% if has_content != true %}slideshow__content--no-content{% endif %}
+        "
+        style="--max-width-content: {{ max_width_subheading }}rem;"
+      >
+        {%- if link != blank and link_text == blank -%}
+          <a href="{{ link }}" class="slideshow__content-inner">
+        {%- else -%}
+          <div class="slideshow__content-inner">
+        {%- endif -%}
+
+          {%- if heading != blank -%}
+            <h4 class="slideshow__heading ff-heading animate">
+              {{ heading | newline_to_br }}
+            </h4>
+          {%- endif -%}
+
+          {%- if subheading != blank -%}
+            <div class="slideshow__subheading rte ff-body fs-body-large animate">
+              {{ subheading }}
+            </div>
+          {%- endif -%}
+
+          {%- if link != blank and link_text != blank -%}
+            <div class="slideshow__button animate">
+              <a class="btn btn--primary btn--large" href="{{ link }}">
+                {{ link_text }}
+              </a>
+            </div>
+          {%- endif -%}
+
+        {%- if link != blank and link_text == blank -%}
+          </a>
+        {%- else -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  -->
+</div>

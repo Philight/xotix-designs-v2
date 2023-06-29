@@ -1,0 +1,569 @@
+{
+  "sections": {
+    "cf7c830a-afb5-4676-aad3-b87aae75e49a": {
+      "type": "video-hero2",
+      "blocks": {
+        "template--17830063931704__cf7c830a-afb5-4676-aad3-b87aae75e49a-1688059994d3eed6d8-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Video Hero",
+            "heading_text_size": 64,
+            "text_max_width": 40
+          }
+        },
+        "template--17830063931704__cf7c830a-afb5-4676-aad3-b87aae75e49a-1688059994d3eed6d8-1": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<p>Feature seamless auto-playing hero videos in this space.</p>",
+            "text_max_width": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--17830063931704__cf7c830a-afb5-4676-aad3-b87aae75e49a-1688059994d3eed6d8-0",
+        "template--17830063931704__cf7c830a-afb5-4676-aad3-b87aae75e49a-1688059994d3eed6d8-1"
+      ],
+      "settings": {
+        "desktop_height": 100,
+        "mobile_height": 100,
+        "video_url": "",
+        "alignment": "left_center",
+        "content_order": "second_first_third",
+        "content_overlay_width": 50,
+        "content_overlay_height": 50,
+        "content_overlay_color": "transparent",
+        "content_overlay_opacity": 0,
+        "overlay_shadow": 20,
+        "color_text": "#ffffff",
+        "color_background_button": "transparent",
+        "color_border_button": "transparent",
+        "color_text_button": "#181818",
+        "color_overlay": "#000",
+        "overlay_opacity": 30
+      }
+    },
+    "0739fa7f-820f-4576-8de0-6f3e7a21d22f": {
+      "type": "featured-collection2",
+      "settings": {
+        "collection": "",
+        "columns": 3,
+        "title": "Featured collection",
+        "subheading": "",
+        "link_text": "",
+        "text_max_width": 36,
+        "aspect_ratio": "natural",
+        "section_contrast": false
+      }
+    },
+    "f704c74f-ddde-4975-bb14-97823eedf859": {
+      "type": "banner2",
+      "blocks": {
+        "template--17830063931704__f704c74f-ddde-4975-bb14-97823eedf859-1688060172bb3c2db7-0": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--17830063931704__f704c74f-ddde-4975-bb14-97823eedf859-1688060172bb3c2db7-1": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--17830063931704__f704c74f-ddde-4975-bb14-97823eedf859-1688060172bb3c2db7-0",
+        "template--17830063931704__f704c74f-ddde-4975-bb14-97823eedf859-1688060172bb3c2db7-1"
+      ],
+      "settings": {
+        "columns": 2,
+        "desktop_height": 50,
+        "mobile_height": 50,
+        "css_class": ""
+      }
+    },
+    "6622e4cd-6e44-4676-a517-1cb96f298fad": {
+      "type": "policies2",
+      "blocks": {
+        "template--17830063931704__6622e4cd-6e44-4676-a517-1cb96f298fad-16880601835437c056-0": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--17830063931704__6622e4cd-6e44-4676-a517-1cb96f298fad-16880601835437c056-1": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--17830063931704__6622e4cd-6e44-4676-a517-1cb96f298fad-16880601835437c056-0",
+        "template--17830063931704__6622e4cd-6e44-4676-a517-1cb96f298fad-16880601835437c056-1"
+      ],
+      "settings": {
+        "columns": 2,
+        "desktop_height": 50,
+        "mobile_height": 50,
+        "css_class": ""
+      }
+    },
+    "f1d59c08-4175-4119-92af-f0b5339d3a45": {
+      "type": "image-with-text2",
+      "settings": {
+        "heading": "Kente Inspired Masks",
+        "description": "Our hypoallergenic, washable, and reusable masks will keep you looking stylish while protecting you and your close ones.",
+        "button_text": "SHOP MASKS",
+        "button_link": "",
+        "image": "shopify://shop_images/kente-masks.jpg",
+        "is_fullwidth": true,
+        "reverse_order": false,
+        "css_class": ""
+      }
+    },
+    "221ebdb6-140c-4fda-a523-e3084b6b7e0f": {
+      "type": "collection-tabs2",
+      "settings": {
+        "collection": "",
+        "columns": 3,
+        "title": "Featured collection",
+        "subheading": "",
+        "link_text": "",
+        "text_max_width": 36,
+        "aspect_ratio": "natural",
+        "section_contrast": false
+      }
+    },
+    "3cecbd8d-17ad-4a83-ae48-d7252c61e92c": {
+      "type": "image-with-text2",
+      "settings": {
+        "heading": "Make It Unique",
+        "description": "For a special unique touch, engrave your bracelet with a special message",
+        "button_text": "PERSONALIZE",
+        "button_link": "",
+        "image": "shopify://shop_images/name_1.jpg",
+        "is_fullwidth": false,
+        "reverse_order": true,
+        "css_class": ""
+      }
+    },
+    "4a4c23e6-5905-4989-beaa-75776271390d": {
+      "type": "parallax2",
+      "settings": {
+        "collection": "",
+        "columns": 3,
+        "title": "Featured collection",
+        "subheading": "",
+        "link_text": "",
+        "text_max_width": 36,
+        "aspect_ratio": "natural",
+        "section_contrast": false
+      }
+    },
+    "681dead9-3090-4d71-9052-bb133dd2ae6c": {
+      "type": "product-testimonial2",
+      "blocks": {
+        "template--17830063931704__681dead9-3090-4d71-9052-bb133dd2ae6c-1688060202659b35df-0": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--17830063931704__681dead9-3090-4d71-9052-bb133dd2ae6c-1688060202659b35df-1": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--17830063931704__681dead9-3090-4d71-9052-bb133dd2ae6c-1688060202659b35df-0",
+        "template--17830063931704__681dead9-3090-4d71-9052-bb133dd2ae6c-1688060202659b35df-1"
+      ],
+      "settings": {
+        "columns": 2,
+        "desktop_height": 50,
+        "mobile_height": 50,
+        "css_class": ""
+      }
+    },
+    "248f5055-6d74-4da6-9de3-a186e9835da1": {
+      "type": "stones-benefits2",
+      "blocks": {
+        "template--17830063931704__248f5055-6d74-4da6-9de3-a186e9835da1-168806020625f6c370-0": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--17830063931704__248f5055-6d74-4da6-9de3-a186e9835da1-168806020625f6c370-1": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--17830063931704__248f5055-6d74-4da6-9de3-a186e9835da1-168806020625f6c370-0",
+        "template--17830063931704__248f5055-6d74-4da6-9de3-a186e9835da1-168806020625f6c370-1"
+      ],
+      "settings": {
+        "columns": 2,
+        "desktop_height": 50,
+        "mobile_height": 50,
+        "css_class": ""
+      }
+    },
+    "video-hero": {
+      "type": "video-hero",
+      "disabled": true,
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "UP TO 50% OFF",
+            "heading_text_size": 50,
+            "text_max_width": 52
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link_text": "ENTER",
+            "link": "shopify://collections/starlite"
+          }
+        },
+        "ab9f8df0-7c58-4ac8-b873-72bc526afbc5": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<p>SIGN UP TO NEWSLETTER AND TAKE ADVANTAGE NOW</p>",
+            "text_max_width": 40
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button",
+        "ab9f8df0-7c58-4ac8-b873-72bc526afbc5"
+      ],
+      "settings": {
+        "desktop_height": 60,
+        "mobile_height": 50,
+        "video_url": "https://cdn.shopify.com/s/files/1/0592/3494/3165/files/Untitled_Instagram_Post_1.mp4?v=1641845400",
+        "alignment": "center_top",
+        "content_order": "second_first_third",
+        "content_overlay_width": 70,
+        "content_overlay_height": 35,
+        "content_overlay_color": "#ffffff",
+        "content_overlay_opacity": 9,
+        "overlay_shadow": 20,
+        "color_text": "#e6bfa8",
+        "color_background_button": "#e6bfa8",
+        "color_border_button": "rgba(0,0,0,0)",
+        "color_text_button": "#582c13",
+        "color_overlay": "rgba(0,0,0,0)",
+        "overlay_opacity": 30
+      }
+    },
+    "914105cc-00d2-4cba-ae29-5581edc2ec2e": {
+      "type": "brands-collaboration2",
+      "blocks": {
+        "template--17830063931704__914105cc-00d2-4cba-ae29-5581edc2ec2e-1688060187bb08f991-0": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--17830063931704__914105cc-00d2-4cba-ae29-5581edc2ec2e-1688060187bb08f991-1": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--17830063931704__914105cc-00d2-4cba-ae29-5581edc2ec2e-1688060187bb08f991-0",
+        "template--17830063931704__914105cc-00d2-4cba-ae29-5581edc2ec2e-1688060187bb08f991-1"
+      ],
+      "settings": {
+        "columns": 2,
+        "desktop_height": 50,
+        "mobile_height": 50,
+        "css_class": ""
+      }
+    },
+    "4b8e8b74-a0dd-49b0-9a6c-7c8b12b7caf5": {
+      "type": "xotix-social2",
+      "blocks": {
+        "template--17830063931704__4b8e8b74-a0dd-49b0-9a6c-7c8b12b7caf5-1688060230e8105fd7-0": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--17830063931704__4b8e8b74-a0dd-49b0-9a6c-7c8b12b7caf5-1688060230e8105fd7-1": {
+          "type": "slide",
+          "settings": {
+            "link": "",
+            "heading": "<p>Heading</p>",
+            "subheading": "<p>Use this section to make a bold statement</p>",
+            "shop_text": "Learn more",
+            "alignment": "center_center",
+            "content_order": "second_first_third",
+            "content_padding": 11,
+            "heading_text_size": 64,
+            "overlay_shadow": 10,
+            "color_text": "#ffffff",
+            "color_text_button": "#181818",
+            "color_background_button": "#FFFFFF",
+            "color_border_button": "#FFFFFF",
+            "content_overlay_color": "transparent",
+            "content_overlay_opacity": 30,
+            "content_overlay_width": 50,
+            "content_overlay_height": 50,
+            "color_overlay": "#000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--17830063931704__4b8e8b74-a0dd-49b0-9a6c-7c8b12b7caf5-1688060230e8105fd7-0",
+        "template--17830063931704__4b8e8b74-a0dd-49b0-9a6c-7c8b12b7caf5-1688060230e8105fd7-1"
+      ],
+      "settings": {
+        "columns": 2,
+        "desktop_height": 50,
+        "mobile_height": 50,
+        "css_class": ""
+      }
+    },
+    "a320aa21-bc6e-4ab1-9495-6e6a574607cb": {
+      "type": "footer2",
+      "settings": {
+        "collection": "",
+        "columns": 3,
+        "title": "Featured collection",
+        "subheading": "",
+        "link_text": "",
+        "text_max_width": 36,
+        "aspect_ratio": "natural",
+        "section_contrast": false
+      }
+    }
+  },
+  "order": [
+    "cf7c830a-afb5-4676-aad3-b87aae75e49a",
+    "0739fa7f-820f-4576-8de0-6f3e7a21d22f",
+    "f704c74f-ddde-4975-bb14-97823eedf859",
+    "6622e4cd-6e44-4676-a517-1cb96f298fad",
+    "f1d59c08-4175-4119-92af-f0b5339d3a45",
+    "221ebdb6-140c-4fda-a523-e3084b6b7e0f",
+    "3cecbd8d-17ad-4a83-ae48-d7252c61e92c",
+    "4a4c23e6-5905-4989-beaa-75776271390d",
+    "681dead9-3090-4d71-9052-bb133dd2ae6c",
+    "248f5055-6d74-4da6-9de3-a186e9835da1",
+    "video-hero",
+    "914105cc-00d2-4cba-ae29-5581edc2ec2e",
+    "4b8e8b74-a0dd-49b0-9a6c-7c8b12b7caf5",
+    "a320aa21-bc6e-4ab1-9495-6e6a574607cb"
+  ]
+}

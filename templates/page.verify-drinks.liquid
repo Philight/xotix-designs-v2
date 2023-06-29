@@ -1,0 +1,39 @@
+{% comment %}
+  {% raw %}
+  {% layout none %}
+  {% endraw %}
+{% endcomment %}
+
+{% layout 'theme.verify-drinks-layout' %}
+
+<style>
+  #mainContainer {
+    width: 100vw;
+    height: 100vh;
+
+    font-size: 46px;
+    color: white;
+  }
+  .outer-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .verify-drinks-content {
+    display: none;
+  }
+  .verified {
+  }
+  .expired {
+  }
+</style>
+
+<!-- HTML -->
+<div id="mainContainer">
+  <div class="outer-container">
+    <div class="verify-drinks-content verified">VERIFIED</div>
+    <div class="verify-drinks-content expired">INVALID OR EXPIRED</div>
+  </div>
+</div>

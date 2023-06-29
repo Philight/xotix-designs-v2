@@ -1,0 +1,37 @@
+{%- liquid
+  assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+  assign height = image.height | times: 1.0 | default: 1.0
+  assign width = image.width | times: 1.0 | default: 1.0
+
+  assign padding_top = height | divided_by: width | times: 100 | append: '%'
+
+  if id == blank
+    assign id = image.id
+  endif
+-%}
+
+<div class="image js-enabled {% unless disable_style %}image--{{ id }} {% endunless %}{{ wrapper_class }}">
+  <img
+    class="image__img lazyload{% if preload %} lazypreload{% endif %} {{ image_class }}"
+    src="{{ image | img_url: '300x300' }}"
+    data-src="{{ img_url }}"
+    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+    data-aspectratio="{{ image.aspect_ratio }}"
+    data-sizes="auto"
+    alt="{{ image.alt | escape }}"
+  >
+</div>
+
+{%- unless disable_style -%}
+  <style>
+    .image--{{ id }} {
+      padding-top: {{ padding_top }};
+    }
+  </style>
+{%- endunless -%}
+
+<noscript>
+  <div class="image image--{{ id }} {{ wrapper_class }}">
+    <img class="image__img" src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}">
+  </div>
+</noscript>

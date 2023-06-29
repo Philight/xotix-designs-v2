@@ -1,0 +1,206 @@
+.page--thank-you .recommended-products,
+.page--thank-you .recommended-collections, {
+  position: relative;
+  margin: 30px 0;
+}
+
+
+.page--thank-you .section-title {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.page--thank-you .recommended-products__container,
+.page--thank-you .recommended-collections_container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 10px 0;
+  --recommended-products-gap: 6px;
+  overflow: hidden;
+}
+
+.page--thank-you .recommended-products .recommended-item,
+.page--thank-you .recommended-collections .recommended-item {
+  flex: 1 0 calc((100% - 2*var(--recommended-products-gap)) / 3);
+  margin-left: var(--recommended-products-gap);
+}
+
+.page--thank-you .recommended-products .recommended-item:nth-child(1),
+.page--thank-you .recommended-collections .recommended-item:nth-child(1) {
+  margin-left: 0;
+}
+
+.page--thank-you .recommended-collections .recommended-item {
+  position: relative;
+}
+
+.page--thank-you .recommended-collections .recommended-item:hover {
+  transition: opacity .3s ease-in-out;
+  opacity: 0.8;
+}
+
+.page--thank-you .recommended-products .recommended-item .product-image,
+.page--thank-you .recommended-collections .recommended-item .collection-image {
+  padding-top: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.page--thank-you .recommended-collections .recommended-item .collection-image {
+  background-color: #FFF;
+}
+
+.page--thank-you .recommended-products .recommended-item .product-image img,
+.page--thank-you .recommended-collections .recommended-item .collection-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 100%;
+  transform: translate(-50%,-50%);
+}
+
+.page--thank-you .recommended-collections .recommended-item .collection-image img {
+  max-height: none;
+  object-fit: cover;
+  transform: translate(-50%,-50%) scale(1.2);
+}
+
+.page--thank-you .recommended-collections .recommended-item .collection-image .collection-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000038;
+}
+
+.page--thank-you .recommended-collections .recommended-item .collection-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  word-break: initial;
+}
+
+.page--thank-you .recommended-products .recommended-item .product-title,
+.page--thank-you .recommended-products .recommended-item .product-price,
+.page--thank-you .buy-more .product-title,
+.page--thank-you .buy-more .product-price {
+  text-align: center;
+  line-height: 1;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.page--thank-you .recommended-products .sale-price{
+  text-decoration: line-through;
+      margin-right: 4px;
+}
+.page--thank-you .recommended-products .on-sale .price{
+  color: red;
+}
+
+.page--thank-you .recommended-products .add-to-cart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page--thank-you .recommended-products .add-to-cart-wrapper button{
+  padding: 6px 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 2px;
+  line-height: 1;
+  margin-top: 8px;
+  transition: opacity .3s ease-in-out;
+  background-color: #FFF;
+}
+.page--thank-you .recommended-products .add-to-cart-wrapper button:hover{
+  opacity: 0.7;
+}
+
+.page--thank-you .icon-wrapper{
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff61;
+  padding: 7px 8px;
+  border-radius: 50%;
+}
+
+.page--thank-you .icon-wrapper.img-nav {
+  position: relative;
+  top: 0;
+  max-width: 20px;
+  max-height: 20px;
+  display: inline-block;
+  padding: 5px 6px;
+  background-color: transparent;
+}
+
+.page--thank-you .icon-nav {
+  -webkit-mask: url(https://res.cloudinary.com/xotixdesigns/image/upload/v1648679440/icons/iconmonstr-arrow-right-thin_pynpks_1_fxc3p3.svg) no-repeat center;;
+  mask: url(https://res.cloudinary.com/xotixdesigns/image/upload/v1648679440/icons/iconmonstr-arrow-right-thin_pynpks_1_fxc3p3.svg) no-repeat center;;
+  background-color: #6c6c6c;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.page--thank-you .icon-wrapper.left {
+  transform: scaleX(-1) translateY(-50%);
+  left: -46px;
+}
+
+.page--thank-you .icon-wrapper.right {
+  right: -46px;
+}
+
+.page--thank-you .icon-wrapper.img-nav.left {
+  left: unset;
+  transform: scaleX(-1);
+}
+
+.page--thank-you .icon-wrapper.img-nav.right {
+  right: unset;
+  transform: none;
+}
+
+.page--thank-you .buy-more {
+  position: relative;
+}
+
+.page--thank-you .buy-more .product-item {
+  position: relative;
+}
+
+.page--thank-you .buy-more .product-item .product-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 22px 0;
+}
+
+.page--thank-you .buy-more .product-images {
+  display: flex;
+  align-items: center;
+  overflow:  scroll;
+}
+
+.page--thank-you .buy-more .image-wrapper {
+  flex: 0 0 100%;
+}
+
+.page--thank-you .buy-more .product-title {
+  font-size: 22px;
+  margin: 0 6px;
+}

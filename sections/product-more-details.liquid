@@ -1,0 +1,90 @@
+<div class="section__inner">
+  <div
+    data-section-id="{{ section.id }}"
+    data-section-type="product-more-details"
+    data-product-id="{{ product.id }}"
+    class="
+      product-more-details
+      section
+      {% if section.settings.section_contrast -%}
+        section--contrast
+      {%- endif %}
+    "
+    style="--text-max-width: {{ section.settings.text_max_width }}rem;"
+  >
+    <div class="product-more-details__container">
+      <div class="product-more-details__content">
+        <h3 class="product-more-details__title ff-heading fs-heading-1-base-ns">{{ section.settings.title }}</h3>
+
+        <div class="product-more-details__content-item__container">
+          {%- for block in section.blocks -%}
+            <div class="product-more-details__content-item">
+              <h4>{{ block.settings.title }}</h4>
+              {{ block.settings.content }}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <div class="product-more-details__banner">
+        {%
+          render 'image' with
+          image: section.settings.image
+        %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product More Details",
+  "tag": "section",
+  "class": "shopify-section--stackable",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.product_recommendations.settings.title.label",
+      "default": "More details"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Banner Image"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.product_recommendations.settings.section_contrast.label",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "More Details"
+    }
+  ],
+  "templates": ["product"]
+}
+{% endschema %}

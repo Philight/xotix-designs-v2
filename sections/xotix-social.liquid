@@ -1,0 +1,251 @@
+{%- liquid
+  assign columns = section.settings.columns
+  assign column_count = columns
+  assign total_items = blocks.size
+
+  assign carousel_wraps = false
+  assign minimum_items_for_wrap_around = column_count | plus: 1
+  assign items_needed = minimum_items_for_wrap_around | minus: total_items
+
+  if items_needed <= 0 or total_items == 0
+    assign carousel_wraps = true
+  endif
+
+  assign carousel_item_count = total_items
+
+  if total_items == 0 and columns != blank
+    assign carousel_item_count = minimum_items_for_wrap_around
+  endif
+-%}
+
+{%- capture placeholder_item -%}
+  <div class="social-proof__slide" data-slide>
+    <div class="social-proof__image-wrapper">
+      <div class="social-proof__image placeholder-image">
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+    </div>
+  </div>
+{%- endcapture -%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="social-proof"
+  class="
+    xotix-social
+    social-proof
+    social-proof--columns-{{ column_count }}
+    social-proof--{{ section.settings.aspect_ratio }}
+    section
+    {% if section.settings.section_contrast -%}
+    section--contrast
+    {%- endif %}
+  "
+  style="
+    --text-max-width: {{ section.settings.text_max_width }}rem;
+    --color-like: {{ section.settings.like_color }};
+  "
+  data-carousel-wraps="{{ carousel_wraps }}"
+>
+  <div class="section__inner" style="padding:0;">
+    {% render 'section-header',
+      heading: section.settings.title,
+      subheading: section.settings.subheading,
+      classes: 'section-header--large section-header--center',
+      alignment: section.settings.heading_alignment
+    %}
+
+    <div class="social-proof__content">
+      <div class="social-proof__slider-wrapper">
+        <div class="social-proof__slider" data-slider style="margin:0;">
+          <div id="xotix-social-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-navigation">
+              <a class="chevron-left">
+                {%- render 'icon' with icon: 'chevron', css: 'width: 56px; height: 56px; padding: 4px;' -%}
+              </a>
+              <a class="chevron-right">
+                {%- render 'icon' with icon: 'chevron', css: 'width: 56px; height: 56px; padding: 4px;' -%}
+              </a>
+              <a class="modal-close">
+                {%- render 'icon' with icon: 'close-stroke', css: 'width: 56px; height: 56px; padding: 4px;' -%}
+              </a>
+            </div>
+            <div class="modal-content">
+              <h1>ABCD</h1>
+              <p>adgfhgjhhgdfsda</p>
+            </div>
+          </div>
+          {%- for block in section.blocks -%}
+            {%-
+              render 'social-proof-item' with
+              forloop: forloop,
+              block: block,
+              link: block.settings.link,
+              image: block.settings.image,
+              aspect_ratio: section.settings.aspect_ratio,
+              likes: block.settings.likes,
+              account: block.settings.account,
+              caption: block.settings.caption,
+              social_account: block.settings.social_account
+            -%}
+          {%- else -%}
+            {% for i in (1..minimum_items_for_wrap_around) %}
+              {{ placeholder_item }}
+            {% endfor %}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {% render 'icon' with icon: 'chevron', class: 'left-nav hidden' %}
+      {% render 'icon' with icon: 'chevron', class: 'right-nav' %}
+
+      {% render 'carousel-navigation' with columns: column_count, item_count: carousel_item_count %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "XotiX Social",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--text-first",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.social_proof.settings.columns.label",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "t:sections.social_proof.settings.title.label",
+      "default": "Social proof"
+    },
+    {
+      "id": "subheading",
+      "type": "richtext",
+      "label": "t:sections.social_proof.settings.subheading.label",
+      "default": "<p>Use this Section to display your favourite social images.</p>"
+    },
+    {
+      "id": "heading_alignment",
+      "type": "select",
+      "label": "Heading Alignment",
+      "options": [
+        { "label": "Left", "value": "left" },
+        { "label": "Center", "value": "center" },
+        { "label": "Right", "value": "right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.social_proof.settings.text_max_width.label",
+      "min": 24,
+      "max": 48,
+      "step": 1,
+      "default": 42
+    },
+    {
+      "id": "aspect_ratio",
+      "type": "select",
+      "label": "t:sections.social_proof.settings.aspect_ratio.label",
+      "options": [
+        { "label": "t:sections.social_proof.settings.aspect_ratio.options__1", "value": "natural" },
+        { "label": "t:sections.social_proof.settings.aspect_ratio.options__2", "value": "square" },
+        { "label": "t:sections.social_proof.settings.aspect_ratio.options__3", "value": "landscape" },
+        { "label": "t:sections.social_proof.settings.aspect_ratio.options__4", "value": "portrait" }
+      ],
+      "default": "natural"
+    },
+    {
+      "type": "color",
+      "id": "like_color",
+      "label": "t:sections.social_proof.settings.like_color.label",
+      "default": "#C71B1B"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.social_proof.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "max_blocks": 15,
+  "blocks": [
+    {
+      "type": "post",
+      "name": "t:sections.social_proof.blocks.post.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.social_proof.blocks.post.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.social_proof.blocks.post.settings.link.label"
+        },
+        {
+          "id": "social_account",
+          "type": "select",
+          "label": "Social Account",
+          "options": [
+            { "label": "Facebook", "value": "facebook" },
+            { "label": "Instagram", "value": "instagram" },
+            { "label": "Youtube", "value": "youtube" },
+            { "label": "Snapchat", "value": "snapchat" },
+            { "label": "Twitter", "value": "twitter" },
+            { "label": "Tiktok", "value": "tiktok" },
+            { "label": "Pinterest", "value": "pinterest" }
+          ],
+          "default": "instagram"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.social_proof.blocks.post.settings.header.content"
+        },
+        {
+          "type": "text",
+          "id": "likes",
+          "label": "t:sections.social_proof.blocks.post.settings.likes.label",
+          "info": "t:sections.social_proof.blocks.post.settings.likes.info"
+        },
+        {
+          "type": "text",
+          "id": "account",
+          "label": "t:sections.social_proof.blocks.post.settings.account.label"
+        },
+        {
+          "type": "richtext",
+          "id": "caption",
+          "label": "t:sections.social_proof.blocks.post.settings.caption.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "XotiX Social",
+      "blocks": [
+        {
+          "type": "post"
+        },
+        {
+          "type": "post"
+        },
+        {
+          "type": "post"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

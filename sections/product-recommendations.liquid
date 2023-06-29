@@ -1,0 +1,122 @@
+{%- liquid
+  assign max_products = 6
+  assign columns = section.settings.columns
+-%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="recommended-products"
+  data-product-id="{{ product.id }}"
+  data-limit="{{ max_products }}"
+  class="
+    recommended-products
+    recommended-products--columns-{{ columns }}
+    section
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+  style="--text-max-width: {{ section.settings.text_max_width }}rem;"
+>
+  <div class="section__inner">
+    {%
+      render 'section-header',
+      heading: section.settings.title,
+      subheading: section.settings.subheading,
+      classes: 'section-header--large section-header--center',
+    %}
+
+    <div class="recommended-products__content" data-recommendations>
+      <div class="recommended-products__slider-wrapper">
+        {%- liquid
+          assign carousel_wraps = false
+          assign minimum_items_for_wrap_around = columns | plus: 1
+          assign items_needed = minimum_items_for_wrap_around | minus: recommendations.products_count
+
+          if items_needed <= 0
+            assign carousel_wraps = true
+          endif
+        -%}
+
+        {%- if recommendations.products_count > 0 -%}
+          <div class="recommended-products__slider" data-slider data-carousel-wraps="{{ carousel_wraps }}">
+            {%- for product in recommendations.products -%}
+              <script type="application/json" class="bold-product-json">
+                {{ product | json }}
+              </script>
+              <div class="recommended-products__slide" data-slide>
+                {% render 'product-item' with product: product, aspect_ratio: section.settings.aspect_ratio %}
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {% render 'carousel-navigation' with columns: columns, item_count: recommendations.products_count %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.product_recommendations.name",
+  "tag": "section",
+  "class": "shopify-section--stackable",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.product_recommendations.settings.columns.label",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.product_recommendations.settings.title.label",
+      "default": "Recommended"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:sections.product_recommendations.settings.subheading.label",
+      "default": "<p>You might want to take a closer look.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.product_recommendations.settings.text_max_width.label",
+      "min": 24,
+      "max": 48,
+      "step": 1,
+      "default": 42
+    },
+    {
+      "id": "aspect_ratio",
+      "type": "select",
+      "label": "t:sections.product_recommendations.settings.aspect_ratio.label",
+      "options": [
+        { "label": "t:sections.product_recommendations.settings.aspect_ratio.options__1", "value": "natural" },
+        { "label": "t:sections.product_recommendations.settings.aspect_ratio.options__2", "value": "square" },
+        { "label": "t:sections.product_recommendations.settings.aspect_ratio.options__3", "value": "landscape" },
+        { "label": "t:sections.product_recommendations.settings.aspect_ratio.options__4", "value": "portrait" }
+      ],
+      "default": "natural"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.product_recommendations.settings.section_contrast.label",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.product_recommendations.presets.name"
+    }
+  ],
+  "templates": ["product"]
+}
+{% endschema %}

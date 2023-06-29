@@ -1,0 +1,10 @@
+<div class="product__view-count-wrapper">
+  <div
+    class="product__view-count"
+    data-counter="{{ block.settings.max_view_count }}"
+    data-nullified="{{ block.settings.enable_null }}"
+  >
+    {% render 'icon-custom' with icon: block.settings.icon_type -%}
+    <span class="count">2</span><span>{{ block.settings.view_count_text }}</span>
+  </div>
+</div>

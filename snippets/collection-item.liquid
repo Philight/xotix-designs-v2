@@ -1,0 +1,100 @@
+{%- liquid
+  assign image_is_constrained = true
+  if is_collection_carousel
+    assign footer_style = ''
+  endif
+
+  if aspect_ratio == 'natural'
+    assign image_is_constrained = false
+  endif
+-%}
+
+{% capture placeholder_image %}
+  {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+  <div class="collection-item__image-wrapper">
+    <div class="collection-item__image placeholder-image">
+      {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+    </div>
+  </div>
+{% endcapture %}
+<div
+  class="collection-item collection-item--{{ aspect_ratio }} {% if collection.title == "For Her" %}for-her{%endif%}"
+  style="--text-max-width: {{ text_max_width }}rem;"
+>
+  {%- if collection.image != blank or collection.products.first != blank -%}
+    {%- assign image_object = collection.image | default: collection.products.first.featured_media.preview_image -%}
+    {%- assign image_id = collection.image.id | default: collection.products.first.featured_media.id -%}
+
+    <a
+      href="{{ collection.url }}"
+      class="collection-item__image-wrapper hover"
+      aria-label="{{ collection.title }}"
+    >
+      <div
+        class="collection-item__overlay {{overlay_type}}"
+        style="opacity: {{overlay_opacity | divided_by: 100.0 }};"
+      ></div>
+
+      {% if xotix_fullheight %}
+        <div class="overlay"></div>
+        <h4 class="collection-item__header ff-heading fs-heading-3-base fs-heading-2-large-ns">
+          <div class="overlay heading-overlay"></div>
+          {{ collection.title }}
+        </h4>
+      {% endif %}
+      {%- if image_object -%}
+        {%
+          render 'image' with
+          image: image_object,
+          id: image_id,
+          wrapper_class: 'collection-item__image',
+          disable_style: image_is_constrained
+        %}
+      {%- else -%}
+        <div class="placeholder-image">
+          {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    </a>
+  {%- elsif collection == empty -%}
+    {{ placeholder_image }}
+  {%- else -%}
+    {{ placeholder_image }}
+  {%- endif -%}
+
+  {% unless xotix_fullheight %}
+    <div
+      class="collection-item__footer ta-c{% if show_shop %} show-shop{% endif %}"
+      style="{{ footer_style }};color: {{text_color}}; border-color:{{text_color | color_modify: 'alpha', 0.75}}"
+    >
+      <a href="{{ collection.url }}">
+        {%- unless title == blank -%}
+          <h5 class="collection-item__title fs-body-small fs-body-base-ns">
+            {{ title }}
+          </h5>
+        {%- endunless -%}
+
+        <h4 class="collection-item__header ff-heading fs-heading-3-base fs-heading-2-large-ns">
+          {%- if collection == empty -%}
+            {{ 'collections.general.collection_label' | t }}
+          {%- else -%}
+            {%- if show_shop -%}Shop&nbsp{%- endif -%}
+            {% if heading == blank %}{{ collection.title }}{% else %}{{ heading }}{% endif %}
+          {%- endif -%}
+        </h4>
+
+        {%- unless shop_text == blank -%}
+          <h5 class="collection-item__shop_text" style="border-bottom-color: {{text_color}};">
+            {{ shop_text }}
+          </h5>
+        {%- endunless -%}
+
+        {%- if show_description == true and collection.description != blank -%}
+          <p class="collection-item__subheading fs-body-small fs-body-base-ns">
+            {{ collection.description | truncate: 120 }}
+          </p>
+        {%- endif -%}
+      </a>
+    </div>
+  {% endunless %}
+</div>

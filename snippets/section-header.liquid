@@ -1,0 +1,51 @@
+{% if heading != blank or subheading != blank or link_text != blank %}
+  {%- liquid
+    assign button_classes = 'btn--small btn--medium-ns'
+
+    if classes contains 'section-header--large'
+      assign button_classes = 'btn--medium'
+    endif
+
+    if alignment != blank
+      if alignment == 'left'
+        assign heading_alignment = 'text-align: left; margin-left: var(--space-outer);'
+      elsif alignment == 'right'
+        assign heading_alignment = 'text-align: right;  margin-right: var(--space-outer);'
+      else
+        assign heading_alignment = 'text-align: center; margin: auto;'
+      endif
+    endif
+  -%}
+  <div
+    class="section-header {{ classes }}"
+    style="--header-max-width: {{ header_max_width }}px"
+  >
+    <div class="header-max-width">
+      {%- unless heading == blank -%}
+        <a href="{{ url }}">
+          <h2
+            class="section-header__heading ff-heading fs-heading-2-base fs-heading-1-base-ns"
+            style="{{ heading_alignment }}"
+          >
+            {{ heading | newline_to_br }}
+          </h2>
+        </a>
+      {%- endunless -%}
+
+      {%- unless subheading == blank -%}
+        <div
+          class="section-header__subheading rte ff-body fs-body-base fs-body-large-ns"
+          style="{{ heading_alignment }}"
+        >
+          {{ subheading }}
+        </div>
+      {%- endunless -%}
+
+      {%- if url != blank and link_text != blank -%}
+        <a href="{{ url }}" class="section-header__button btn btn--primary {{ button_classes }}">
+          {{ link_text }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+{% endif %}

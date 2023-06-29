@@ -1,0 +1,57 @@
+{% assign file_extension = 'png' %}
+
+<li class="filter-item{% if type == 'swatch' or type == 'chip' %} inline{% endif %}">
+  <label
+    data-filter
+    class="filter-item__content {% if filter_value.count == 0 and filter_value.active == false %}filter-item__content--disabled{% endif %}"
+    for="filter-{{ filter_value.label | handleize | escape }}"
+  >
+    <input
+      type="checkbox"
+      name="{{ filter_value.param_name }}"
+      value="{{ filter_value.value }}"
+      class="filter-item__checkbox visually-hidden"
+      id="filter-{{ filter_value.label | handleize | escape }}"
+      {% if filter_value.active -%}
+        checked
+      {% endif %}
+      {%- if key != blank and val != blank -%}
+        data-{{ key }}="{{ val | handle }}"
+      {%- endif -%}
+      {%- if type == 'swatch' -%}
+        aria-label="{{ filter_value.label }}"
+      {%- endif -%}
+      {% if filter_value.count == 0 and filter_value.active == false %}
+        disabled
+      {% endif %}
+    >
+    {%- if type == 'checkbox' -%}
+      <div class="filter-input__input ">
+        {% render 'icon' with icon: 'check' %}
+      </div>
+    {%- endif -%}
+
+    {%- if type == 'checkbox' -%}
+      <span class="filter-item__label">
+        {{ filter_value.label }}
+      </span>
+      <span class="filter-item__count">{{ filter_value.count }}</span>
+    {%- endif -%}
+
+    {%- if type == 'swatch' -%}
+      <div
+        class="filter-item__swatch"
+        style="
+          background-image: url({{ filter_value.label | handle | append: '.' | append: file_extension | file_url }});
+          background-color: {{ filter_value.label | handle }};
+        "
+      ></div>
+    {%- endif -%}
+
+    {%- if type == 'chip' -%}
+      <div class="filter-item__chip">
+        {{ filter_value.label }}
+      </div>
+    {%- endif -%}
+  </label>
+</li>

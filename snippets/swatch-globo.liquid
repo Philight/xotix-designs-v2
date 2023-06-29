@@ -1,0 +1,8 @@
+{% if product.variants.size > 0 %}
+  <div class="swatches-globo--list" globo-product-swatch-id="{{product.id}}">
+    <div class="swatches-globo" product-swatch-id="{{product.id}}"></div>
+    <div data-id="{{product.id}}" data-url="{{product.url}}" class="GWS-product-item" style="display:none;">
+      {{ product | json }}
+    </div>
+  </div>
+{% endif %}

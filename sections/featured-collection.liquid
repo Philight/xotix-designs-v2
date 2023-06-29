@@ -1,0 +1,145 @@
+{%- liquid
+  assign featured_collection = section.settings.collection
+  assign columns = section.settings.columns
+  assign max_products = 6
+
+  assign carousel_wraps = false
+  assign minimum_items_for_wrap_around = columns | plus: 1
+  assign items_needed = minimum_items_for_wrap_around | minus: featured_collection.all_products_count
+
+  if items_needed <= 0 or featured_collection.all_products_count == 0 or featured_collection == blank
+    assign carousel_wraps = true
+  endif
+
+  assign carousel_item_count = featured_collection.all_products_count
+
+  if featured_collection.all_products_count == 0
+    assign carousel_item_count = minimum_items_for_wrap_around
+  endif
+-%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="featured-collection"
+  data-carousel-wraps="{{ carousel_wraps }}"
+  class="
+    featured-collection
+    featured-collection--columns-{{ columns }}
+    featured-collection--{{ section.settings.aspect_ratio }}
+    section
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+  style="--text-max-width: {{ section.settings.text_max_width }}rem;"
+>
+  <div class="section__inner">
+    {%
+      render 'section-header',
+      heading: section.settings.title,
+      subheading: section.settings.subheading,
+      url: featured_collection.url,
+      link_text: section.settings.link_text,
+      classes: 'section-header--large section-header--center',
+    %}
+
+    <div class="featured-collection__content">
+      <div class="featured-collection__slider-wrapper">
+        <div class="featured-collection__slider" data-slider>
+          {%- for product in featured_collection.products limit: max_products -%}
+            <div class="featured-collection__slide" data-slide>
+              {% render 'product-item', product: product, aspect_ratio: section.settings.aspect_ratio %}
+            </div>
+          {%- else -%}
+            {%- for i in (1..minimum_items_for_wrap_around) -%}
+              <div class="featured-collection__slide" data-slide>
+                {% render 'product-item',
+                  product: product,
+                  aspect_ratio: section.settings.aspect_ratio,
+                  placeholder: true
+                %}
+              </div>
+            {%- endfor -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {% render 'icon' with icon: 'chevron', class: 'left-nav hidden' %}
+      {% render 'icon' with icon: 'chevron', class: 'right-nav' %}
+
+      {% render 'carousel-navigation' with columns: columns, item_count: carousel_item_count %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.featured_collection.name",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--text-first",
+  "settings": [
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "t:sections.featured_collection.settings.collection.label"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.featured_collection.settings.columns.label",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "t:sections.featured_collection.settings.title.label",
+      "default": "Featured collection"
+    },
+    {
+      "id": "subheading",
+      "type": "richtext",
+      "label": "t:sections.featured_collection.settings.subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "t:sections.featured_collection.settings.link_text.label"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.featured_collection.settings.text_max_width.label",
+      "min": 24,
+      "max": 48,
+      "step": 1,
+      "default": 36
+    },
+    {
+      "id": "aspect_ratio",
+      "type": "select",
+      "label": "t:sections.featured_collection.settings.aspect_ratio.label",
+      "options": [
+        { "label": "t:sections.featured_collection.settings.aspect_ratio.options__1", "value": "natural" },
+        { "label": "t:sections.featured_collection.settings.aspect_ratio.options__2", "value": "square" },
+        { "label": "t:sections.featured_collection.settings.aspect_ratio.options__3", "value": "landscape" },
+        { "label": "t:sections.featured_collection.settings.aspect_ratio.options__4", "value": "portrait" }
+      ],
+      "default": "natural"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.featured_collection.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featured_collection.presets.name"
+    }
+  ]
+}
+{% endschema %}

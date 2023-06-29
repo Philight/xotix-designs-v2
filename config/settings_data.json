@@ -1,0 +1,580 @@
+{
+  "current": {
+    "color_background_body": "#ffffff",
+    "color_border": "#d4d4d4",
+    "color_overlay": "#181818",
+    "color_text": "#3d3d3d",
+    "color_text_link": "#000000",
+    "color_header_bg": "#000000",
+    "color_header_text": "#9e8f63",
+    "color_background_footer": "#000000",
+    "color_text_footer": "#ffffff",
+    "color_background_button": "#191919",
+    "color_background_contrast": "#fbf6f3",
+    "color_text_contrast": "#ffffff",
+    "color_border_contrast": "#d4d4d4",
+    "color_background_button_contrast": "#000000",
+    "color_text_button_contrast": "#ffffff",
+    "color_text_link_contrast": "#000000",
+    "color_background_popover": "#131313",
+    "color_border_popover": "#3D3D3D",
+    "color_background_button_popover": "#ffffff",
+    "color_text_button_popover": "#131313",
+    "font_logo": "abril_fatface_n4",
+    "capitalize_logo": false,
+    "logo_letter_spacing": -25,
+    "logo_base_size": 33,
+    "font_heading": "montserrat_n4",
+    "heading_letter_spacing": 100,
+    "heading_base_size": 39,
+    "font_body": "lato_n4",
+    "body_letter_spacing": 75,
+    "body_base_size": 17,
+    "capitalize_product_title": true,
+    "product_title_letter_spacing": -50,
+    "button_style": "uppercase",
+    "button_shape": "0",
+    "swatch_options": "Material",
+    "social_facebook_link": "https://m.facebook.com/XotiX-Designs-100303335761405/?tsid=0.1617590656796115&source=result",
+    "social_instagram_link": "https://www.instagram.com/xotixdesigns/",
+    "social_pinterest_link": "https://www.pinterest.com/xotds",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_twitter_link": "www.twitter.com/xotixdesigns",
+    "checkout_logo_image": "shopify://shop_images/Sleek_Fashion_I_Trendy_Banner_Landscape_Facebook_Shops_Ad_Facebook_Shops_Ad_15_HUUYH.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_image": "shopify://shop_images/Sleek_Fashion_I_Trendy_Banner_Landscape_Facebook_Shops_Ad_18.png",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "shopify://shop_images/Sleek_Fashion_I_Trendy_Banner_Landscape_Facebook_Shops_Ad_19.png",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#6b4129",
+    "checkout_button_color": "#e9d1c3",
+    "variant_popup_page": "size-guide",
+    "color_border_header": "#363636",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "title": "14% + 14% OFF ON ALL PRODUCTS AT CHECKOUT !! FREE SHIPPING WORLDWIDE!! HAPPY VALENTINE'S",
+              "link": "",
+              "color_background": "#e4dabf",
+              "color_text": "#746c42"
+            }
+          },
+          "6babe932-3e75-48f4-8e66-f0777108ae33": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "title": "25% OFF !!!  25% OFF ON ALL PRODUCTS AT CHECKOUT",
+              "link": "",
+              "color_background": "#000000",
+              "color_text": "#ffffff"
+            }
+          },
+          "14866c93-3818-4249-bcc4-421934b0f1dc": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "title": "BLACK FRIDAY SALE",
+              "link": "",
+              "color_background": "#c6bd8f",
+              "color_text": "#000000"
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0",
+          "6babe932-3e75-48f4-8e66-f0777108ae33",
+          "14866c93-3818-4249-bcc4-421934b0f1dc"
+        ],
+        "settings": {
+          "timing": 4
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify://shop_images/XD_Black.png",
+          "logo_max_width": 60,
+          "menu": "main-menu",
+          "secondary_menu": "",
+          "style": "inline",
+          "navigation_position": "below",
+          "logo_position": "center",
+          "enable_transparent_home": false,
+          "color_text_transparent": "#ffffff",
+          "color_icon_transparent": "#ffffff",
+          "color_count_transparent": "#000000",
+          "color_border_transparent": "#ffffff",
+          "opacity_border_transparent": 0
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "05da2cd5-1ef7-4e3a-97d5-fa9794711f23": {
+            "type": "menu",
+            "settings": {
+              "title": "Explore",
+              "link_list": ""
+            }
+          },
+          "bf6d3719-324a-4b5f-a9db-a7f6245dde2c": {
+            "type": "menu",
+            "settings": {
+              "title": "Popular searches",
+              "link_list": "footer"
+            }
+          },
+          "fc921d31-6d01-4ce6-aaea-164ecea1f2ae": {
+            "type": "menu",
+            "settings": {
+              "title": "Support",
+              "link_list": ""
+            }
+          },
+          "newsletter-1": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Newsletter",
+              "text": "<p>Subscribe for store updates and discounts.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "05da2cd5-1ef7-4e3a-97d5-fa9794711f23",
+          "bf6d3719-324a-4b5f-a9db-a7f6245dde2c",
+          "fc921d31-6d01-4ce6-aaea-164ecea1f2ae",
+          "newsletter-1"
+        ],
+        "settings": {
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "show_social_icons": true,
+          "show_payment_icons": false,
+          "credits_right": "If you have any of your suggestions, questions or other matters relating to our business relationship, you may contact us at (+421) 940 973 088, send us a mail at our address below or you may contact us by email at: info@xotixdesigns.com. In case of complaints about the purchased goods, please follow the Complaints Procedure outlined in Returns and Refunds Policy section. X.oti.X Designs and www.xotixdesigns.com\nare owned and operated by Souleymane Doumouya - EPICC Lermontova 3, 811 05 Bratislava Slovak Republic ID number: 52591476 V.A.T.: 1121333719"
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "blocks": {
+          "popup-0": {
+            "type": "heading",
+            "settings": {
+              "title": "Subscribe",
+              "subheading": "<p>We only send emails once or twice a month and only about good things.</p>"
+            }
+          },
+          "popup-1": {
+            "type": "newsletter_signup",
+            "settings": {}
+          }
+        },
+        "block_order": ["popup-0", "popup-1"],
+        "settings": {
+          "enable_popup": true,
+          "image_position": "center",
+          "color_text": "#ffffff",
+          "color_text_button": "#1c2232",
+          "color_background_button": "#ffffff",
+          "color_overlay": "#000000",
+          "overlay_opacity": 10
+        }
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {
+    "Chic": {
+      "color_background_body": "#ffffff",
+      "color_border": "#d4d4d4",
+      "color_overlay": "#181818",
+      "color_text": "#1d1d1d",
+      "color_text_link": "#000000",
+      "color_header_bg": "#000000",
+      "color_header_text": "#ffffff",
+      "color_background_footer": "#F4F4F4",
+      "color_text_footer": "#1D1D1D",
+      "color_background_button": "#191919",
+      "color_background_contrast": "#f4f4f4",
+      "color_text_contrast": "#000000",
+      "color_border_contrast": "#d4d4d4",
+      "color_background_button_contrast": "#000000",
+      "color_text_button_contrast": "#ffffff",
+      "color_text_link_contrast": "#000000",
+      "color_background_popover": "#131313",
+      "color_border_popover": "#3D3D3D",
+      "color_background_button_popover": "#ffffff",
+      "color_text_button_popover": "#131313",
+      "font_logo": "frutiger_serif_n7",
+      "capitalize_logo": false,
+      "logo_letter_spacing": 0,
+      "logo_base_size": 37,
+      "font_heading": "frutiger_serif_n7",
+      "heading_letter_spacing": -25,
+      "heading_base_size": 48,
+      "font_body": "assistant_n4",
+      "capitalize_product_title": true,
+      "product_title_letter_spacing": 25,
+      "button_shape": "0",
+      "swatch_options": "Material",
+      "variant_popup_page": "size-guide",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "social_tumblr_link": "",
+      "color_border_header": "#363636",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "title": "Announce something here",
+                "link": "https://fluorescent.co/help/spark/announcement-bar#set-up-the-announcement-bar",
+                "color_background": "#ffffff",
+                "color_text": "#000000"
+              }
+            },
+            "6babe932-3e75-48f4-8e66-f0777108ae33": {
+              "type": "announcement",
+              "settings": {
+                "title": "Announce something here",
+                "link": "https://fluorescent.co/help/spark/announcement-bar#set-up-the-announcement-bar",
+                "color_background": "#ffffff",
+                "color_text": "#191919"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0",
+            "6babe932-3e75-48f4-8e66-f0777108ae33"
+          ],
+          "settings": {
+            "timing": 4
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_max_width": 200,
+            "menu": "main-menu",
+            "style": "icon",
+            "navigation_position": "inline",
+            "logo_position": "center",
+            "enable_transparent_home": true,
+            "color_text_transparent": "#ffffff",
+            "color_icon_transparent": "#ffffff",
+            "color_count_transparent": "#000000",
+            "color_border_transparent": "#ffffff",
+            "opacity_border_transparent": 0
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "newsletter-1": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "text": "<p>Subscribe for store updates and discounts.</p>"
+              }
+            }
+          },
+          "block_order": ["newsletter-1"],
+          "settings": {
+            "show_locale_selector": true,
+            "show_currency_selector": true,
+            "show_social_icons": true,
+            "show_payment_icons": true
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "blocks": {
+            "popup-0": {
+              "type": "heading",
+              "settings": {
+                "title": "Subscribe",
+                "subheading": "<p>We only send emails once or twice a month and only about good things.</p>"
+              }
+            },
+            "popup-1": {
+              "type": "newsletter_signup",
+              "settings": {}
+            }
+          },
+          "block_order": ["popup-0", "popup-1"],
+          "settings": {
+            "enable_popup": true,
+            "image_position": "center",
+            "color_text": "#ffffff",
+            "color_text_button": "#1C2232",
+            "color_background_button": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 10
+          }
+        }
+      }
+    },
+    "Ecstatic": {
+      "color_border": "#e4e4e4",
+      "color_overlay": "#000000",
+      "color_header_bg": "#ffffff",
+      "color_background_footer": "#141415",
+      "color_text_footer": "#ffffff",
+      "color_background_button": "#151515",
+      "color_background_contrast": "#f9f9f9",
+      "color_text_contrast": "#232323",
+      "color_border_contrast": "#d9d9d9",
+      "color_text_popover": "#000000",
+      "color_background_popover": "#ffffff",
+      "font_logo": "oswald_n7",
+      "capitalize_logo": true,
+      "logo_base_size": 32,
+      "font_heading": "oswald_n7",
+      "capitalize_headings": true,
+      "heading_letter_spacing": 0,
+      "heading_base_size": 46,
+      "font_body": "ibm_plex_sans_n4",
+      "body_letter_spacing": 0,
+      "body_base_size": 18,
+      "capitalize_product_title": true,
+      "product_title_letter_spacing": 25,
+      "button_shape": "0",
+      "chip_options": "Lenses",
+      "variant_popup_option": "Lenses",
+      "variant_popup_text": "Learn more",
+      "variant_popup_page": "learn-more",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "color_border_header": "#e7e7e7",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "title": "Announce something here",
+                "link": "https://fluorescent.co/help/spark/announcement-bar#set-up-the-announcement-bar",
+                "color_background": "#2a5ddf",
+                "color_text": "#ffffff"
+              }
+            },
+            "f82475f7-569c-49d7-9e26-b00dd828c2af": {
+              "type": "announcement",
+              "settings": {
+                "title": "Announce something here",
+                "link": "https://fluorescent.co/help/spark/announcement-bar#set-up-the-announcement-bar",
+                "color_background": "#000000",
+                "color_text": "#ffffff"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0",
+            "f82475f7-569c-49d7-9e26-b00dd828c2af"
+          ],
+          "settings": {
+            "timing": 4
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_max_width": 200,
+            "menu": "main-menu",
+            "secondary_menu": "",
+            "style": "inline",
+            "navigation_position": "inline",
+            "logo_position": "center",
+            "enable_transparent_home": false,
+            "color_text_transparent": "#ffffff",
+            "color_icon_transparent": "#ffffff",
+            "color_count_transparent": "#000000",
+            "color_border_transparent": "#ffffff",
+            "opacity_border_transparent": 20
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "newsletter-1": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "text": "<p>Subscribe for store updates and discounts.</p>"
+              }
+            }
+          },
+          "block_order": ["newsletter-1"],
+          "settings": {
+            "show_locale_selector": true,
+            "show_currency_selector": true,
+            "show_social_icons": true,
+            "show_payment_icons": true
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "blocks": {
+            "popup-0": {
+              "type": "heading",
+              "settings": {
+                "title": "Subscribe",
+                "subheading": "<p>We only send emails once or twice a month and only about good things.</p>"
+              }
+            },
+            "popup-1": {
+              "type": "newsletter_signup",
+              "settings": {}
+            }
+          },
+          "block_order": ["popup-0", "popup-1"],
+          "settings": {
+            "enable_popup": true,
+            "image_position": "center",
+            "color_text": "#ffffff",
+            "color_text_button": "#1C2232",
+            "color_background_button": "#ffffff",
+            "color_overlay": "#2a5ddf",
+            "overlay_opacity": 100
+          }
+        }
+      }
+    },
+    "Minimal": {
+      "color_border": "#dddde1",
+      "color_text_link": "#b75c4c",
+      "color_background_button": "#b75a4e",
+      "color_border_contrast": "#d8dade",
+      "color_background_button_contrast": "#1C2232",
+      "color_text_popover": "#1c2232",
+      "color_background_popover": "#fdfdfd",
+      "color_border_popover": "#c2c5cc",
+      "font_logo": "abril_fatface_n4",
+      "capitalize_logo": true,
+      "logo_letter_spacing": 0,
+      "logo_base_size": 40,
+      "font_heading": "georgia_pro_n7",
+      "capitalize_headings": false,
+      "heading_letter_spacing": 0,
+      "heading_base_size": 46,
+      "font_body": "ibm_plex_sans_n4",
+      "body_letter_spacing": 0,
+      "body_base_size": 18,
+      "variant_popup_page": "size-guide",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "title": "Announce something here",
+                "link": "https://fluorescent.co/help/spark/announcement-bar#set-up-the-announcement-bar",
+                "color_background": "#1c2232",
+                "color_text": "#ffffff"
+              }
+            },
+            "edba0405-b6f3-4251-856a-bce93ff6b8f3": {
+              "type": "announcement",
+              "settings": {
+                "title": "Announce something here",
+                "link": "https://fluorescent.co/help/spark/announcement-bar#set-up-the-announcement-bar",
+                "color_background": "#1c2232",
+                "color_text": "#ffffff"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0",
+            "edba0405-b6f3-4251-856a-bce93ff6b8f3"
+          ],
+          "settings": {
+            "timing": 4
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_max_width": 200,
+            "menu": "main-menu",
+            "secondary_menu": "",
+            "style": "icon",
+            "navigation_position": "below",
+            "logo_position": "center",
+            "enable_transparent_home": true,
+            "color_text_transparent": "#ffffff",
+            "color_icon_transparent": "#ffffff",
+            "color_count_transparent": "#000000",
+            "color_border_transparent": "#ffffff",
+            "opacity_border_transparent": 20
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "newsletter-1": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "text": "<p>Subscribe for store updates and discounts.</p>"
+              }
+            }
+          },
+          "block_order": ["newsletter-1"],
+          "settings": {
+            "show_locale_selector": true,
+            "show_currency_selector": true,
+            "show_social_icons": true,
+            "show_payment_icons": true
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "blocks": {
+            "popup-0": {
+              "type": "heading",
+              "settings": {
+                "title": "Subscribe",
+                "subheading": "<p>We only send emails once or twice a month and only about good things.</p>"
+              }
+            },
+            "popup-1": {
+              "type": "newsletter_signup",
+              "settings": {}
+            }
+          },
+          "block_order": ["popup-0", "popup-1"],
+          "settings": {
+            "enable_popup": true,
+            "image_position": "center",
+            "color_text": "#ffffff",
+            "color_text_button": "#ffffff",
+            "color_background_button": "#1c2232",
+            "color_overlay": "#b75c4c",
+            "overlay_opacity": 100
+          }
+        }
+      }
+    }
+  }
+}

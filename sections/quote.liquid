@@ -1,0 +1,121 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="quote"
+  class="
+    quote
+    {% if section.settings.image_shape == 'round' -%}
+      quote--image-rounded
+    {%- endif %}
+    section
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+>
+  <div class="section__inner">
+    <div
+      class="quotes"
+      data-slider
+      data-timer="{{ section.settings.timer | times: 1000 }}"
+    >
+      {%- for block in section.blocks -%}
+        {%-
+          render 'quote-item' with
+          block: block,
+          forloop: forloop,
+          quote: block.settings.quote,
+          text_max_width: block.settings.text_max_width
+          image: block.settings.image,
+          author: block.settings.author,
+        -%}
+      {%- endfor -%}
+    </div>
+
+    {% if section.blocks.size > 1 %}
+      <div class="quote__navigation">
+        {%- render 'navigation-dots' with dot_count: section.blocks.size -%}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.quotes.name",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--text-first",
+  "settings": [
+    {
+      "id": "timer",
+      "type": "range",
+      "label": "t:sections.quotes.settings.timer.label",
+      "default": 7,
+      "min": 3,
+      "max": 15,
+      "step": 1
+    },
+    {
+      "id": "image_shape",
+      "type": "radio",
+      "label": "t:sections.quotes.settings.image_shape.label",
+      "default": "round",
+      "options": [
+        { "value": "round", "label": "t:sections.quotes.settings.image_shape.options__1" },
+        { "value": "square", "label": "t:sections.quotes.settings.image_shape.options__2" }
+      ]
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.quotes.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "t:sections.quotes.blocks.quote.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "t:sections.quotes.blocks.quote.settings.quote.label",
+          "default": "<p>\"Absolutely unparalleled products and service. I'm confident that this store will be the next big thing in its industry, and that its products will be timeless.\"</p>"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "t:sections.quotes.blocks.quote.settings.author.label",
+          "default": "Steve Jordans"
+        },
+        {
+          "type": "range",
+          "id": "text_max_width",
+          "label": "t:sections.quotes.blocks.quote.settings.text_max_width.label",
+          "min": 40,
+          "max": 60,
+          "step": 1,
+          "default": 48
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.quotes.blocks.quote.settings.image.label",
+          "info": "t:sections.quotes.blocks.quote.settings.image.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.quotes.presets.name",
+      "blocks": [
+        {
+          "type": "quote"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

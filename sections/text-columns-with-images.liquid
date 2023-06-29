@@ -1,0 +1,158 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="text-columns-with-images"
+  class="
+    text-columns-with-images
+    text-columns-with-images--columns-{{ section.settings.columns }}
+    text-columns-with-images--text-{{ section.settings.text_alignment }}
+    {% if section.settings.image_shape == 'round' -%}
+      text-columns-with-images--image-rounded
+    {%- endif %}
+    section
+    section--small
+    {% if section.settings.section_contrast -%}section--contrast{%- endif %}
+    {%if section.settings.enable_fullwidth%}section--fullwidth{%endif%}
+  "
+  style="--text-max-width: 42rem;"
+>
+  <div class="section__inner">
+    <div class="text-columns-with-images__grid">
+      {%- for block in section.blocks -%}
+        {%-
+          render 'text-columns-with-images-item' with
+          columns: section.settings.columns,
+          image: block.settings.image,
+          heading: block.settings.heading,
+          subheading: block.settings.subheading,
+          text_max_width: block.settings.text_max_width,
+          link: block.settings.link,
+          link_text: block.settings.link_text
+          button_size: button_size,
+        -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.text_columns_with_images.name",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--small shopify-section--text-first",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.text_columns_with_images.settings.columns.label",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "id": "image_shape",
+      "type": "radio",
+      "label": "t:sections.text_columns_with_images.settings.image_shape.label",
+      "default": "round",
+      "options": [
+        { "value": "round", "label": "t:sections.text_columns_with_images.settings.image_shape.options__1" },
+        { "value": "square", "label": "t:sections.text_columns_with_images.settings.image_shape.options__2" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:sections.text_columns_with_images.settings.text_alignment.label",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.text_columns_with_images.settings.text_alignment.options__1"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.text_columns_with_images.settings.text_alignment.options__2"
+        }
+      ]
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.text_columns_with_images.settings.section_contrast.label",
+      "default": true
+    },
+    {
+      "id": "enable_fullwidth",
+      "type": "checkbox",
+      "label": "Enable Fullwidth",
+      "default": false
+    }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "column",
+      "name": "t:sections.text_columns_with_images.blocks.column.name",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "t:sections.text_columns_with_images.blocks.column.settings.image.label",
+          "info": "t:sections.text_columns_with_images.blocks.column.settings.image.info"
+        },
+        {
+          "id": "heading",
+          "type": "text",
+          "label": "t:sections.text_columns_with_images.blocks.column.settings.heading.label",
+          "default": "Feature heading"
+        },
+        {
+          "id": "subheading",
+          "type": "richtext",
+          "label": "t:sections.text_columns_with_images.blocks.column.settings.subheading.label",
+          "default": "<p>Tell a story, explain a detail about your product, or describe a new promotion.</p>"
+        },
+        {
+          "type": "range",
+          "id": "text_max_width",
+          "label": "t:sections.text_columns_with_images.blocks.column.settings.text_max_width.label",
+          "min": 24,
+          "max": 48,
+          "step": 1,
+          "default": 42
+        },
+        {
+          "id": "link",
+          "type": "url",
+          "label": "t:sections.text_columns_with_images.blocks.column.settings.link.label"
+        },
+        {
+          "id": "link_text",
+          "type": "text",
+          "label": "t:sections.text_columns_with_images.blocks.column.settings.link_text.label",
+          "default": "Read more"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.text_columns_with_images.presets.name",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

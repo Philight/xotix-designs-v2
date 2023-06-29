@@ -1,0 +1,17 @@
+*.md
+.editorconfig
+.eslintignore
+.eslintrc.cjs
+.gitignore
+.prettierignore
+.prettierrc.cjs
+.shopifyignore
+.theme-check.yml
+frontend/
+jsconfig.json
+package-lock.json
+package.json
+postcss.config.cjs
+shopify.theme.toml
+tailwind.config.cjs
+vite.config.js

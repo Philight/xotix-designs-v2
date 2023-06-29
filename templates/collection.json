@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_image": false,
+        "collection_image_aspect_ratio": "square",
+        "show_collection_description": true,
+        "text_max_width": 40
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "show_sort": false,
+        "show_filters": false,
+        "columns": 3,
+        "per_page": 12,
+        "pagination": "paginated",
+        "show_swatches_and_chips": false,
+        "aspect_ratio": "square"
+      }
+    }
+  },
+  "order": ["banner", "product-grid"]
+}

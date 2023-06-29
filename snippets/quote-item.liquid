@@ -1,0 +1,31 @@
+<div
+  class="quote__item"
+  {{ block.shopify_attributes }}
+  data-index="{{ forloop.index0 }}"
+  data-slide
+>
+  {%- unless quote == blank -%}
+    <h4
+      class="quote__item-text ff-heading fs-heading-3-base fs-heading-2-large-ns"
+      style="--text-max-width: {{ text_max_width }}rem;"
+    >
+      <span>{{ quote }}</span>
+    </h4>
+  {%- endunless -%}
+
+  {%- unless author == blank -%}
+    <div class="quote__item-author ff-body fs-body-small fs-body-base-ns">
+      &mdash;&ensp;<span>{{ author }}</span>
+    </div>
+  {%- endunless -%}
+
+  {%- unless image == blank -%}
+    <div class="quote__item-image">
+      {%-
+        render 'image' with
+        image: image,
+        disable_style: true,
+      -%}
+    </div>
+  {%- endunless -%}
+</div>

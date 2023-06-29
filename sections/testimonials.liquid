@@ -1,0 +1,152 @@
+{%- liquid
+  assign header_classes = 'section-header--large'
+
+  if section.settings.text_alignment == 'center'
+    assign header_classes = header_classes | append: ' section-header--center'
+  endif
+
+  assign testimonialSize = section.blocks | size
+  assign testimonialPages = testimonialSize | divided_by: section.settings.columns
+-%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="testimonials"
+  class="
+    testimonials
+    testimonials--columns-{{ section.settings.columns }}
+    section
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+>
+  <div class="section__inner">
+    {% render 'section-header',
+      heading: section.settings.title,
+      subheading: section.settings.subheading,
+      classes: header_classes
+    %}
+
+    <div class="testimonials__grid">
+      {%- for block in section.blocks -%}
+        {%-
+          render 'testimonials-item' with
+          columns: section.settings.columns,
+          heading: block.settings.heading,
+          testimonial: block.settings.testimonial,
+          author: block.settings.author,
+          text_max_width: block.settings.text_max_width,
+        -%}
+      {%- endfor -%}
+    </div>
+    <div class="testimonials-navigation-dots">
+      {%- for column in (1..testimonialPages) -%}
+        <div class="nav-dot"></div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.testimonials.name",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--text-first",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.testimonials.settings.columns.label",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "t:sections.testimonials.settings.title.label"
+    },
+    {
+      "id": "subheading",
+      "type": "richtext",
+      "label": "t:sections.testimonials.settings.subheading.label"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:sections.testimonials.settings.text_alignment.label",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.testimonials.settings.text_alignment.options__1"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.testimonials.settings.text_alignment.options__2"
+        }
+      ]
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.testimonials.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "t:sections.testimonials.blocks.testimonial.name",
+      "settings": [
+        {
+          "id": "heading",
+          "type": "text",
+          "label": "t:sections.testimonials.blocks.testimonial.settings.heading.label",
+          "default": "Amazing product!"
+        },
+        {
+          "id": "testimonial",
+          "type": "richtext",
+          "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial.label",
+          "default": "<p>\"Add customer reviews and testimonials to showcase your store’s happy customers.\"</p>"
+        },
+        {
+          "id": "author",
+          "type": "text",
+          "label": "t:sections.testimonials.blocks.testimonial.settings.author.label",
+          "default": "Author's name"
+        },
+        {
+          "type": "range",
+          "id": "text_max_width",
+          "label": "t:sections.testimonials.blocks.testimonial.settings.text_max_width.label",
+          "min": 24,
+          "max": 48,
+          "step": 1,
+          "default": 42
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.testimonials.presets.name",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

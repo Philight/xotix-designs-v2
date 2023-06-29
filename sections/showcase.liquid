@@ -1,0 +1,195 @@
+{% liquid
+
+%}
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="showcase"
+  class="
+       showcase
+       section
+    cols-{{section.settings.image_columns}}
+       {% if section.settings.section_contrast -%}
+         section--contrast
+       {%- endif %}
+       {%if section.settings.enable_fullwidth%}section--fullwidth{%endif%}
+  "
+  style="
+    --showcase-max-height: {{ section.settings.banner_max_height }}vh;
+
+    --banner-parallax-overlay-color: {{ section.settings.overlay_color }};
+    --banner-parallax-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.00}};
+    --banner-parallax-text-color: {{ section.settings.text_color }};
+
+    --showcase-text-max-width: {{ section.settings.text_max_width }}px;
+    {{ block.settings.logo_font | font_face }}
+  "
+>
+  <div class="section__inner ">
+    {% render 'section-header',
+      heading: section.settings.heading,
+      subheading: section.settings.subheading,
+      url: section.settings.link_url,
+      classes: 'section-header--large section-header--center',
+      header_max_width: section.settings.text_max_width
+    %}
+    <div class="showcase__content">
+      {%- for block in section.blocks -%}
+        {% if block.settings.enable_logo %}
+          <div
+            class="showcase__logo-wrapper"
+            style="
+              --showcase-logo-font-family: {{ block.settings.logo_font.family }};
+              --showcase-logo-font-weight: {{ block.settings.logo_font.weight }};
+              --showcase-logo-font-style: {{ block.settings.logo_font.style }};
+            "
+          >
+            <span class="text-line">
+              <span class="text-wrapper">X.O.T.I.</span>{% render 'icon-custom' with icon: 'XD-black' -%}
+              <span class="text-wrapper">ESIGNS</span>
+            </span>
+          </div>
+        {% else %}
+          <div class="showcase__image-wrapper">
+            <div class="showcase__image-overlay"></div>
+            {%
+              render 'image' with
+              image: block.settings.image
+            %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Showcase",
+  "tag": "section",
+  "class": "shopify-section--stackable",
+  "settings": [
+    {
+      "id": "image_columns",
+      "type": "range",
+      "label": "Image Columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "id": "text_max_width",
+      "type": "range",
+      "label": "Text Max Width",
+      "min": 100,
+      "max": 1500,
+      "step": 20,
+      "default": 1500
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "SHOWCASE"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "BOLD STATEMENT"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Heading URL"
+    },
+    {
+      "id": "subheading_style",
+      "type": "select",
+      "label": "Subheading Style",
+      "options": [
+        { "label": "Style 1", "value": "style-1" },
+        { "label": "Style 2", "value": "style-2" }
+      ],
+      "default": "style-1"
+    },
+    {
+      "id": "banner_max_height",
+      "type": "range",
+      "label": "Maximum Banner Height",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "default": 50
+    },
+    {
+      "id": "overlay_color",
+      "type": "color",
+      "label": "Overlay Color",
+      "default": "#000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "unit": "%",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "id": "enable_fullwidth",
+      "type": "checkbox",
+      "label": "Enable Fullwidth",
+      "default": false
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.featured_collection.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "enable_logo",
+          "type": "checkbox",
+          "label": "Use XD Logo"
+        },
+        {
+          "id": "logo_font",
+          "type": "font_picker",
+          "label": "Logo Font",
+          "default": "ibm_plex_sans_n4"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Showcase",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

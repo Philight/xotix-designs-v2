@@ -1,0 +1,200 @@
+{% liquid
+  assign max_products = 6
+%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-list"
+  class="
+    featured-collection-table
+    collection-list
+    collection-list--columns-{{ section.settings.columns }}
+    section
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+  style="--text-max-width: {{ section.settings.text_max_width }}rem;"
+>
+  <div class="section__inner">
+    {%
+      render 'section-header',
+      heading: section.settings.title,
+      subheading: section.settings.subheading,
+      classes: 'section-header--large section-header--center',
+    %}
+
+    <div class="featured-collection-table__content">
+      <div class="table-navigation">
+        {%- for block in section.blocks -%}
+          <button
+            class="tab-selector {% if forloop.first == true %}selected{% endif %}"
+            data-collection-id="{{ block.settings.collection.id }}"
+          >
+            {{ block.settings.collection.title }}
+          </button>
+        {%- endfor -%}
+      </div>
+      {%- for block in section.blocks -%}
+        {%- assign featured_collection = block.settings.collection -%}
+        {%- if featured_collection != empty -%}
+          <div
+            class="featured-collection-wrapper {% if forloop.first == true %}selected{% endif %}"
+            data-collection-id="{{ featured_collection.id }}"
+          >
+            <div class="featured-collection-container">
+              {%- for product in featured_collection.products limit: max_products -%}
+                <div class="featured-collection-slide" data-slide>
+                  {% render 'product-item', product: product, aspect_ratio: section.settings.aspect_ratio %}
+                </div>
+              {%- else -%}
+                {%- for i in (1..minimum_items_for_wrap_around) -%}
+                  <div class="featured-collection-slide" data-slide>
+                    {% render 'product-item',
+                      product: product,
+                      aspect_ratio: section.settings.aspect_ratio,
+                      placeholder: true
+                    %}
+                  </div>
+                {%- endfor -%}
+              {%- endfor -%}
+            </div>
+
+            <a class="featured-collection-link" href="{{ featured_collection.url }}">
+              {{- section.settings.calltoaction_text -}}
+            </a>
+            {% render 'carousel-navigation' with columns: columns, item_count: carousel_item_count %}
+          </div>
+
+        {%- else -%}
+          {% render 'collection-item' with collection: empty, aspect_ratio: section.settings.aspect_ratio %}
+        {%- endif -%}
+      {%- else -%}
+        {%- for i in (1..columns) -%}
+          {% render 'collection-item' with collection: empty, aspect_ratio: section.settings.aspect_ratio %}
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Collection Table",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--text-first",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.collection_list.settings.columns.label",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.collection_list.settings.title.label"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:sections.collection_list.settings.subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "calltoaction_text",
+      "label": "Call-to-action Text",
+      "default": "View All"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.collection_list.settings.text_max_width.label",
+      "min": 24,
+      "max": 48,
+      "step": 1,
+      "default": 42
+    },
+    {
+      "id": "aspect_ratio",
+      "type": "select",
+      "label": "t:sections.collection_list.settings.aspect_ratio.label",
+      "options": [
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__1",
+          "value": "natural"
+        },
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__2",
+          "value": "round"
+        },
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__3",
+          "value": "square"
+        },
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__4",
+          "value": "landscape"
+        },
+        {
+          "label": "t:sections.collection_list.settings.aspect_ratio.options__5",
+          "value": "portrait"
+        }
+      ],
+      "default": "natural"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.collection_list.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "t:sections.collection_list.blocks.collection.name",
+      "settings": [
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "t:sections.collection_list.blocks.collection.settings.collection.label"
+        },
+        {
+          "id": "subheading",
+          "type": "richtext",
+          "label": "t:sections.collection_list.blocks.collection.settings.subheading.label"
+        },
+        {
+          "type": "range",
+          "id": "text_max_width",
+          "label": "t:sections.collection_list.blocks.collection.settings.text_max_width.label",
+          "min": 24,
+          "max": 48,
+          "step": 1,
+          "default": 42
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection Table",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

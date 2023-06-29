@@ -1,0 +1,129 @@
+<!doctype html>
+
+<!--
+  ___                       ___           ___           ___
+       /  /\                     /__/\         /  /\         /  /\
+      /  /:/_                    \  \:\       /  /:/        /  /::\
+     /  /:/ /\  ___     ___       \  \:\     /  /:/        /  /:/\:\
+    /  /:/ /:/ /__/\   /  /\  ___  \  \:\   /  /:/  ___   /  /:/  \:\
+   /__/:/ /:/  \  \:\ /  /:/ /__/\  \__\:\ /__/:/  /  /\ /__/:/ \__\:\
+   \  \:\/:/    \  \:\  /:/  \  \:\ /  /:/ \  \:\ /  /:/ \  \:\ /  /:/
+    \  \::/      \  \:\/:/    \  \:\  /:/   \  \:\  /:/   \  \:\  /:/
+     \  \:\       \  \::/      \  \:\/:/     \  \:\/:/     \  \:\/:/
+      \  \:\       \__\/        \  \::/       \  \::/       \  \::/
+       \__\/                     \__\/         \__\/         \__\/
+
+  --------------------------------------------------------------------
+  #  Spark v2.1.0
+  #  Documentation: https://fluorescent.co/help/spark/
+  #  Purchase: https://themes.shopify.com/themes/spark/
+  #  A product by Fluorescent: https://fluorescent.co/
+  --------------------------------------------------------------------
+-->
+
+<html class="no-js" lang="{{ request.locale.iso_code }}" style="--announcement-height: 1px;">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    {% comment %}
+      {% raw %}
+           <script src="{{ 'verifyDrinks.js' | asset_url }}"></script>
+      {% endraw %}
+    {% endcomment %}
+
+    {%- if settings.favicon != blank -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {%- endif -%}
+
+    {%- capture seo_title -%}
+    {%- if request.page_type == 'search' and search.performed == true -%}
+      {{ 'search.heading' | t: count: search.results_count }}: {{ 'search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+    {%- else -%}
+      {{ page_title }}
+    {%- endif -%}
+    {%- if current_tags -%}
+      {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+    {%- endif -%}
+    {%- if current_page != 1 -%}
+      &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {%- endif -%}
+    {%- assign escaped_page_title = page_title | escape -%}
+    {%- unless escaped_page_title contains shop.name -%}
+      &ndash; {{ shop.name }}
+    {%- endunless -%}
+  {%- endcapture -%}
+    <title>{{ seo_title | strip }}</title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    {% render 'social-meta-tags' %}
+
+    {% render 'theme-setup' %}
+    {% render 'theme-setting-vars' %}
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+
+    {% include 'globo.filter.script' %}
+    {{ content_for_header }}
+  </head>
+
+  <body
+    class="template-{{ request.page_type | handle }}{% if settings.enable_sticky_header %} header-sticky{% endif %}"
+    {% if settings.cart_enable_ajax %}
+      data-enable-cart-ajax="true"
+    {% endif %}
+  >
+    <div class="page">
+      <div class="theme-editor-scroll-offset"></div>
+
+      <div class="header__space" data-header-space></div>
+      {% section 'announcement-bar' %}
+
+      <main id="main" class="main">
+        {{ content_for_layout }}
+      </main>
+
+      {% section 'footer' %}
+      {% section 'popup' %}
+      {% render 'modal' %}
+      {% render 'store-availability-drawer' %}
+
+      {% if settings.enable_page_transitions %}
+        <div class="page-transition" data-page-transition></div>
+      {% endif %}
+    </div>
+
+    {{ '//www.youtube.com/iframe_api' | script_tag }}
+    {{ '//cdn.shopify.com/shopifycloud/shopify-plyr/v1.0/shopify-plyr.css' | stylesheet_tag }}
+
+    {%- if template contains 'customers' -%}
+      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    {% comment %}
+      Set the following line to true to use the single theme.classic.js (no code-splitting, editable)
+    {% endcomment %}
+    {% assign useLegacyThemeJS = false %}
+
+    {% if useLegacyThemeJS %}
+      {% comment %}This is the classic monolithic build that is optionally used by intermediary theme devs who need to edit the JS{% endcomment %}
+      <script src="{{ 'theme.classic.js' | asset_url }}"></script>
+    {% else %}
+      {% comment %}This is the ES Module for modern browsers.  This features code splitting {% endcomment %}
+      <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
+
+      {% comment %}This is the fallback for browsers that don't support ES Modules, code-splitting is supported by systemJS{% endcomment %}
+      <script nomodule src="{{ 's.min.js' | asset_url }}"></script>
+      <script nomodule>
+        System.import('{{ 'theme.nomodule.js' | asset_url }}');
+      </script>
+    {% endif %}
+    {% render 'preorder-now' %}
+    {% include 'globo.filter.action' %}
+  </body>
+</html>

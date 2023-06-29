@@ -1,0 +1,355 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product--default",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "854e24f4-dde4-4976-82ad-31a86bf07541": {
+          "type": "product_view_count",
+          "settings": {
+            "view_count_text": "people are viewing this product",
+            "icon_type": "eye",
+            "max_view_count": 2,
+            "enable_null": false
+          }
+        },
+        "07722593-b510-4369-aef0-a21c4adfbc72": {
+          "type": "product_view_count",
+          "settings": {
+            "view_count_text": "people recently purchased this",
+            "icon_type": "shopping-bag",
+            "max_view_count": 8,
+            "enable_null": true
+          }
+        },
+        "border": {
+          "type": "border",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_labels": true,
+            "variant_popup_option": "Size",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_labels": true
+          }
+        },
+        "86fa75c1-d872-445a-b681-b4c08f2b6ff4": {
+          "type": "border",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "style": "paragraph"
+          }
+        },
+        "8457926d-91ca-4f02-8e1d-a84f3608bcdc": {
+          "type": "border",
+          "settings": {}
+        },
+        "e913228a-87a1-46b3-adbd-771b90b90e8e": {
+          "type": "guarancy",
+          "settings": {
+            "enable_warranty": true,
+            "enable_risk_free": true,
+            "enable_handmade": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "button_max_width": 100
+          }
+        },
+        "59a1bad0-5f8c-4e2c-8aad-d84325592581": {
+          "type": "accordion",
+          "settings": {
+            "column": "left",
+            "style": "open",
+            "heading": "Energetic Properties",
+            "content": ""
+          }
+        },
+        "payment_widget": {
+          "type": "payment_widget",
+          "settings": {
+            "column": "right",
+            "style": "open",
+            "icon": "payment",
+            "title": "Payment",
+            "show_payment_icons": true,
+            "text": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.</p>"
+          }
+        },
+        "security_widget": {
+          "type": "security_widget",
+          "settings": {
+            "column": "right",
+            "style": "closed",
+            "icon": "security",
+            "title": "Security",
+            "text": "<p>This website is encrypted. We take your security very seriously. All transactions powered by Shopify.</p>"
+          }
+        },
+        "shipping_widget": {
+          "type": "shipping_widget",
+          "settings": {
+            "column": "right",
+            "style": "closed",
+            "icon": "shipping",
+            "title": "Shipping",
+            "text": "<p>Rates are approximations. Exact rates will be provided at checkout.</p>",
+            "show_estimator": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "854e24f4-dde4-4976-82ad-31a86bf07541",
+        "07722593-b510-4369-aef0-a21c4adfbc72",
+        "border",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "86fa75c1-d872-445a-b681-b4c08f2b6ff4",
+        "description",
+        "8457926d-91ca-4f02-8e1d-a84f3608bcdc",
+        "e913228a-87a1-46b3-adbd-771b90b90e8e",
+        "buy_buttons",
+        "59a1bad0-5f8c-4e2c-8aad-d84325592581",
+        "payment_widget",
+        "security_widget",
+        "shipping_widget"
+      ],
+      "settings": {
+        "enable_quick_purchase_bar": true,
+        "show_share_buttons": true,
+        "enable_video_looping": true,
+        "title_color": "#b9b4aa"
+      }
+    },
+    "1644876384df5e8690": {
+      "type": "banner-parallax",
+      "settings": {
+        "heading": "WOOD NEVER LOOKED SO GOOD!",
+        "subheading": "BOBO BIRD WATCHES",
+        "subheading_style": "style-1",
+        "image": "shopify://shop_images/Haa42ced79ad3471fa6545d7f0a9be083W.jpg",
+        "enable_fullwidth": true,
+        "enable_button": true,
+        "override_button": true,
+        "button_text": "SHOP NOW",
+        "button_link": "shopify://collections/bobobird-watches-for-x-oti-x",
+        "banner_max_height": 46,
+        "text_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_background_color": "rgba(0,0,0,0)",
+        "button_border_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 17
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "columns": 4,
+        "title": "SIMILAR PIECES",
+        "subheading": "<p>You might want to take a closer look.</p>",
+        "text_max_width": 42,
+        "aspect_ratio": "landscape",
+        "section_contrast": false
+      }
+    },
+    "16448805613c41e1dd": {
+      "type": "showcase",
+      "disabled": true,
+      "blocks": {
+        "16448805613e8803a7-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pf-cd52e2c4--bitmapcopy2.jpg",
+            "enable_logo": false,
+            "logo_font": "ibm_plex_sans_n4"
+          }
+        },
+        "16448805613e8803a7-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/pf-f0e14217--bitmapcopy.jpg",
+            "enable_logo": false,
+            "logo_font": "ibm_plex_sans_n4"
+          }
+        },
+        "16448805613e8803a7-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/pf-f4329889--bitmap6.jpg",
+            "enable_logo": false,
+            "logo_font": "ibm_plex_sans_n4"
+          }
+        }
+      },
+      "block_order": [
+        "16448805613e8803a7-2",
+        "16448805613e8803a7-0",
+        "16448805613e8803a7-1"
+      ],
+      "settings": {
+        "image_columns": 3,
+        "text_max_width": 500,
+        "heading": "FASHION CHIC",
+        "subheading": "Sleek I Trendy I Fashion",
+        "link_url": "",
+        "subheading_style": "style-1",
+        "banner_max_height": 50,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "enable_fullwidth": false,
+        "section_contrast": true
+      }
+    },
+    "16444584889359d105": {
+      "type": "product-more-details",
+      "disabled": true,
+      "blocks": {
+        "f33b88e9-2e59-4bc0-bf3f-073b381fc345": {
+          "type": "paragraph",
+          "settings": {
+            "title": "PRODUCT DETAIL",
+            "content": "<p>Tarnish free and hypoallergenic</p><p>Posts : Titanium</p><p>Weight : Light ( 2.8g )</p>"
+          }
+        },
+        "e5245eef-274b-439c-a5a9-2b286aba16a8": {
+          "type": "paragraph",
+          "settings": {
+            "title": "MATERIAL",
+            "content": ""
+          }
+        },
+        "2ee1e067-f44e-4f85-8b7b-633cc1209792": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Title",
+            "content": ""
+          }
+        },
+        "3b8c0b31-8966-4ea7-b9eb-98fdb19ec3a1": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Title",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "f33b88e9-2e59-4bc0-bf3f-073b381fc345",
+        "e5245eef-274b-439c-a5a9-2b286aba16a8",
+        "2ee1e067-f44e-4f85-8b7b-633cc1209792",
+        "3b8c0b31-8966-4ea7-b9eb-98fdb19ec3a1"
+      ],
+      "settings": {
+        "title": "More details",
+        "image": "shopify://shop_images/pf-33951693--bitmap5.jpg",
+        "section_contrast": false
+      }
+    },
+    "16445100565f78a24c": {
+      "type": "feature-tiles",
+      "blocks": {
+        "5eadb7e0-13c8-486d-93d4-ad8ca3f756d8": {
+          "type": "review_tiles",
+          "settings": {
+            "autoplay_duration": 4,
+            "review_text1": "ETHICAL MATERIAL / GIFT PACKAGES",
+            "review_author1": "",
+            "review_text2": "FREE SHIPPING WORLDWIDE",
+            "review_author2": "",
+            "review_text3": "365-DAY WARRANTY",
+            "review_author3": "",
+            "image": "shopify://shop_images/Sleek_Fashion_I_Trendy_2.png"
+          }
+        },
+        "96ee7f12-8f6f-4ed9-9b4c-655d5c262705": {
+          "type": "text_tiles",
+          "settings": {
+            "title": "",
+            "content": "<p><strong>SLEEK   I   FASHION   I   TRENDY</strong></p>",
+            "image": "shopify://shop_images/Sleek_Fashion_I_Trendy_4.png"
+          }
+        },
+        "866c9373-5443-4083-8ad8-f8b66b9a0e53": {
+          "type": "product_tiles",
+          "settings": {
+            "title": "MAKE IT YOURS TODAY",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "5eadb7e0-13c8-486d-93d4-ad8ca3f756d8",
+        "96ee7f12-8f6f-4ed9-9b4c-655d5c262705",
+        "866c9373-5443-4083-8ad8-f8b66b9a0e53"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "alt_direction": false,
+        "url": "",
+        "tile_max_height": 80
+      }
+    },
+    "1645138914494a764a": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "columns": 3,
+        "title": "Recommended",
+        "subheading": "<p>You might want to take a closer look.</p>",
+        "text_max_width": 42,
+        "aspect_ratio": "natural",
+        "section_contrast": true
+      }
+    },
+    "16458165743fc5e63f": {
+      "type": "stones-and-benefits",
+      "settings": {
+        "stones_columns": 3,
+        "heading": "STONES & THEIR BENEFITS",
+        "subheading": "BOLD STATEMENT",
+        "banner_max_height": 52,
+        "enable_randomize": false,
+        "enable_fullwidth": true,
+        "section_contrast": true,
+        "stripe_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1644876384df5e8690",
+    "recommendations",
+    "16448805613c41e1dd",
+    "16444584889359d105",
+    "16445100565f78a24c",
+    "1645138914494a764a",
+    "16458165743fc5e63f"
+  ]
+}

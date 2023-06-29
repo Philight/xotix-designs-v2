@@ -1,0 +1,160 @@
+{% liquid
+  if section.settings.enable_randomize == true
+    assign randomize_stones = true
+  else
+    assign randomize_stones = false
+  endif
+
+  assign menu = linklists['page-links']
+  for link in menu.links
+    if link.title == 'STONES AND THEIR BENEFITS'
+      assign stones_and_benefits_page = link
+    endif
+  endfor
+
+  assign stones_and_benefits_page_handle = stones_and_benefits_page.handle
+
+  assign all_stones = 'lapis-lazuli-rough-stone-fafsghf_gy1qcd,red-jasper-gdagfghsh_ujpull,blue-sea-sediment-jasper-natural_us2dc2,Green-Moss-Agate-Rough-Single_ufnf6f' | split: ','
+
+  assign cloudinary_url = 'https://res.cloudinary.com/xotixdesigns/image/upload/v1645091318/xotixdesigns/gemstones/'
+
+  assign all_stones_json = pages[stones_and_benefits_page_handle].metafields.stones.stones_json
+%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="stones-and-benefits"
+  data-section-randomize="{{ randomize_stones }}"
+  class="
+     stones-and-benefits
+     section
+    cols-{{section.settings.stones_columns}}
+     {% if section.settings.section_contrast -%}section--contrast{%- endif %}
+     {%if section.settings.enable_fullwidth%}section--fullwidth{%endif%}
+  "
+  style="
+    //--stones-and-benefits-max-height: {{ section.settings.banner_max_height }}vh;
+
+         --banner-parallax-overlay-color: {{ section.settings.overlay_color }};
+    --banner-parallax-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.00}};
+    --banner-parallax-text-color: {{ section.settings.text_color }};
+
+    --showcase-text-max-width: {{ section.settings.text_max_width }}px;
+    --stones-and-benefits-stripe-color: {{ section.settings.stripe_color }};
+  "
+>
+  {% if section.settings.section_contrast == false or section.settings.enable_fullwidth == true %}
+    <div class="stones-and-benefits__background-stripe"></div>
+  {% endif %}
+  <div class="section__inner ">
+    {% render 'section-header',
+      heading: section.settings.heading,
+      subheading: section.settings.subheading,
+      url: stones_and_benefits_page.url,
+      classes: 'section-header--large section-header--center',
+      header_max_width: section.settings.text_max_width
+    %}
+
+    <div class="stones-and-benefits__content">
+      <div class="stones-and-benefits__stones-container">
+        {%- for each_stone in all_stones_json.value -%}
+          <div class="stones-and-benefits__stone-wrapper">
+            <div class="stones-and-benefits__image-wrapper">
+              <a href="{{ each_stone[1].link_to }}">
+                <div class="image js-enabled {% unless disable_style %}image--{{ id }} {% endunless %}{{ wrapper_class }}">
+                  <img
+                    class="image__img lazyload{% if preload %} lazypreload{% endif %} {{ image_class }}"
+                    src="{{ each_stone[1].img_url }}"
+                    data-src="{{ each_stone[1].img_url }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                    data-aspectratio="{{ image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt=""
+                  >
+                </div>
+              </a>
+            </div>
+
+            <h2 class="stones-and-benefits__title">{{ each_stone[0] }}</h2>
+            <h2 class="stones-and-benefits__title hidden">PLACEHOLDER</h2>
+            <h3 class="stones-and-benefits__subtitle">{{ each_stone[1].property }}</h3>
+            <h3 class="stones-and-benefits__subtitle hidden">XXXXXXXXXXXXXXX XXXXXXXXXXXXXXX</h3>
+            <h5 class="stones-and-benefits__readmore"><a href="{{ each_stone[1].link_to }}">Read more</a></h5>
+          </div>
+        {% endfor %}
+      </div>
+
+      {% render 'icon' with icon: 'chevron', class: 'nav left' %}
+      {% render 'icon' with icon: 'chevron', class: 'nav right' %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Stones & Benefits",
+  "tag": "section",
+  "class": "shopify-section--stackable",
+  "settings": [
+    {
+      "id": "stones_columns",
+      "type": "range",
+      "label": "Stones Columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "STONES & THEIR BENEFITS"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "BOLD STATEMENT"
+    },
+    {
+      "id": "banner_max_height",
+      "type": "range",
+      "label": "Maximum Banner Height",
+      "min": 20,
+      "max": 70,
+      "step": 2,
+      "default": 70
+    },
+    {
+      "id": "enable_randomize",
+      "type": "checkbox",
+      "label": "Randomize Order of Stones",
+      "default": false
+    },
+    {
+      "id": "enable_fullwidth",
+      "type": "checkbox",
+      "label": "Enable Fullwidth",
+      "default": false
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.featured_collection.settings.section_contrast.label",
+      "default": false
+    },
+    {
+      "id": "stripe_color",
+      "type": "color",
+      "label": "Background Stripe Color",
+      "default": "transparent"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stones & Benefits"
+    }
+  ]
+}
+{% endschema %}

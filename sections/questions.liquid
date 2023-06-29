@@ -1,0 +1,103 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="questions"
+  class="questions section{% if section.settings.section_contrast %} section--contrast{% endif %}"
+  style="
+    --s-icon-darker: {{ settings.color_border | color_darken: 10 }};
+    --s-icon-darker-contrast: {{  settings.color_border_contrast | color_darken: 10 }};
+  "
+>
+  <div class="section__inner">
+    {%
+      render 'section-header',
+      heading: section.settings.section_title,
+      subheading: section.settings.subheading,
+      classes: 'section-header--large section-header--spacing-small',
+    %}
+
+    <div class="questions__accordion" aria-label="{{ 'general.accessibility.accordion_groups' | t }}">
+      {%- for block in section.blocks -%}
+        {%-
+          render 'questions-item' with
+          forloop: forloop,
+          block: block,
+          question: block.settings.title,
+          answer: block.settings.answer,
+          author: block.settings.author,
+        -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.questions.name",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--text-first",
+  "settings": [
+    {
+      "id": "section_title",
+      "type": "text",
+      "label": "t:sections.questions.settings.title.label",
+      "default": "Questions"
+    },
+    {
+      "id": "subheading",
+      "type": "richtext",
+      "label": "t:sections.questions.settings.subheading.label"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.questions.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "question",
+      "name": "t:sections.questions.blocks.question.name",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "t:sections.questions.blocks.question.settings.title.label",
+          "default": "This is an example of a question that a customer might ask"
+        },
+        {
+          "id": "answer",
+          "type": "richtext",
+          "label": "t:sections.questions.blocks.question.settings.answer.label",
+          "default": "<p>This is an example of a response that you might give. It's good to be as thorough as possible in responses as that has a tendency to improve trust overall.</p>"
+        },
+        {
+          "id": "author",
+          "type": "text",
+          "label": "t:sections.questions.blocks.question.settings.author.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.questions.presets.name",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

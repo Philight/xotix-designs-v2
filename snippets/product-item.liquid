@@ -1,0 +1,159 @@
+{%- liquid
+  if product.media.size > 1
+    assign multiple_images = true
+  endif
+
+  assign includes_aspect_ratio = false
+  assign current_variant = product.selected_or_first_available_variant
+
+  if aspect_ratio != blank and aspect_ratio != 'natural'
+    assign includes_aspect_ratio = true
+  endif
+-%}
+
+<div class="product-item{% if includes_aspect_ratio %} product-item--{{ aspect_ratio }}{% endif %}">
+  {%- if placeholder or product.featured_media == blank -%}
+    {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+
+    <div class="product-item__media">
+      {%- if placeholder -%}
+        <div class="product-item__image-link">
+      {%- else -%}
+        <a href="{{ product.url }}" aria-label="{{ product.title }}" class="product-item__image-link">
+      {%- endif -%}
+
+      <div class="placeholder-image product-item__image">
+        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+
+      {%- if placeholder -%}
+        </div>
+      {%- else -%}
+        </a>
+      {%- endif -%}
+    </div>
+  {%- elsif product.featured_media -%}
+    <div class="product-item__media">
+      <a class="product-item__image-link" href="{{ product.url }}" aria-label="{{ product.title }}">
+        {%- if multiple_images -%}
+          {%
+            render 'image' with
+            id: product.media[0].id,
+            image: product.media[0].preview_image,
+            wrapper_class: 'product-item__image',
+            disable_style: includes_aspect_ratio
+          %}
+          {%
+            render 'image' with
+            image: product.media[1].preview_image,
+            wrapper_class: 'product-item__image product-item__image--two',
+            disable_style: includes_aspect_ratio
+          %}
+        {%- else -%}
+          {%
+            render 'image' with
+            id: product.featured_media.id,
+            image: product.featured_media,
+            wrapper_class: 'product-item__image',
+            disable_style: includes_aspect_ratio
+          %}
+        {%- endif -%}
+      </a>
+
+      {%- unless product.available -%}
+        <div class="product-item__wash"></div>
+      {%- endunless -%}
+
+      {%- if enable_hover_options -%}
+        {%- render 'product-item-options' with product: product, product_columns: product_columns -%}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div class="product-item__meta fs-body-small">
+    <div class="product-item__text ff-body fs-body-small fs-body-base-ns ta-c">
+      <h4 class="product-item__product-title fs-product-title fs-body-bold">
+        {%- if placeholder -%}
+          {{ 'homepage.onboarding.product_title' | t }}
+        {%- else -%}
+          <a href="{{ product.url }}">{{ product.title }}</a>
+        {%- endif -%}
+      </h4>
+
+      {% comment %}{% raw %}{% endraw %}{% endcomment %}
+      {% if placeholder %}
+        {{ 9999 | money }}
+
+      {% elsif product.compare_at_price > product.price %}
+        <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+        <s class="t-subdued">{{ product.compare_at_price | money }}</s>
+
+        {% if product.price_varies %}
+          {%- assign sale_price = product.price | money -%}
+          <span class="product-item__price">{{ 'products.product.on_sale_from_html' | t: price: sale_price }}</span>
+        {% else %}
+          <span class="sale">{{ product.price | money }}</span>
+        {% endif %}
+
+      {% else %}
+        {% if product.price_varies %}
+          {%- assign price = product.price | money -%}
+          <span class="product-item__price">
+            {{- 'products.product.from_lowest_price_html' | t: lowest_price: price -}}
+          </span>
+        {% else %}
+          <span class="product-item__price">{{ product.price | money }}</span>
+        {% endif %}
+      {% endif %}
+
+      <div>
+        {% render 'unit-price', item: current_variant %}
+      </div>
+    </div>
+
+    <!-- sale_badge_includes_percent -->
+
+    {%- if product.compare_at_price > product.price or product.available != true -%}
+      <div class="product-item__badges fs-body-x-small">
+        {% if product.compare_at_price > product.price %}
+          <div class="product-item__badge product-item__badge--sale">
+            {%- if settings.sale_badge_includes_percent -%}
+              {%- if product.compare_at_price_varies or product.price_varies -%}
+                <span class="fs-percent-bold">{{ 'products.product.on_sale_varied' | t }}</span>
+                {% assign percent = 0 %}
+                {% for variant in product.variants %}
+                  {% if variant.compare_at_price > variant.price %}
+                    {% assign variant_percent = variant.compare_at_price
+                      | minus: variant.price
+                      | times: 100
+                      | divided_by: variant.compare_at_price
+                    %}
+                    {%- if variant_percent > percent -%}
+                      {%- assign percent = variant_percent -%}
+                    {%- endif -%}
+                  {% endif %}
+                {% endfor %}
+              {%- else -%}
+                <span class="fs-body-bold">{{ 'products.product.on_sale' | t }}</span>
+                {%- assign percent = product.compare_at_price
+                  | minus: product.price
+                  | times: 100
+                  | divided_by: product.compare_at_price
+                -%}
+              {%- endif -%}
+              &nbsp;{{ 'products.product.on_sale_percent' | t: value: percent }}
+            {%- else -%}
+              <span class="fs-body-bold">{{ 'products.product.on_sale' | t }}</span>
+            {%- endif -%}
+          </div>
+        {% endif %}
+
+        {% unless product.available or placeholder %}
+          <div class="product-item__badge product-item__badge--sold-out fs-body-bold">
+            {{ 'products.product.sold_out' | t }}
+          </div>
+        {% endunless %}
+      </div>
+    {%- endif -%}
+  </div>
+</div>

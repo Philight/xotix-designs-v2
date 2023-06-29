@@ -1,0 +1,44 @@
+{%- liquid
+  case columns
+    when 2
+      assign testimonial_heading_type = 'fs-heading-2-large-l'
+      assign testimonial_content_type = 'fs-body-large-l'
+    when 3
+      assign testimonial_heading_type = 'fs-heading-2-base-l'
+  endcase
+-%}
+
+{% if heading != blank or testimonial != blank or author != blank %}
+  <blockquote class="testimonials__item">
+    <div class="testimonials__item-heading-wrapper ff-heading fs-heading-3-base {{ testimonial_heading_type }}">
+      <div class="testimonials__item-icon-wrapper">
+        <span class="testimonials__item-icon">&ensp;{% render 'icon' with icon: 'quote' %}</span>
+      </div>
+      <h4 class="testimonials__item-heading {% if heading == blank %}hidden{% endif %}">
+        {{ heading -}}
+        {%- if heading == blank %}PLACEHOLDER{% endif %}
+      </h4>
+    </div>
+
+    <div class="testimonials__item-rating">
+      {% for i in (1..rating) %}
+        {% render 'xotix-icon' with icon: 'star' %}
+      {% endfor %}
+    </div>
+
+    {% unless testimonial == blank %}
+      <div
+        class="testimonials__item-testimonial ff-heading fs-body-small fs-body-base-ns {{ testimonial_content_type }}"
+        style="--text-max-width: {{ text_max_width }}rem;"
+      >
+        {{ testimonial }}
+      </div>
+    {% endunless %}
+
+    {% unless author == blank %}
+      <cite class="testimonials__item-author fs-body-small fs-body-base-ns fs-body-italic">
+        &mdash;&ensp;<span>{{ author }}</span>
+      </cite>
+    {% endunless %}
+  </blockquote>
+{% endif %}

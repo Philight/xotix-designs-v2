@@ -1,0 +1,81 @@
+{%- liquid
+
+-%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="featured-collection"
+  class="featured-collection__cmp"
+></div>
+
+{% schema %}
+{
+  "name": "Featured Collection 2",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--text-first",
+  "settings": [
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "t:sections.featured_collection.settings.collection.label"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.featured_collection.settings.columns.label",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "t:sections.featured_collection.settings.title.label",
+      "default": "Featured collection"
+    },
+    {
+      "id": "subheading",
+      "type": "richtext",
+      "label": "t:sections.featured_collection.settings.subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "t:sections.featured_collection.settings.link_text.label"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.featured_collection.settings.text_max_width.label",
+      "min": 24,
+      "max": 48,
+      "step": 1,
+      "default": 36
+    },
+    {
+      "id": "aspect_ratio",
+      "type": "select",
+      "label": "t:sections.featured_collection.settings.aspect_ratio.label",
+      "options": [
+        { "label": "t:sections.featured_collection.settings.aspect_ratio.options__1", "value": "natural" },
+        { "label": "t:sections.featured_collection.settings.aspect_ratio.options__2", "value": "square" },
+        { "label": "t:sections.featured_collection.settings.aspect_ratio.options__3", "value": "landscape" },
+        { "label": "t:sections.featured_collection.settings.aspect_ratio.options__4", "value": "portrait" }
+      ],
+      "default": "natural"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.featured_collection.settings.section_contrast.label",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection 2"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "cart_ajax_enable": true
+      }
+    },
+    "1648388546b0f88271": {
+      "type": "judgeme_carousel_section",
+      "settings": {
+        "maxwidth": 1320
+      }
+    }
+  },
+  "order": ["main", "1648388546b0f88271"]
+}

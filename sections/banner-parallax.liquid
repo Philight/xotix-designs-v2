@@ -1,0 +1,179 @@
+{% liquid
+
+%}
+<div class="section__inner {%if section.settings.enable_fullwidth%}section-fullwidth{%endif%}">
+  <div
+    data-section-id="{{ section.id }}"
+    data-section-type="feature-tiles"
+    class="
+      banner-parallax
+      section
+      flex-h-center
+      flex-v-center
+    "
+    style="
+      --banner-parallax-max-height: {{ section.settings.banner_max_height }}vh;
+      --banner-parallax-overlay-color: {{ section.settings.overlay_color }};
+      --banner-parallax-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.00}};
+      --banner-parallax-text-color: {{ section.settings.text_color }};
+      --banner-parallax-button-text-color: {{ section.settings.button_text_color }};
+      --banner-parallax-button-background-color: {{ section.settings.button_background_color }};
+      --banner-parallax-button-border-color: {{ section.settings.button_border_color }};
+    "
+  >
+    <div class="banner-parallax__content">
+      <h2 class="banner-parallax__heading ff-heading fs-heading-1-base-ns">{{ section.settings.heading }}</h2>
+      <h3 class="banner-parallax__subheading {{section.settings.subheading_style}}">
+        {{ section.settings.subheading }}
+      </h3>
+      {% if section.settings.enable_button %}
+        {% if template == 'product' and section.settings.override_button == false %}
+          {% assign current_variant = product.selected_or_first_available_variant %}
+          {%
+            render 'product-form' with
+            product: product,
+            current_variant: current_variant,
+            btn_class: 'banner-parallax__button',
+            btn_text: section.settings.button_text
+          %}
+        {% else %}
+          <div class="banner-parallax__button-wrapper">
+            <a href="{{ section.settings.button_link }}" class="banner-parallax__button">
+              {{- section.settings.button_text -}}
+            </a>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="banner-parallax__image-container">
+      <div class="banner-parallax__image-overlay"></div>
+      {%
+        render 'image' with
+        image: section.settings.image
+      %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner Parallax",
+  "tag": "section",
+  "class": "shopify-section--stackable",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "HEADLINE"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "BOLD STATEMENT"
+    },
+    {
+      "id": "subheading_style",
+      "type": "select",
+      "label": "Subheading Style",
+      "options": [
+        { "label": "Style 1", "value": "style-1" },
+        { "label": "Style 2", "value": "style-2" }
+      ],
+      "default": "style-1"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Parallax Background Image"
+    },
+    {
+      "id": "enable_fullwidth",
+      "type": "checkbox",
+      "label": "Enable Fullwidth",
+      "default": false
+    },
+    {
+      "id": "enable_button",
+      "type": "checkbox",
+      "label": "Show call-to-action button",
+      "default": false,
+      "info": "On PRODUCT Page, will work as Add-To-Cart"
+    },
+    {
+      "id": "override_button",
+      "type": "checkbox",
+      "label": "Override Add-To-Cart",
+      "default": false,
+      "info": "On PRODUCT Page, use Button Link instead of Add-To-Cart"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "GET IT NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "id": "banner_max_height",
+      "type": "range",
+      "label": "Maximum Banner Height",
+      "min": 20,
+      "max": 50,
+      "step": 2,
+      "default": 50
+    },
+    {
+      "id": "text_color",
+      "type": "color",
+      "label": "Text Color",
+      "default": "#FFF"
+    },
+    {
+      "id": "button_text_color",
+      "type": "color",
+      "label": "Button Text Color",
+      "default": "#FFF"
+    },
+    {
+      "id": "button_background_color",
+      "type": "color",
+      "label": "Button Background Color",
+      "default": "#FFF"
+    },
+    {
+      "id": "button_border_color",
+      "type": "color",
+      "label": "Button Border Color",
+      "default": "#FFF"
+    },
+    {
+      "id": "overlay_color",
+      "type": "color",
+      "label": "Overlay Color",
+      "default": "#000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "unit": "%",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Parallax"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,68 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="newsletter"
+  class="
+    newsletter
+    section
+    section--extra-small
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+  style="--text-max-width: 42rem;"
+>
+  <div class="newsletter__inner section__inner">
+    <div class="newsletter__text">
+      {%- unless section.settings.title == blank -%}
+        <h2 class="newsletter__heading ff-heading fs-heading-2-base fs-heading-2-large-ns">
+          {{ section.settings.title | newline_to_br }}
+        </h2>
+      {%- endunless -%}
+
+      {%- unless section.settings.subheading == blank -%}
+        <div class="newsletter__subheading rte ff-body fs-body-small fs-body-base-ns">
+          {{ section.settings.subheading }}
+        </div>
+      {%- endunless -%}
+    </div>
+
+    {% render 'newsletter-form', id: 'newsletter-dynamic' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.newsletter.name",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--extra-small shopify-section--text-first",
+  "settings": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "t:sections.newsletter.settings.title.label",
+      "default": "Subscribe"
+    },
+    {
+      "id": "subheading",
+      "type": "richtext",
+      "label": "t:sections.newsletter.settings.subheading.label",
+      "default": "<p>Sign up for our newsletter</p>"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.newsletter.settings.paragraph.content"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.newsletter.settings.section_contrast.label",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter.presets.name"
+    }
+  ]
+}
+{% endschema %}

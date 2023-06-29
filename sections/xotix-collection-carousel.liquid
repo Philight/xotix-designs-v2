@@ -1,0 +1,280 @@
+{%- liquid
+  assign aspect_ratio = section.settings.aspect_ratio
+  assign heading = section.settings.title
+  assign subheading = section.settings.subheading
+  assign link_text = section.settings.link_text
+  assign text_max_width = section.settings.text_max_width
+  assign max_products = 7
+
+  assign text_padding = section.settings.text_padding
+
+  case columns
+    when 2
+      assign desktop_max_width = text_max_width | minus: 10
+    when 3
+      assign desktop_max_width = text_max_width | minus: 15
+    when 4
+      assign desktop_max_width = text_max_width | minus: 20
+  endcase
+-%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="featured-collection-row"
+  class="
+    xotix-collection-carousel
+    featured-collection-row
+    featured-collection-row--columns-{{ section.settings.columns }}
+    featured-collection-row--{{ aspect_ratio }}
+    featured-collection-row--text-align-{{ section.settings.text_alignment }}
+    section
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+  style="
+    --text-max-width: {{ text_max_width }}rem;
+    --text-max-width-desktop: {{ desktop_max_width }}rem;
+  "
+>
+  <div class="section__inner xotix-fullwidth" style="">
+    {%
+      render 'section-header',
+      heading: heading,
+      subheading: subheading,
+      url: featured_collection.url,
+      link_text: link_text,
+      classes: 'section-header--large section-header--center',
+    %}
+
+    <div class="featured-collection-row__content">
+      <div class="featured-collection-row__slider-wrapper">
+        <div class="featured-collection-row__slider" data-slider style="margin: 0px;">
+          {%- for block in section.blocks -%}
+            {%- assign featured_collection = block.settings.collection -%}
+            {%- if featured_collection != empty -%}
+              <div
+                class="featured-collection-row__slide"
+                data-slide
+                style="padding: 0 {{ text_padding | divided_by: 2}}px"
+              >
+                {%
+                  render 'collection-item' with
+                  collection: featured_collection,
+                  title: block.settings.title,
+                  heading: block.settings.heading,
+                  shop_text: block.settings.shop_text,
+                  text_color: block.settings.text_color,
+                  overlay_type: block.settings.overlay_type,
+                  overlay_opacity: block.settings.overlay_opacity,
+                  aspect_ratio: section.settings.aspect_ratio,
+                  text_max_width: block.settings.text_max_width,
+                  is_collection_carousel: true,
+                  show_shop: section.settings.show_shop
+                %}
+              </div>
+
+            {%- else -%}
+              <div
+                class="featured-collection-row__slide"
+                data-slide
+                style="padding: 0 {{ text_padding | divided_by: 2}}px"
+              >
+                {% render 'collection-item' with collection: empty, aspect_ratio: section.settings.aspect_ratio %}
+              </div>
+            {%- endif -%}
+          {%- else -%}
+            {%- for i in (1..columns) -%}
+              <div
+                class="featured-collection-row__slide"
+                data-slide
+                style="padding: 0 {{ text_padding | divided_by: 2}}px"
+              >
+                {% render 'collection-item' with collection: empty, aspect_ratio: section.settings.aspect_ratio %}
+              </div>
+            {%- endfor -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {% assign count = featured_collection.products.size | plus: 1 %}
+
+      {% render 'icon' with icon: 'chevron', class: 'left-nav hidden' %}
+      {% render 'icon' with icon: 'chevron', class: 'right-nav' %}
+
+      {% render 'carousel-navigation' with columns: columns, item_count: count %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "XotiX Collection Carousel",
+  "tag": "section",
+  "class": "shopify-section--stackable shopify-section--text-first",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.featured_collection_row.settings.columns.label",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "t:sections.featured_collection_row.settings.title.label",
+      "default": "Collection"
+    },
+    {
+      "id": "subheading",
+      "type": "richtext",
+      "label": "t:sections.featured_collection_row.settings.subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "t:sections.featured_collection_row.settings.link_text.label"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.featured_collection_row.settings.text_max_width.label",
+      "min": 24,
+      "max": 48,
+      "step": 1,
+      "default": 39
+    },
+    {
+      "type": "range",
+      "id": "text_padding",
+      "label": "Padding",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 10
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:sections.featured_collection_row.settings.text_alignment.label",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.featured_collection_row.settings.text_alignment.options__1"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.featured_collection_row.settings.text_alignment.options__2"
+        }
+      ]
+    },
+    {
+      "id": "aspect_ratio",
+      "type": "select",
+      "label": "t:sections.featured_collection_row.settings.aspect_ratio.label",
+      "options": [
+        { "label": "t:sections.featured_collection_row.settings.aspect_ratio.options__1", "value": "natural" },
+        { "label": "t:sections.featured_collection_row.settings.aspect_ratio.options__2", "value": "square" },
+        { "label": "t:sections.featured_collection_row.settings.aspect_ratio.options__3", "value": "landscape" },
+        { "label": "t:sections.featured_collection_row.settings.aspect_ratio.options__4", "value": "portrait" }
+      ],
+      "default": "natural"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.featured_collection_row.settings.section_contrast.label",
+      "default": false
+    },
+    {
+      "id": "show_shop",
+      "type": "checkbox",
+      "label": "Show Shop",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "t:sections.collection_list.blocks.collection.name",
+      "settings": [
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "t:sections.collection_list.blocks.collection.settings.collection.label"
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "id": "heading",
+          "type": "richtext",
+          "label": "Heading"
+        },
+        {
+          "id": "shop_text",
+          "type": "text",
+          "label": "Shop Text"
+        },
+        {
+          "id": "text_color",
+          "type": "color",
+          "label": "Text Color",
+          "default": "#000"
+        },
+        {
+          "id": "overlay_type",
+          "type": "select",
+          "label": "Overlay Type",
+          "options": [
+            { "label": "White", "value": "white" },
+            { "label": "Black", "value": "black" }
+          ],
+          "default": "white"
+        },
+        {
+          "id": "overlay_opacity",
+          "type": "range",
+          "label": "Overlay Opacity",
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "text_max_width",
+          "label": "t:sections.collection_list.blocks.collection.settings.text_max_width.label",
+          "min": 24,
+          "max": 48,
+          "step": 1,
+          "default": 42
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "XotiX Collection Carousel",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,127 @@
+{% capture "form_classes" -%}
+  product-form product-form-{{ section.id }}
+{%- endcapture %}
+
+{% form 'product',
+  product,
+  class: form_classes,
+  novalidate: 'novalidate',
+  data-product-form: '',
+  data-product-handle: product.handle,
+  data-current-product-id: current_variant.id
+%}
+  {% liquid
+    if btn_class
+      assign custom_btn_class = btn_class
+    endif
+  %}
+
+  {% comment %}
+    product quantity within form remains hidden but will be updated
+    from outside the form if enabled.
+  {% endcomment %}
+  <div class="product-form__quantity">
+    <div class="product__label-wrapper">
+      <label class="product__label {{ label_classes }}" for="Quantity-Input-{{ product.id }}">
+        {{ 'products.product.quantity' | t }}
+      </label>
+    </div>
+    <input
+      type="number"
+      id="Quantity-{{ product.id }}"
+      name="quantity"
+      value="1"
+      min="1"
+      pattern="[0-9]*"
+      class="input product-form__input product-form__input--quantity"
+      aria-label="{{ 'general.accessibility.quantity' | t }}"
+    >
+  </div>
+
+  {% comment %}
+    In order for this form to submit, it needs to contain an input with name="id".
+    ProductForm() will automatically create this input (or make sure it has the
+    right value set if it already exists) on form submit based on the
+    currently selected variant. However, if JS is disabled we need a fallback.
+
+    Include a single <select> element which allows users to select all variants
+    as a fallback and present it only when JS is disabled. In addition,
+    make sure you hide the option inputs declared above, like we do with the
+    `.js-enabled` class which only shows its contents when JS is enabled.
+  {% endcomment %}
+  <div class="product-form__variants">
+    <select
+      name="id"
+      class="input"
+      id="variant-selector"
+      data-variant-select
+    >
+      {%- for variant in product.variants -%}
+        <option
+          value="{{ variant.id }}"
+          {%- if variant == current_variant -%}
+            selected="selected"
+          {%- endif -%}
+        >
+          {{ variant.title }}
+          {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+        </option>
+      {%- endfor -%}
+    </select>
+  </div>
+
+  <div
+    class="product-form__controls-group product-form__controls-group--submit"
+    style="      --product-buy-button-max-width: {{ button_max_width }}%;"
+  >
+    <div
+      class="
+        product-form__item product-form__item--submit
+        {%- if show_dynamic_checkout %} product-form__item--payment-button {%- endif -%}
+        {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}
+      "
+    >
+      <button
+        type="submit"
+        name="add"
+        {% unless current_variant.available %}
+          aria-disabled="true" disabled
+        {% endunless %}
+        aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+        class="product-form__cart-submit btn btn--small btn--medium-ns btn--full {% if show_dynamic_checkout %}btn--secondary{% else %}btn--primary{% endif %} {{custom_btn_class}}"
+        data-add-to-cart
+        data-lang-available="{{ 'product.add_to_cart' | t }}"
+        data-lang-unavailable="{{ 'product.unavailable' | t }}"
+        data-lang-sold-out="{{ 'product.sold_out' | t }}"
+      >
+        <span data-add-to-cart-text>
+          {%- unless current_variant.available -%}
+            {{ 'products.product.sold_out' | t }}
+          {%- elsif btn_text != blank -%}
+            {{ btn_text }}
+          {%- else -%}
+            {{ 'products.product.add_to_cart' | t }}
+          {%- endunless -%}
+        </span>
+        <div class="btn__loading-wrap">
+          <div class="btn__loading-bar"></div>
+        </div>
+      </button>
+
+      {%- if show_dynamic_checkout -%}
+        {{ form | payment_button }}
+      {%- endif -%}
+
+      <div class="product-form__shop-pay fs-body-small">
+        {{- form | payment_terms -}}
+      </div>
+
+      {% comment %} Surface pick-up {% endcomment %}
+      <div
+        class="store-availability-container__wrapper"
+        data-store-availability-container
+        data-base-url="{{ shop.url }}{{ routes.root_url }}"
+      ></div>
+    </div>
+  </div>
+{%- endform -%}

@@ -1,0 +1,362 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product--default",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "d20d2c0d-d218-4df3-839a-22582b79a923": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "border": {
+          "type": "border",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_labels": true,
+            "variant_popup_option": "Size",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_labels": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "5fe20954-09bd-4697-ad46-f4695c39d023": {
+          "type": "accordion",
+          "settings": {
+            "column": "right",
+            "style": "closed",
+            "heading": "Characteristics",
+            "content": "<p>text</p>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "style": "open"
+          }
+        },
+        "payment_widget": {
+          "type": "payment_widget",
+          "settings": {
+            "column": "left",
+            "style": "closed",
+            "icon": "payment",
+            "title": "Payment",
+            "show_payment_icons": true,
+            "text": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.</p>"
+          }
+        },
+        "security_widget": {
+          "type": "security_widget",
+          "settings": {
+            "column": "left",
+            "style": "closed",
+            "icon": "security",
+            "title": "Security",
+            "text": "<p>This website is encrypted. We take your security very seriously. All transactions powered by Shopify.</p>"
+          }
+        },
+        "shipping_widget": {
+          "type": "shipping_widget",
+          "settings": {
+            "column": "left",
+            "style": "closed",
+            "icon": "shipping",
+            "title": "Shipping",
+            "text": "<p>Rates are approximations. Exact rates will be provided at checkout.</p>",
+            "show_estimator": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "d20d2c0d-d218-4df3-839a-22582b79a923",
+        "border",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "5fe20954-09bd-4697-ad46-f4695c39d023",
+        "description",
+        "payment_widget",
+        "security_widget",
+        "shipping_widget"
+      ],
+      "settings": {
+        "enable_quick_purchase_bar": true,
+        "show_share_buttons": true,
+        "enable_video_looping": true
+      }
+    },
+    "text-columns-with-images": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "heading": "Feature heading",
+            "subheading": "<p>Tell a story, explain a detail about your product, or describe a new promotion.</p>",
+            "text_max_width": 42,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "heading": "Feature heading",
+            "subheading": "<p>Tell a story, explain a detail about your product, or describe a new promotion.</p>",
+            "text_max_width": 42,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "heading": "Feature heading",
+            "subheading": "<p>Tell a story, explain a detail about your product, or describe a new promotion.</p>",
+            "text_max_width": 42,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "heading": "Feature heading",
+            "subheading": "<p>Tell a story, explain a detail about your product, or describe a new promotion.</p>",
+            "text_max_width": 42,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": ["column-1", "column-2", "column-3", "column-4"],
+      "settings": {
+        "columns": 4,
+        "image_shape": "round",
+        "text_alignment": "center",
+        "section_contrast": true
+      }
+    },
+    "image-with-features": {
+      "type": "image-with-features",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Images with Features",
+            "text_max_width": 32
+          }
+        },
+        "feature-1": {
+          "type": "feature",
+          "settings": {
+            "image_shape": "round",
+            "heading": "Example heading",
+            "subheading": "<p>Use these small paragraph blocks to feature various aspects about a product. You can add up to three of these blocks and each can have an image associated with them.</p>",
+            "text_max_width": 32
+          }
+        },
+        "feature-2": {
+          "type": "feature",
+          "settings": {
+            "image_shape": "round",
+            "heading": "Example heading",
+            "subheading": "<p>Use these small paragraph blocks to feature various aspects about a product. You can add up to three of these blocks and each can have an image associated with them.</p>",
+            "text_max_width": 32
+          }
+        }
+      },
+      "block_order": ["heading", "feature-1", "feature-2"],
+      "settings": {
+        "image_width": "half",
+        "aspect_ratio": "natural",
+        "text_position": "left",
+        "text_alignment": "left",
+        "section_contrast": true
+      }
+    },
+    "logo-list": {
+      "type": "logo-list",
+      "blocks": {
+        "logo-1": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-2": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-3": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-4": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo-5": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["logo-1", "logo-2", "logo-3", "logo-4", "logo-5"],
+      "settings": {
+        "columns": 5,
+        "gutter_spacing": 20,
+        "title": "As featured in",
+        "section_contrast": true
+      }
+    },
+    "video-hero": {
+      "type": "video-hero",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Video Hero",
+            "heading_text_size": 64,
+            "text_max_width": 40
+          }
+        },
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<p>Feature seamless auto-playing hero videos in this space.</p>",
+            "text_max_width": 40
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link_text": "Learn more",
+            "link": "https://fluorescent.co/help/spark/video-hero"
+          }
+        }
+      },
+      "block_order": ["heading", "subheading", "button"],
+      "settings": {
+        "desktop_height": 100,
+        "mobile_height": 100,
+        "video_url": "",
+        "alignment": "center_center",
+        "overlay_shadow": 20,
+        "color_text": "#ffffff",
+        "color_background_button": "#FFFFFF",
+        "color_text_button": "#181818",
+        "color_overlay": "#000",
+        "overlay_opacity": 30
+      }
+    },
+    "questions": {
+      "type": "questions",
+      "blocks": {
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "title": "This is an example of a question that a customer might ask",
+            "answer": "<p>This is an example of a response that you might give. It's good to be as thorough as possible in responses as that has a tendency to improve trust overall.</p>",
+            "author": ""
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "title": "This is an example of a question that a customer might ask",
+            "answer": "<p>This is an example of a response that you might give. It's good to be as thorough as possible in responses as that has a tendency to improve trust overall.</p>",
+            "author": ""
+          }
+        },
+        "question-3": {
+          "type": "question",
+          "settings": {
+            "title": "This is an example of a question that a customer might ask",
+            "answer": "<p>This is an example of a response that you might give. It's good to be as thorough as possible in responses as that has a tendency to improve trust overall.</p>",
+            "author": ""
+          }
+        },
+        "question-4": {
+          "type": "question",
+          "settings": {
+            "title": "This is an example of a question that a customer might ask",
+            "answer": "<p>This is an example of a response that you might give. It's good to be as thorough as possible in responses as that has a tendency to improve trust overall.</p>",
+            "author": ""
+          }
+        },
+        "question-5": {
+          "type": "question",
+          "settings": {
+            "title": "This is an example of a question that a customer might ask",
+            "answer": "<p>This is an example of a response that you might give. It's good to be as thorough as possible in responses as that has a tendency to improve trust overall.</p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "question-1",
+        "question-2",
+        "question-3",
+        "question-4",
+        "question-5"
+      ],
+      "settings": {
+        "section_title": "Questions",
+        "subheading": "",
+        "section_contrast": true
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "columns": 3,
+        "title": "Recommended",
+        "subheading": "<p>You might want to take a closer look.</p>",
+        "text_max_width": 42,
+        "aspect_ratio": "natural",
+        "section_contrast": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "text-columns-with-images",
+    "image-with-features",
+    "logo-list",
+    "video-hero",
+    "questions",
+    "recommendations"
+  ]
+}

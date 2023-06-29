@@ -1,0 +1,194 @@
+{%- liquid
+  assign image_is_constrained = true
+
+  if section.settings.aspect_ratio == 'natural'
+    assign image_is_constrained = false
+  endif
+
+  case section.settings.columns
+    when 2
+      assign article_heading_type = 'fs-heading-2-large-l'
+    when 3
+      assign article_heading_type = 'fs-heading-2-base-l'
+    when 4
+      assign article_heading_type = 'fs-heading-3-base-l'
+  endcase
+-%}
+
+{%- capture placeholder_item -%}
+  <div class="blog-posts__item">
+    <div class="blog-posts__item-image-wrapper">
+      <div class="blog-posts__item-image placeholder-image">
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+    </div>
+    <div class="blog-posts__item-footer ta-c">
+      <h4 class="blog-posts__item-heading ff-heading fs-heading-3-base fs-heading-2-base-nl {{ article_heading_type }}">{{ 'homepage.onboarding.blog_title' | t }}</h4>
+      {%- if section.settings.show_date -%}
+        <div class="blog-posts__item-date fs-body-base">{{ "now" | time_tag: format: 'date' }}</div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endcapture -%}
+
+<div
+  data-section-type="blog-posts"
+  class="
+    blog-posts
+    blog-posts--columns-{{ section.settings.columns }}
+    blog-posts--{{ section.settings.aspect_ratio }}
+    section
+    {% if section.settings.section_contrast -%}
+      section--contrast
+    {%- endif %}
+  "
+  style="--text-max-width: {{ text_max_width }}rem;"
+>
+  <div class="section__inner">
+    {%
+      render 'section-header',
+      heading: section.settings.title,
+      subheading: section.settings.subheading,
+      classes: 'section-header--large section-header--center',
+    %}
+    <div class="blog-posts__grid">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.article != blank or block_id -%}
+          <div class="blog-posts__item">
+            {%- if block.settings.article.image -%}
+              <a href="{{ block.settings.article.url }}" class="blog-posts__item-image-wrapper hover">
+                {%
+                  render 'image' with
+                  image: block.settings.article.image,
+                  wrapper_class: 'blog-posts__item-image',
+                  disable_style: image_is_constrained,
+                %}
+              </a>
+            {%- endif -%}
+
+            <div class="blog-posts__item-footer ta-c">
+              <h4 class="blog-posts__item-heading ff-heading fs-heading-3-base {{ article_heading_type }}">
+                <a href="{{ block.settings.article.url }}">{{ block.settings.article.title }}</a>
+              </h4>
+              {%- if section.settings.show_date -%}
+                <p class="blog-posts__item-date fs-body-small fs-body-base-ns">
+                  {{ block.settings.article.published_at | time_tag: format: 'date' }}
+                </p>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- else -%}
+          {{ placeholder_item }}
+        {%- endif -%}
+      {%- else -%}
+        {%- for i in (1..section.settings.columns) -%}
+          {{ placeholder_item }}
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.blog_posts.name",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "id": "show_date",
+      "type": "checkbox",
+      "label": "t:sections.blog_posts.settings.show_date.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.blog_posts.settings.columns.label",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "t:sections.blog_posts.settings.title.label"
+    },
+    {
+      "id": "subheading",
+      "type": "richtext",
+      "label": "t:sections.blog_posts.settings.subheading.label"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.blog_posts.settings.text_max_width.label",
+      "min": 24,
+      "max": 48,
+      "step": 1,
+      "default": 42
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "options": [
+        {
+          "value": "natural",
+          "label": "t:sections.blog_posts.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.blog_posts.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "landscape",
+          "label": "t:sections.blog_posts.settings.image_ratio.options__3.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.blog_posts.settings.image_ratio.options__4.label"
+        }
+      ],
+      "default": "natural",
+      "label": "t:sections.blog_posts.settings.image_ratio.label"
+    },
+    {
+      "id": "section_contrast",
+      "type": "checkbox",
+      "label": "t:sections.blog_posts.settings.contrast.label",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article",
+      "name": "t:sections.blog_posts.blocks.article.name",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "t:sections.blog_posts.blocks.article.settings.article.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.blog_posts.presets.name",
+      "blocks": [
+        {
+          "type": "article"
+        },
+        {
+          "type": "article"
+        },
+        {
+          "type": "article"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
