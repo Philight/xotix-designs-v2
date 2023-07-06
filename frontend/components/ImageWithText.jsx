@@ -1,5 +1,7 @@
-import Image from '@components/graphic/Image'
-import Layer from '@components/graphic/Layer'
+import useDeviceDimensions from '@utils/useDeviceDimensions';
+import Image from '@components/graphic/Image';
+import Layer from '@components/graphic/Layer';
+import { BREAKPOINTS } from '@utils/BREAKPOINTS';
 
 const DATA = {
   heading: 'Kente Inspired Masks',
@@ -9,19 +11,18 @@ const DATA = {
   image:
     'https://cdn.shopify.com/s/files/1/0720/9998/7768/files/kente-masks.jpg?v=1687880840',
   link: 'https://cdn.shopify.com/s/files/1/0720/9998/7768/files/free-delivery.png?v=1687877503',
-}
+};
 
 const ImageWithText = (props) => {
-  console.log('ImageWithText props', props)
-  const { className, columns, sectionSettings } = props
-  const COLUMNS = columns ?? 4
-  const IS_FULLWIDTH = sectionSettings.is_fullwidth ?? false
-  const REVERSE_ORDER = sectionSettings.reverse_order ?? false
-  const heading = sectionSettings.heading
-  const description = sectionSettings.description
-  const ctaText = sectionSettings.button_text
-  const ctaLink = sectionSettings.button_link
-  const image = sectionSettings.image
+  const { className, sectionSettings } = props;
+  const { DEVICE_WIDTH } = useDeviceDimensions();
+  const IS_FULLWIDTH = sectionSettings.is_fullwidth ?? false;
+  const REVERSE_ORDER = sectionSettings.reverse_order ?? false;
+  const heading = sectionSettings.heading;
+  const description = sectionSettings.description;
+  const ctaText = sectionSettings.button_text;
+  const ctaLink = sectionSettings.button_link;
+  const image = sectionSettings.image;
 
   return (
     <div
@@ -33,17 +34,25 @@ const ImageWithText = (props) => {
         <div className={`image-with-text__content`}>
           <h2 className={`image-with-text__heading`}>{heading}</h2>
           <h3 className={`image-with-text__description`}>{description}</h3>
-          <a
-            href={DATA.link}
-            className="image-with-text__button btn btn--primary btn--large"
-          >
-            {ctaText}
-          </a>
+          <div className={`button__c image-with-text__button`}>
+            <a
+              href={ctaLink}
+              className={`btn ${
+                DEVICE_WIDTH < BREAKPOINTS['TABLET_LG'].px
+                  ? 'btn--primary-outline'
+                  : 'btn--primary'
+              } btn--large`}
+              role='button'
+            >
+              {ctaText}
+            </a>
+          </div>
         </div>
+        <Layer className={`image-with-text__overlay`} />
         <Image src={image} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ImageWithText
+export default ImageWithText;

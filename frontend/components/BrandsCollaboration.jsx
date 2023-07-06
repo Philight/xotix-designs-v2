@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
-import SectionHeader from '@components/text/SectionHeader'
-import Image from '@components/graphic/Image'
-import Shape from '@components/graphic/Shape'
+import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import SectionHeader from '@components/text/SectionHeader';
+import Image from '@components/graphic/Image';
+import Shape from '@components/graphic/Shape';
 
 const DATA = [
   {
@@ -25,18 +25,16 @@ const DATA = [
     image:
       'https://cdn.shopify.com/s/files/1/0720/9998/7768/files/brand-bobobird.png?v=1688027242',
   },
-]
+];
 
 const BrandsCollaboration = (props) => {
-  console.log('BrandsCollaboration props', props)
   const { className, sectionSettings, columns, autoplay, duration, reverse } =
-    props
-  const [slideIndex, setIndex] = useState(0)
-  const COLUMNS = columns ?? 4
+    props;
+  const COLUMNS = columns ?? 4;
 
-  const ENABLE_AUTOPLAY = autoplay ?? true
-  const DURATION = duration ?? 15000
-  const REVERSE = reverse ?? true
+  const ENABLE_AUTOPLAY = autoplay ?? true;
+  const DURATION = duration ?? 15000;
+  const REVERSE = reverse ?? true;
 
   const BrandsContainer = () => (
     <motion.div
@@ -63,13 +61,13 @@ const BrandsCollaboration = (props) => {
         </div>
       ))}
     </motion.div>
-  )
+  );
 
   return (
     <div className={`brands-collaboration__c ${className} col-${COLUMNS}`}>
       <SectionHeader
-        heading="OUR BRANDS COLLABORATION"
-        subheading="ESTABLISHED & PROMINENT PARTNERS"
+        heading='OUR BRANDS COLLABORATION'
+        subheading='ESTABLISHED & PROMINENT PARTNERS'
       />
 
       <Shape className={`top border`} />
@@ -81,7 +79,7 @@ const BrandsCollaboration = (props) => {
 
       <Shape className={`bottom border`} />
     </div>
-  )
-}
+  );
+};
 
-export default BrandsCollaboration
+export default BrandsCollaboration;

@@ -298,17 +298,17 @@
       "pinterest-4f0a1b55.svg",
       "wolt-70002b4b.svg"
     ],
-    "file": "index-192ab370.js",
+    "file": "index-18768012.js",
     "isEntry": true,
     "src": "frontend/entrypoints/index.jsx"
   },
   "frontend/entrypoints/react.css": {
-    "file": "react-1a683d25.css",
+    "file": "react-2cfb4f43.css",
     "isEntry": true,
     "src": "frontend/entrypoints/react.css"
   },
   "frontend/entrypoints/theme.css": {
-    "file": "theme-4f3b28ae.css",
+    "file": "theme-fdd33d9b.css",
     "isEntry": true,
     "src": "frontend/entrypoints/theme.css"
   }

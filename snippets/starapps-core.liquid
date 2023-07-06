@@ -28,41 +28,41 @@
     }
   </style>
   <script type="text/javascript">
-    'use strict'
+    'use strict';
     // JS code added by StarApps Studio
     // It hides the default option selector so it's not visible in the frontend
     // Javascript to prevent options selector to be visible on JS disabled browsers
-    ;(function () {
-      var swatchTarget = '.swatches div[option-target] .swatch-single'
-      var intervalTime = 0
+    (function () {
+      var swatchTarget = '.swatches div[option-target] .swatch-single';
+      var intervalTime = 0;
       var intervalID = setInterval(function () {
         // Update interval time
-        intervalTime += 250
+        intervalTime += 250;
 
         // Check for app
-        var variantSwatchKingApp = document.querySelector(swatchTarget)
+        var variantSwatchKingApp = document.querySelector(swatchTarget);
 
         // If we either find our app or page is loaded + 5 seconds
         if (variantSwatchKingApp || (intervalTime >= 5000 && document.readyState == 'complete')) {
           // Lookup style tag
-          var styleTagElement = document.querySelector('style[data-vsk-hide]')
+          var styleTagElement = document.querySelector('style[data-vsk-hide]');
 
           // If element found; Remove it.
           if (styleTagElement) {
             if (styleTagElement.remove) {
-              styleTagElement.remove()
+              styleTagElement.remove();
             } else {
-              styleTagElement.innerHTML = ''
+              styleTagElement.innerHTML = '';
             }
           }
           // End
 
           // Remove interval
-          clearInterval(intervalID)
+          clearInterval(intervalID);
         }
         // End
-      }, 250)
-    })()
+      }, 250);
+    })();
     // END
   </script>
 {% endif %}

@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import path from 'path'
-import shopify from 'vite-plugin-shopify'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import path from 'path';
+import shopify from 'vite-plugin-shopify';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [shopify(), react()],
@@ -10,6 +10,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      ROOT: path.resolve(__dirname),
       '@': path.resolve(__dirname, 'frontend'),
       '@assets': path.resolve(__dirname, 'frontend', 'assets'),
       '@css': path.resolve(__dirname, 'frontend', 'assets', 'css'),
@@ -25,4 +26,4 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, 'frontend', 'utils'),
     },
   },
-})
+});

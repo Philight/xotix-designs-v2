@@ -1,24 +1,5 @@
-.prose {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    &:first-child {
-      @apply mt-0;
-    }
-  }
-}
-
 .page-max-w {
   @apply mx-auto max-w-custom px-page-outer;
-  /*
-  padding: 0 var(--space-outer);
-  max-width: var(--max-width);
-  margin-left: auto;
-  margin-right: auto;
-*/
 }
 
 .section-spacing {
@@ -54,42 +35,52 @@
 .heading {
   @apply font-heading;
 }
-
 .heading--lg {
-  @apply text-5xl tracking-2;
+  @apply text-2xl tab-lg:text-3xl desk-md:text-5xl-minus;
+  @apply tracking-2;
 }
 .heading--md {
-  @apply text-2xl tracking-2;
+  @apply text-lg tab-lg:text-xl desk-md:text-2xl;
+  @apply tracking-2;
 }
 .heading--sm {
-  @apply text-sm tracking-4;
+  @apply text-3xs tab-lg:text-2xs desk-md:text-sm;
+  @apply tracking-4;
 }
 
 .body {
   @apply font-body;
 }
-
 .body--lg {
-  @apply font-body text-2xl tracking-2;
+  @apply text-lg tab-lg:text-xl desk-md:text-2xl;
+  @apply tracking-2;
 }
 .body--md {
-  @apply font-body text-base-plus tracking-2;
+  @apply text-base desk-md:text-base-plus;
+  @apply tracking-2;
 }
 .body--sm {
-  @apply font-body text-sm font-light tracking-2;
+  @apply text-3xs tab-lg:text-xs desk-md:text-sm;
+  @apply font-light;
+  @apply tracking-3 desk-md:tracking-2;
 }
 
 .btn-text {
   @apply font-btn;
 }
 .btn-text--sm {
-  @apply font-btn text-xs font-semibold tracking-2;
+  @apply text-xs;
+  @apply font-semibold;
+  @apply tracking-2;
 }
 .btn-text--lg {
-  @apply font-btn text-3xl font-semibold tracking-2;
+  @apply text-xl tab-lg:text-2xl desk-md:text-3xl;
+  @apply font-semibold;
+  @apply tracking-2;
 }
 
 /* BUTTON VARIANTS */
+
 .btn {
   @apply cursor-pointer rounded-sm;
 }
@@ -106,11 +97,21 @@
 .btn--primary {
   @apply btn-text btn-text--sm;
   @apply bg-tertiary;
+
+  transition: background-color 0.5s ease-in-out, color 0.4s ease-in-out;
+  &:hover {
+    @apply bg-tertiary-dark text-white-primary;
+  }
 }
 
 .btn--primary-outline {
   @apply btn-text btn-text--sm;
   @apply border-2 border-tertiary-dark bg-transparent text-tertiary;
+
+  transition: background-color 0.5s ease-in-out, color 0.4s ease-in-out;
+  &:hover {
+    @apply bg-tertiary text-black-primary;
+  }
 }
 
 .btn--outline {
@@ -128,7 +129,8 @@
 }
 
 .btn--large {
-  @apply h-10 min-h-0 p-0 px-8 pt-px;
+  @apply min-h-0 p-0 pt-px;
+  @apply h-8 px-6 desk-md:h-10 desk-md:px-8;
 }
 
 /* FLEX & GRID */
@@ -146,13 +148,16 @@
 
 .carousel-item,
 .carousel-group {
-  @apply shrink-0 grow-0 basis-full;
   transition: transform 0.5s ease-out;
   will-change: transform;
 }
+.carousel-group {
+  @apply shrink-0 grow-0 basis-full;
+  @apply w-full;
+}
 
 .carousel-item {
-  @apply basis-full xl:basis-1/4;
+  @apply shrink-0 grow-0 basis-full xl:basis-1/4;
 }
 
 .carousel-nav {
@@ -162,5 +167,42 @@
   }
   &.right {
     @apply right-0;
+  }
+}
+
+.f-grid {
+  --f-grid-gap: theme(space.2); /* gap-2 */
+
+  .f-grid-group {
+    @apply flex shrink-0 grow-0 basis-full flex-wrap;
+    @apply mr-[var(--f-grid-gap)];
+  }
+
+  .f-grid-row {
+    @apply flex shrink-0 grow-0 basis-full;
+  }
+
+  .f-grid-item {
+    @apply shrink-0 grow-0;
+    @apply pr-[var(--f-grid-gap)];
+  }
+
+  &.cols-1 .f-grid-item {
+    @apply basis-[calc((100%+var(--f-grid-gap))/1)];
+  }
+  &.cols-2 .f-grid-item {
+    @apply basis-[calc((100%+var(--f-grid-gap))/2)];
+  }
+  &.cols-3 .f-grid-item {
+    @apply basis-[calc((100%+var(--f-grid-gap))/3)];
+  }
+  &.cols-4 .f-grid-item {
+    @apply basis-[calc((100%+var(--f-grid-gap))/4)];
+  }
+
+  &:not(.rows-1) {
+    .f-grid-row:nth-child(n + 2) .f-grid-item {
+      @apply pt-[var(--f-grid-gap)];
+    }
   }
 }

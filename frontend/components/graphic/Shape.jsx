@@ -1,9 +1,9 @@
-import { forwardRef } from 'react'
+import { forwardRef } from 'react';
 //import { motion } from 'framer-motion';
 
 const Shape = forwardRef((props, ref) => {
   let { className, style, children, width, height, left, bottom, onClick } =
-    props
+    props;
 
   return (
     <canvas
@@ -20,7 +20,7 @@ const Shape = forwardRef((props, ref) => {
     >
       {children}
     </canvas>
-  )
-})
+  );
+});
 
-export default Shape
+export default Shape;

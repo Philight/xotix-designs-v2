@@ -1,6 +1,8 @@
 module.exports = {
   singleQuote: true,
-  semi: false,
+  trailingComma: 'all',
+  jsxSingleQuote: true,
+  semi: true,
   printWidth: 80,
   bracketSpacing: true,
   plugins: [
@@ -17,4 +19,4 @@ module.exports = {
       },
     },
   ],
-}
+};

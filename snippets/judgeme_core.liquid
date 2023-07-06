@@ -14,33 +14,33 @@
 
 <script data-cfasync="false" class="jdgm-script">
   !(function (d) {
-    ;(window.jdgm = window.jdgm || {}),
+    (window.jdgm = window.jdgm || {}),
       (jdgm.CDN_HOST = 'https://cdn.judge.me/'),
       (jdgm.docReady = function (e) {
-        ;(d.attachEvent ? 'complete' === d.readyState : 'loading' !== d.readyState)
+        (d.attachEvent ? 'complete' === d.readyState : 'loading' !== d.readyState)
           ? setTimeout(e, 0)
-          : d.addEventListener('DOMContentLoaded', e)
+          : d.addEventListener('DOMContentLoaded', e);
       }),
       (jdgm.loadCSS = function (e, t, o, a) {
-        ;(!o && jdgm.loadCSS.requestedUrls.indexOf(e) >= 0) ||
+        (!o && jdgm.loadCSS.requestedUrls.indexOf(e) >= 0) ||
           (jdgm.loadCSS.requestedUrls.push(e),
           ((a = d.createElement('link')).rel = 'stylesheet'),
           (a.class = 'jdgm-stylesheet'),
           (a.media = 'nope!'),
           (a.href = e),
           (a.onload = function () {
-            ;(this.media = 'all'), t && setTimeout(t)
+            (this.media = 'all'), t && setTimeout(t);
           }),
-          d.body.appendChild(a))
+          d.body.appendChild(a));
       }),
       (jdgm.loadCSS.requestedUrls = []),
       jdgm.docReady(function () {
-        ;(window.jdgmLoadCSS || d.querySelectorAll('.jdgm-widget, .jdgm-all-reviews-page').length > 0) &&
+        (window.jdgmLoadCSS || d.querySelectorAll('.jdgm-widget, .jdgm-all-reviews-page').length > 0) &&
           (jdgmSettings.widget_load_with_code_splitting
             ? jdgm.loadCSS(jdgm.CDN_HOST + 'widget/base.css')
-            : jdgm.loadCSS(jdgm.CDN_HOST + 'shopify_v2.css'))
-      })
-  })(document)
+            : jdgm.loadCSS(jdgm.CDN_HOST + 'shopify_v2.css'));
+      });
+  })(document);
 </script>
 <script async data-cfasync="false" type="text/javascript" src="https://cdn.judge.me/loader.js"></script>
 

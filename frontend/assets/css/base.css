@@ -92,3 +92,29 @@ input[type='number'] {
 a {
   @apply cursor-pointer;
 }
+
+.article {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-white;
+  }
+  p,
+  ul,
+  li {
+    @apply mb-4 text-lg;
+  }
+  img {
+    @apply md:-mx-8 lg:-mx-16;
+
+    @media (min-width: 48em) {
+      width: calc(100% + 4rem);
+      max-width: 100vw;
+    }
+    @media (min-width: 64em) {
+      width: calc(100% + 8rem);
+    }
+  }
+}

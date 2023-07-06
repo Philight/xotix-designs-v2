@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
-import SectionHeader from '@components/text/SectionHeader'
-import Image from '@components/graphic/Image'
-import Shape from '@components/graphic/Shape'
+import { useState, useEffect, useRef } from 'react';
+import SectionHeader from '@components/text/SectionHeader';
+import Image from '@components/graphic/Image';
+import Shape from '@components/graphic/Shape';
 
 const DATA = [
   {
@@ -21,13 +21,13 @@ const DATA = [
   },
   {
     review: {
-      text: '"What a beautiful gift."',
-      author: 'Dano - Bratislava',
+      text: '"What a beautiful one. Love the stones, they give me a sense of deep spiritual belonging and it matches well with my other bracelets"',
+      author: 'Janine',
       image:
         'https://cdn.shopify.com/s/files/1/0720/9998/7768/files/review-gabi-1.png?v=1687972434',
     },
     product: {
-      name: 'GADZO',
+      name: 'GABI',
       description:
         'Hematite and Tiger’s eye. Properties & Energies:Howlite and Tiger’s eye. Properties & EnergiesHowlite and Tiger’s eye. Properties & EnergiesHowlite and Tiger’s eye. Properties & Energies',
       image:
@@ -37,13 +37,13 @@ const DATA = [
   },
   {
     review: {
-      text: '"Good quality, great service."',
-      author: 'Mindza - Bratislava',
+      text: '"The colors and ornaments remind me of my ancestry. My name is Gabi. Perfect match :)"',
+      author: 'Gabrielle - Austria',
       image:
         'https://cdn.shopify.com/s/files/1/0720/9998/7768/files/review-gabi-1.png?v=1687972434',
     },
     product: {
-      name: 'GADZO',
+      name: 'GABI',
       description:
         'Cats eye and Tiger’s eye. Properties & Energies:Howlite and Tiger’s eye. Properties & Energies',
       image:
@@ -51,41 +51,40 @@ const DATA = [
       link: 'https://google.com',
     },
   },
-]
+];
 
 const ProductTestimonial = (props) => {
-  console.log('ProductTestimonial props', props)
-  const { className, sectionSettings, delay } = props
-  const [slideIndex, setIndex] = useState(0)
-  const timeoutRef = useRef(null)
-  const DELAY = delay ?? 4000
+  const { className, delay } = props;
+  const [slideIndex, setIndex] = useState(0);
+  const timeoutRef = useRef(null);
+  const DELAY = delay ?? 4000;
 
   function resetTimeout() {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
   }
 
   useEffect(() => {
-    resetTimeout()
+    resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
         setIndex((prevIndex) =>
-          prevIndex === DATA.length - 1 ? 0 : prevIndex + 1
+          prevIndex === DATA.length - 1 ? 0 : prevIndex + 1,
         ),
-      DELAY
-    )
+      DELAY,
+    );
 
     return () => {
-      resetTimeout()
-    }
-  }, [slideIndex])
+      resetTimeout();
+    };
+  }, [slideIndex]);
 
   return (
     <div className={`product-testimonial__c ${className}`}>
       <SectionHeader
-        heading="OUR HAPPY CUSTOMERS"
-        subheading="WE THANK YOU FOR BEING WITH US"
+        heading='OUR HAPPY CUSTOMERS'
+        subheading='WE THANK YOU FOR BEING WITH US'
       />
       <div className={`product-testimonial__content`}>
         <div className={`product-testimonial__content-row reviews`}>
@@ -172,8 +171,8 @@ const ProductTestimonial = (props) => {
                   {item.product.description}
                 </p>
                 <a
-                  className="product-testimonial__content-row__button btn btn--primary btn--large"
-                  role="button"
+                  className='product-testimonial__content-row__button btn btn--primary btn--large'
+                  role='button'
                   href={item.product.link}
                 >
                   MORE DETAILS
@@ -184,7 +183,7 @@ const ProductTestimonial = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductTestimonial
+export default ProductTestimonial;

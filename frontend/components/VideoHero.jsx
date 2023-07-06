@@ -1,18 +1,16 @@
-import { useState } from 'react'
-import Layer from '@components/graphic/Layer'
-import Icon from '@components/graphic/Icon'
+import Layer from '@components/graphic/Layer';
+import Icon from '@components/graphic/Icon';
 
 const VIDEO_URL =
-  'https://cdn.shopify.com/s/files/1/0592/3494/3165/files/Untitled_Instagram_Post_1.mp4?v=1641845400'
+  'https://cdn.shopify.com/s/files/1/0592/3494/3165/files/Untitled_Instagram_Post_1.mp4?v=1641845400';
 
 const VideoHero = (props) => {
-  console.log('VideoHero props', props)
   return (
-    <div className="video-hero__c">
-      <div className="video-hero__video-wrapper">
-        <Layer className="video-hero__overlay" />
+    <div className='video-hero__c'>
+      <div className='video-hero__video-wrapper'>
+        <Layer className='video-hero__overlay' />
         <video
-          className="video-hero__video"
+          className='video-hero__video'
           autoPlay
           playsInline
           loop
@@ -21,16 +19,16 @@ const VideoHero = (props) => {
         />
       </div>
 
-      <div className="video-hero__content-wrapper">
-        <Layer className="video-hero__content-overlay" />
-        <div className="video-hero__content">
-          <h3 className="video-hero__heading ff-heading animate">
+      <div className='video-hero__content-wrapper'>
+        <Layer className='video-hero__content-overlay' />
+        <div className='video-hero__content'>
+          <h3 className='video-hero__heading ff-heading animate'>
             FASHION CHIC
           </h3>
-          <h4 className="video-hero__subheading ff-body fs-body-large animate">
+          <h4 className='video-hero__subheading ff-body fs-body-large animate'>
             Sleek | Trendy | Fashion
           </h4>
-          <Icon className="video-hero__image" icon="xotix-designs" />
+          <Icon className='video-hero__image' icon='xotix-designs' />
           {/*
           <figure class="image__c js-enabled video-hero__image">
             <img
@@ -44,10 +42,10 @@ const VideoHero = (props) => {
             />
           </figure>
 */}
-          <div className="video-hero__button-wrapper">
+          <div className='video-hero__button-wrapper'>
             <a
-              href="#"
-              className="video-hero__button animate btn btn--standard btn--large"
+              href='#'
+              className='video-hero__button animate btn btn--standard btn--large'
             >
               EXPLORE NOW
             </a>
@@ -55,7 +53,7 @@ const VideoHero = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default VideoHero
+export default VideoHero;

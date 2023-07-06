@@ -1,5 +1,5 @@
-import Image from '@components/graphic/Image'
-import Layer from '@components/graphic/Layer'
+import Image from '@components/graphic/Image';
+import Layer from '@components/graphic/Layer';
 
 const DATA = [
   {
@@ -12,7 +12,7 @@ const DATA = [
     overlayColor: 'rgba(8, 69, 79, 0.3)',
   },
   {
-    heading: 'BOBOBIRD X X.OTI.X',
+    heading: 'BOBOBIRD x X.OTI.X',
     subheading: 'EXCLUSIVE WATCHES',
     ctaText: 'Preorder Now',
     image:
@@ -20,12 +20,11 @@ const DATA = [
     link: 'https://google.com',
     overlayColor: 'rgba(172, 114, 88, 0.3)',
   },
-]
+];
 
 const Banner = (props) => {
-  console.log('Banner props', props)
-  const { className, columns } = props
-  const COLUMNS = columns ?? 2
+  const { className, columns } = props;
+  const COLUMNS = columns ?? 2;
 
   return (
     <div className={`banner__c ${className} col-${COLUMNS}`}>
@@ -51,10 +50,10 @@ const Banner = (props) => {
                 </span>
               </div>
             </div>
-          )
+          ),
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

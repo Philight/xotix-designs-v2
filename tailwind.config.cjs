@@ -1,11 +1,13 @@
+import { BREAKPOINTS } from './frontend/utils/BREAKPOINTS';
+
 /* Converts HEX color to RGB */
 function toRGB(hex) {
-  var bigint = parseInt(hex, 16)
-  var r = (bigint >> 16) & 255
-  var g = (bigint >> 8) & 255
-  var b = bigint & 255
+  var bigint = parseInt(hex, 16);
+  var r = (bigint >> 16) & 255;
+  var g = (bigint >> 8) & 255;
+  var b = bigint & 255;
 
-  return [r, g, b].join(' ')
+  return [r, g, b].join(' ');
 }
 
 module.exports = {
@@ -43,12 +45,21 @@ module.exports = {
         'lg-only': { min: '64em', max: '80em' },
         'xl-only': { min: '80em', max: '96em' },
         '2xl-only': { min: '96em' },
+        'mob-lg': { min: BREAKPOINTS['MOBILE_LG'].em + 'em' }, //  480px
+        'tab-sm': { min: BREAKPOINTS['TABLET_SM'].em + 'em' }, //  600px
+        'tab-md': { min: BREAKPOINTS['TABLET_MD'].em + 'em' }, //  768px
+        'tab-lg': { min: BREAKPOINTS['TABLET_LG'].em + 'em' }, //  900px
+        'desk-sm': { min: BREAKPOINTS['DESKTOP_SM'].em + 'em' }, //  1024px
+        'desk-md': { min: BREAKPOINTS['DESKTOP_MD'].em + 'em' }, //  1200px
+        'desk-lg': { min: BREAKPOINTS['DESKTOP_LG'].em + 'em' }, //  1440px
+        'desk-xl': { min: BREAKPOINTS['DESKTOP_XL'].em + 'em' }, //  1920px
       },
       spacing: {
         nav: 'var(--height-nav)',
         screen: 'var(--screen-height, 100vh)',
         'page-outer': 'var(--space-outer)',
         full: '100%',
+        18: '4.5rem',
         112: '28rem',
         128: '32rem',
         144: '36rem',
@@ -82,6 +93,9 @@ module.exports = {
         copy: ['var(--font-size-copy)', '1.5'],
         fine: ['var(--font-size-fine)', '1.333'],
         'base-plus': ['1.0625rem', '1.625rem'],
+        '2xs': ['0.6875rem', '0.875rem'], // 11px
+        '3xs': ['0.625rem', '0.75rem'], // 10px
+        '5xl-minus': ['2.75rem', '1'],
       },
       fontWeight: {
         'body-weight': 'var(--font-body-weight)',
@@ -112,4 +126,4 @@ module.exports = {
       },
     },
   },
-}
+};
